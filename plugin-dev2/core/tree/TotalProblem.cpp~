@@ -1,0 +1,122 @@
+#include "../include/TotalProblem.h"
+#include "../../util/include/TotalProblemHtml.h"
+#include <vector>
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <fstream>
+
+using namespace std;
+
+#define PROBLEM_CONFIG "/root/plugin-dev2/problem.config"
+#define OUTPUT_HTML "/root/plugin-dev2/run-result/index.html"
+
+void ProblemClass::Print()
+{
+    cout << name << ":" << count << endl;
+    problem *p = head;
+    for(; p; p = p->next)
+    {
+	p->Print();
+    }
+}
+
+void ProblemList::Init()
+{
+    FILE *fp = freopen(PROBLEM_CONFIG, "r", stdin);
+    if(NULL == fp)
+    {
+	cout << "cannot open config file: " << PROBLEM_CONFIG << endl;
+	return;
+    }
+    char tempStr[50];
+    char flagOn[5];
+    while(EOF != scanf("%s %s", tempStr, flagOn))
+    {
+	string temp(flagOn);
+	if("On" == temp)
+	{
+	    ProblemClass *tempPC = new ProblemClass;
+	    tempPC->SetCount(0);
+	    tempPC->SetName(tempStr);
+	    tempPC->SetLink(NULL);
+	    vec_pro.push_back(*tempPC);
+	}
+    }
+    fclose(fp);
+}
+
+void ProblemList::Add(char *prob, string fileName, int line)
+{
+    string str(prob);
+
+    for(int i = 0; i < vec_pro.size(); i++)
+    {
+	if(str == vec_pro[i].GetName())
+	{
+	    struct problem *temp = new struct problem;
+	    temp->fileName = fileName;
+	    temp->line = line;
+	    temp->next = vec_pro[i].GetHead();
+	    vec_pro[i].SetHead(temp);
+	    vec_pro[i].SetCount(vec_pro[i].GetCount() + 1);
+	    break;
+	}
+    }
+}
+
+void ProblemList::Print()
+{
+    for(int i = 0; i < vec_pro.size(); i++)
+    {
+	vec_pro[i].Print();
+    }
+}
+
+ProblemList* ProblemList::mProblemList = NULL;
+
+ProblemList&
+ProblemList::GetInstance()
+{
+    if(NULL == mProblemList)
+	mProblemList = new ProblemList;
+    return *mProblemList;
+}
+
+void ProblemList::OutputHtml()
+{
+    ofstream of;
+    of.open(OUTPUT_HTML);
+    TotalProblemHtml tph;
+    tph.ConstructHeader();
+    tph.StartScript();
+    tph.StartBody();
+    for(int i = 0; i < vec_pro.size(); i++)
+    {
+	char buf[10];
+	tph.ConstructD(vec_pro[i].GetName());
+	tph.ConstructD2(vec_pro[i].GetName());
+	tph.ConstructUse(vec_pro[i].GetName());
+	sprintf(buf, "%d", vec_pro[i].GetCount());
+	string temp(buf);
+	string str = vec_pro[i].GetName() + ": " + temp;
+	tph.AddBodyHead(str);
+	problem *p = vec_pro[i].GetHead();
+	tph.Span(vec_pro[i].GetName());
+	tph.StartParagraph(vec_pro[i].GetName());
+	for(; p; p = p->next)
+	{
+	    string str = p->fileName;
+	    tph.ConstructBodyLine(str, p->line);
+	}
+	tph.EndParagraph();
+	//tph.Span(vec_pro[i].GetName());
+	str.clear();
+	temp.clear();
+    }
+    tph.EndScript();
+    tph.EndBody();
+    tph.ConstructFooter();
+    tph.Output(of);
+    of.close();
+}   

@@ -1,0 +1,151 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 2012-7-17
+ *      Author: administrator
+ */
+#include <stdio.h>
+#include <dirent.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <string>
+#include <string.h>
+#include <iostream>
+
+#include "core/include/ASTTreeRebuild.h"
+#include "core/include/TreePathWalker.h"
+#include "core/include/AnalyzerManager.h"
+#include "core/include/config.h"
+#include "core/include/ReportManager.h"
+#include "core/include/VarDeclCollector.h"
+#include "core/include/TotalProblem.h"
+#include "core/include/ConfigManager.h"
+
+#include "analyzer/include/DivideByTwosExponentAnalyzer.h"
+#include "analyzer/include/MemApplyAnalyzer.h"
+#include "analyzer/include/StructSizeAnalyzer.h"
+#include "analyzer/include/BadMemOperationCallAnalyzer.h"
+#include "analyzer/include/InitializeArrayByForLoopAnalyzer.h"
+#include "analyzer/include/AssignToConstantAnalyzer.h"
+#include "analyzer/include/MultiplyByTwosExponentAnalyzer.h"
+#include "analyzer/include/GeAndLeCondAnalyzer.h"
+#include "analyzer/include/SqrtAnalyzer.h"
+#include "analyzer/include/RealDivisionAnalyzer.h"
+#include "analyzer/include/GlobalVarSizeAnalyzer.h"
+#include "analyzer/include/BitNotExprAnalyzer.h"
+#include "analyzer/include/ForLoopToZeroAnalyzer.h"
+#include "analyzer/include/ForLoopCombineAnalyzer.h"
+#include "analyzer/include/FunctionCallAnalyzer.h"
+#include "analyzer/include/StringCopyAnalyzer.h"
+#include "analyzer/include/IfToSwitchAnalyzer.h"
+#include "analyzer/include/FunctionAsLoopVarAnalyzer.h"
+#include "analyzer/include/LoopDivideAnalyzer.h"
+#include "analyzer/include/LocalVarSizeAnalyzer.h"
+#include "analyzer/include/FunctionCodeSizeAnalyzer.h"
+
+#include "util/include/TotalProblemHtml.h"
+
+AnalyzerManager &manager = AnalyzerManager::getInstance();
+GTree *globalASTTreePointer;
+
+void analyzerDir(string dirName)
+{
+
+	struct dirent* ent = NULL;
+	 DIR *pDir;
+
+		if (dirName[dirName.size()-1] != '/'){
+			dirName += "/";
+		}
+
+		if ((pDir = opendir(dirName.c_str())) == NULL){
+			cerr << "Can't open Directory " << dirName << endl;
+			return;
+		}
+
+	while (NULL != (ent = readdir(pDir))){
+	  if (ent->d_type == DT_REG){
+	   //file
+	   string functionName(ent->d_name);
+	   if(functionName.find(".") == string::npos){
+	    	  continue;
+	       }
+	   ASTTreeRebuild *functionTree = new ASTTreeRebuild(dirName + functionName);
+	   globalASTTreePointer = functionTree->ASTTreePointer;
+
+	   //cout << functionTree->ASTTreePointer->_getFullFileName() << "----" << functionName << endl;
+
+	   TreePathWalker walker(functionTree->ASTTreePointer);
+	   SrcManager::getInstance().init(functionTree->ASTTreePointer->_getFullFileName());
+	   walker.startTreeWalk();
+	   //todo:change location
+	  // ReportManager::getInstance().flushReportToFileSystem("/home/dandelion/plugin-dev2/run-result/");
+	   manager.clearAnalyzerState();
+	   delete functionTree;
+	   delete globalASTTreePointer;
+		  }
+	  else if (ent->d_type == DT_DIR && strcmp(ent->d_name, ".") != 0 && strcmp(ent->d_name, "..") != 0){
+		  	  	  analyzerDir(dirName + ent->d_name);
+	  	   }
+	  }
+}
+int main()
+{
+	  	Config::GetInstance().Init();
+
+			manager.addAnalyzer(new VarDeclCollector());
+			if(Config::GetInstance().IsOn("DivideByTwosExponentAnalyzer"))
+			    manager.addAnalyzer(new DivideByTwosExponentAnalyzer());
+			if(Config::GetInstance().IsOn("MemApplyAnalyzer"))
+			    manager.addAnalyzer(new MemApplyAnalyzer());
+			if(Config::GetInstance().IsOn("StructSizeAnalyzer"))
+			    manager.addAnalyzer(new StructSizeAnalyzer());
+			if(Config::GetInstance().IsOn("BadMemOperationCallAnalyzer"))
+			    manager.addAnalyzer(new BadMemOperationCallAnalyzer());
+			if(Config::GetInstance().IsOn("AssignToConstantAnalyzer"))
+			    manager.addAnalyzer(new AssignToConstantAnalyzer());
+			if(Config::GetInstance().IsOn("InitializeArrayByForLoopAnalyzer"))
+			    manager.addAnalyzer(new InitializeArrayByForLoopAnalyzer());
+			if(Config::GetInstance().IsOn("MultiplyByTwosExponentAnalyzer"))
+			    manager.addAnalyzer(new MultiplyByTwosExponentAnalyzer());
+			if(Config::GetInstance().IsOn("GeAndLeCondAnalyzer"))
+			    manager.addAnalyzer(new GeAndLeCondAnalyzer());
+			if(Config::GetInstance().IsOn("SqrtAnalyzer"))
+			    manager.addAnalyzer( new SqrtAnalyzer() );
+			if(Config::GetInstance().IsOn("RealDivisionAnalyzer"))
+			    manager.addAnalyzer( new RealDivisionAnalyzer() );
+			if(Config::GetInstance().IsOn("GlobalVarSizeAnalyzer"))
+			    manager.addAnalyzer( new GlobalVarSizeAnalyzer() );
+			if(Config::GetInstance().IsOn("BitNotExprAnalyzer"))
+			    manager.addAnalyzer( new BitNotExprAnalyzer() );
+			if(Config::GetInstance().IsOn("ForLoopToZeroAnalyzer"))
+			    manager.addAnalyzer( new ForLoopToZeroAnalyzer() );
+			if(Config::GetInstance().IsOn("ForLoopCombineAnalyzer"))
+			    manager.addAnalyzer( new ForLoopCombineAnalyzer() );
+			if(Config::GetInstance().IsOn("FunctionCallAnalyzer"))
+			    manager.addAnalyzer( new FunctionCallAnalyzer());
+			if(Config::GetInstance().IsOn("StringCopyAnalyzer"))
+			    manager.addAnalyzer( new StringCopyAnalyzer());
+			if(Config::GetInstance().IsOn("IfToSwitchAnalyzer"))
+			    manager.addAnalyzer( new IfToSwitchAnalyzer());
+			if(Config::GetInstance().IsOn("FunctionAsLoopVarAnalyzer"))
+			    manager.addAnalyzer( new FunctionAsLoopVarAnalyzer());
+			if(Config::GetInstance().IsOn("LoopDivideAnalyzer"))
+			    manager.addAnalyzer(new LoopDivideAnalyzer());
+			if(Config::GetInstance().IsOn("FunctionCodeSizeAnalyzer"))
+			    manager.addAnalyzer(new FunctionCodeSizeAnalyzer());
+			if(Config::GetInstance().IsOn("LocalVarSizeAnalyzer"))
+			    manager.addAnalyzer(new LocalVarSizeAnalyzer());
+
+	 ProblemList::GetInstance().Init();
+
+	 analyzerDir(INPUT_FOLD);
+
+
+	 ReportManager::getInstance().flushReportToFileSystem("/home/dandelion/plugin-dev9.10/plugin-dev2/run-result/");
+	 ProblemList::GetInstance().Print();
+	 ProblemList::GetInstance().OutputHtml();
+}
+
+
+

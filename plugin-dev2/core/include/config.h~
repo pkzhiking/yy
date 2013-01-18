@@ -1,0 +1,14 @@
+/*
+ * config.h
+ *
+ *  Created on: 2012-7-17
+ *      Author: dandelion
+ */
+
+#ifndef CONFIG_H_
+#define CONFIG_H_
+
+
+#define INPUT_FOLD "/root/plugin-dev2/test/"
+
+#endif /* CONFIG_H_ */

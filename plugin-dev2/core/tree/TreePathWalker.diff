@@ -1,0 +1,25 @@
+52a53,67
+> bool
+> TreePathWalker::isTreeCodeValidTrace(const std::string& treeCode)
+> {
+> 	unsigned int treeCodeSize = treeCode.size();
+> 	if(treeCodeSize>4 && (treeCode.substr(treeCodeSize-4)=="decl"
+> 			|| treeCode.substr(treeCodeSize-4)=="list"
+> 			|| treeCode.substr(treeCodeSize-4)=="expr"
+> 			|| treeCode.substr(treeCodeSize-4)=="stmt"
+> 			|| treeCode.substr(treeCodeSize-4)=="type"
+> 			)
+> 	){
+> 		return true;
+> 	}
+> 	return false;
+> }
+70,71c85,89
+< 			mExecuteTracePosMap[*itor] = mWalkerPathContext.size();
+< 			this->mWalkerQueue.push_back(*itor);
+---
+> 			//add another layer of check to reduce path
+> 						if (isTreeCodeValidTrace(mTree->findNodeByIndex(*itor)->getTreeCode())){
+> 							mExecuteTracePosMap[*itor] = mWalkerPathContext.size();
+> 							this->mWalkerQueue.push_back(*itor);
+> 						}
