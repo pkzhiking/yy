@@ -42,15 +42,9 @@ def do_move(src,dest,sid):
 		if(fullpath[-6:]=='c.html'):
 		    new_name = 'c.' + sid + '.html'
 		    new_file = fullpath.replace('(', '\(').replace(')', '\)').replace(' ', '_').replace('c.html', new_name)
-		print "dest: " + dest
-		print "old new file: " + new_file
-		print "src " + src
 		pos = new_file.find(src)
-		print "POS: "
-		print pos
 		new_file = new_file[len(src):]
 		new_file = dest + new_file
-		print 'new_file: ' + new_file
 		move_cmd = 'mv ' + fullpath.replace('(', '\(').replace(')', '\)').replace(' ', '\ ') + ' ' + new_file
 		print 'run command ' + move_cmd
 		os.system(move_cmd)
