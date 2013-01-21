@@ -51,11 +51,19 @@ exec_cp_makefile_cmd = "cp " + makefile_temp_file + " " + makefile_target_file
 print exec_cp_makefile_cmd
 os.system(exec_cp_makefile_cmd)
 
+rm_change_make_file_cmd = "rm " + change_make_file
+print rm_change_make_file_cmd
+os.system(rm_change_make_file_cmd)
+
+rm_makefile_temp_file_cmd = "rm " + makefile_temp_file
+print rm_makefile_temp_file_cmd
+os.system(rm_makefile_temp_file_cmd)
+
 change_config_file = "change_config"
 config_file = "config.h"
 temp_config_file = "temp_config"
-current_dir = os.getcwd()
-current_dir = current_dir.replace('/', '\/')
+cur_dir = os.getcwd()
+current_dir = cur_dir.replace('/', '\/')
 f = open(change_config_file, 'wb')
 change_config_sed = "s/define CURRENT_PROJS_DIR[-\"\ a-zA-Z0-9$\/]*/define CURRENT_PROJS_DIR " + "\"" + current_dir + "\"/g\n" + "s/USER [-\/\ a-zA-Z0-9\"$\t\.]*/USER \"" + user + "\"/g\n" + "s/PASSWORD [-\"\ a-zA-Z0-9$\/]*/PASSWORD \"" + password + "\"/g\n" + "s/DATABASE [-\/\ a-zA-Z0-9\"$\t\.]*/DATABASE \"" + database + "\"/g\n" + "s/IP [\.0-9a-zA-Z\"$\/\ ]*/IP \"" + ip + "\"/g"
 print change_config_sed
@@ -79,6 +87,14 @@ copy_to_plugin_dev2 = "cp config.h plugin-dev2/core/include/"
 print copy_to_plugin_dev2
 os.system(copy_to_plugin_dev2)
 
+rm_change_config_file_cmd = "rm " + change_config_file
+print rm_change_config_file_cmd
+os.system(rm_change_config_file_cmd)
+
+rm_temp_config_file = "rm " + temp_config_file
+print rm_temp_config_file
+os.system(rm_temp_config_file)
+
 exec_py_file = "plugin-dev/exec-plugin-dev.py"
 change_html_target_file = "change_html_target"
 temp_html_target_file = "temp_html"
@@ -95,6 +111,14 @@ exec_cp_html_cmd = "cp " + temp_html_target_file + " " + exec_py_file
 print exec_cp_html_cmd
 os.system(exec_cp_html_cmd)
 
+rm_change_html_file_cmd = "rm " + change_html_target_file
+print rm_change_html_file_cmd
+os.system(rm_change_html_file_cmd)
+
+rm_temp_html_file = "rm " + temp_html_target_file
+print rm_temp_html_file
+os.system(rm_temp_html_file)
+
 run_sh_file = "plugin-dev/run.sh"
 change_run_sh_file = "change_run_sh"
 temp_run_sh = "temp_run_sh"
@@ -109,6 +133,14 @@ os.system(exec_change_run_sh_cmd)
 exec_cp_run_sh_cmd = "cp " + temp_run_sh + " " + run_sh_file
 print exec_cp_run_sh_cmd
 os.system(exec_cp_run_sh_cmd)
+
+rm_change_run_sh_file_cmd = "rm " + change_run_sh_file
+print rm_change_run_sh_file_cmd
+os.system(rm_change_run_sh_file_cmd)
+
+rm_temp_run_sh_cmd = "rm " + temp_run_sh
+print rm_temp_run_sh_cmd
+os.system(rm_temp_run_sh_cmd)
 
 make_cmd = "make"
 os.system(make_cmd)
@@ -137,7 +169,10 @@ create_ln_cmd = "ln -s " + complete_sub_dir + " " + tomcat + "/huawei"
 print create_ln_cmd
 os.system(create_ln_cmd)
 
-current_dir = os.getcwd()
+os.chdir(cur_dir)
+ls_cmd = "ls"
+print ls_cmd
+os.system(ls_cmd)
 config_xml_file = "CPSA_web/WEB-INF/classes/config.xml"
 change_xml_file = "change_xml"
 temp_xml_file = "temp_xml"
@@ -157,3 +192,11 @@ os.system(exec_change_xml_sed_cmd)
 exec_cp_config_xml_cmd = "cp " + temp_xml_file + " " + config_xml_file
 print exec_cp_config_xml_cmd
 os.system(exec_cp_config_xml_cmd)
+
+rm_change_xml_file_cmd = "rm " + change_xml_file
+print rm_change_xml_file_cmd
+os.system(rm_change_xml_file_cmd)
+
+rm_temp_xml_file_cmd = "rm " + temp_xml_file
+print rm_temp_xml_file_cmd
+os.system(rm_temp_xml_file_cmd)

@@ -4,7 +4,7 @@
 #define CURRENT_PROJS_DIR "/root/plugin/yy"
 #define FILES_DIR CURRENT_PROJS_DIR "/plugin-dev-pre/files"
 #define DEFAULT_PROJS_DIR CURRENT_PROJS_DIR "/plugin-dev/test/"
-#define IP "1.1.1.1"
+#define IP "localhost"
 #define INPUT_FOLD CURRENT_PROJS_DIR "/plugin-dev2/test/"
 #define SOURCEFILE_LOCATION CURRENT_PROJS_DIR "/plugin-dev/test/"
 #define REPORT_FOLD CURRENT_PROJS_DIR "/plugin-dev2/run-result/"

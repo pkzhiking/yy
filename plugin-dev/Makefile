@@ -13,7 +13,7 @@ EXE: PLUGIN_OBJECT_FILES plugin.so
 	ls --color
 GCCINSTALL_DIR =/usr/gcc-build
 GCCDOWNLOAD_DIR =/root/Downloads/gcc-4.6.0
-GMPINSTALL_DIR =/root/tomcat/webapps
+GMPINSTALL_DIR =/usr/local/gmp
 TESTDIR = $(PWD)/test
 GCC = $(GCCINSTALL_DIR)/bin/gcc
 STDLIBPATH= $(GCCINSTALL_DIR)/lib
