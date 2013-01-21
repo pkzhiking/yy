@@ -165,6 +165,10 @@ extract_cmd = "jar -xvf " + jar_file
 print extract_cmd
 os.system(extract_cmd)
 
+rm_huawei_cmd = "rm " + tomcat + "/huawei -rf"
+print rm_huawei_cmd
+os.system(rm_huawei_cmd)
+
 create_ln_cmd = "ln -s " + complete_sub_dir + " " + tomcat + "/huawei"
 print create_ln_cmd
 os.system(create_ln_cmd)
