@@ -99,7 +99,7 @@ exec_py_file = "plugin-dev/exec-plugin-dev.py"
 change_html_target_file = "change_html_target"
 temp_html_target_file = "temp_html"
 f = open(change_html_target_file, 'wb')
-change_html_target_sed = "s/html_target_dir =[-\/\"a-zA-Z0-9$\ \.]*/html_target_dir =\"" + tomcat_dir + "\"/g"
+change_html_target_sed = "s/html_target_dir =[-\/\"a-zA-Z0-9$\ \._\_]*/html_target_dir =\"" + tomcat_dir + "\"/g"
 print change_html_target_sed
 f.write(change_html_target_sed)
 f.close()
