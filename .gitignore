@@ -3,3 +3,5 @@ CPSA_web
 *.so
 *~
 *.out
+plugin-dev2/binary
+plugin-dev-pre/main
