@@ -1,0 +1,1261 @@
+/home/damon/Workspace/yy/plugin-dev/test/Compiler Group/tri/test.cpp
+1 statement_list
+mPropertyMap 2
+1
+0
+2
+1
+1
+3
+2 bind_expr
+mPropertyMap 4
+1
+type
+4
+0
+line
+24
+1
+vars
+5
+1
+body
+6
+3 return_expr
+mPropertyMap 2
+1
+type
+4
+1
+expr
+7
+4 void_type
+mPropertyMap 2
+1
+name
+8
+0
+algn
+8
+5 var_decl
+mPropertyMap 7
+1
+name
+9
+1
+type
+10
+1
+scpe
+11
+0
+srcp
+test.cpp:14    
+1
+size
+12
+0
+algn
+64
+0
+used
+1
+6 statement_list
+mPropertyMap 8
+1
+0
+13
+1
+1
+14
+1
+2
+15
+1
+3
+16
+1
+4
+17
+1
+5
+18
+1
+6
+19
+1
+7
+20
+7 init_expr
+mPropertyMap 3
+1
+type
+21
+1
+op 0
+22
+1
+op 1
+23
+8 type_decl
+mPropertyMap 4
+1
+name
+24
+1
+type
+4
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+9 identifier_node
+mPropertyMap 2
+0
+strg
+param
+0
+lngt
+5
+10 real_type
+mPropertyMap 3
+1
+name
+25
+1
+size
+12
+0
+algn
+64
+11 function_decl
+mPropertyMap 6
+1
+name
+26
+1
+type
+27
+1
+scpe
+28
+0
+srcp
+test.cpp:12    
+0
+lang
+C
+0
+link
+extern
+12 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+64
+13 decl_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+5
+14 decl_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+30
+15 cleanup_point_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+31
+16 cleanup_point_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+32
+17 decl_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+33
+18 cleanup_point_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+34
+19 cond_expr
+mPropertyMap 5
+1
+type
+4
+0
+line
+20
+1
+op 0
+35
+1
+op 1
+36
+1
+op 2
+37
+20 return_expr
+mPropertyMap 2
+1
+type
+4
+1
+expr
+38
+21 integer_type
+mPropertyMap 7
+1
+name
+39
+1
+size
+40
+0
+algn
+32
+0
+prec
+32
+0
+sign
+signed
+1
+min
+41
+1
+max
+42
+22 result_decl
+mPropertyMap 6
+1
+type
+21
+1
+scpe
+11
+0
+srcp
+test.cpp:12    
+0
+note
+artificial
+1
+size
+40
+0
+algn
+32
+23 integer_cst
+mPropertyMap 2
+1
+type
+21
+0
+low
+0
+24 identifier_node
+mPropertyMap 2
+0
+strg
+void
+0
+lngt
+4
+25 type_decl
+mPropertyMap 4
+1
+name
+43
+1
+type
+10
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+26 identifier_node
+mPropertyMap 2
+0
+strg
+main
+0
+lngt
+4
+27 function_type
+mPropertyMap 4
+1
+size
+44
+0
+algn
+8
+1
+retn
+21
+1
+prms
+45
+28 translation_unit_decl
+mPropertyMap 0
+29 integer_type
+mPropertyMap 7
+1
+name
+46
+1
+size
+12
+0
+algn
+64
+0
+prec
+64
+0
+sign
+unsigned
+1
+min
+47
+1
+max
+48
+30 var_decl
+mPropertyMap 7
+1
+name
+49
+1
+type
+10
+1
+scpe
+11
+0
+srcp
+test.cpp:14    
+1
+size
+12
+0
+algn
+64
+0
+used
+1
+31 expr_stmt
+mPropertyMap 3
+1
+type
+4
+0
+line
+15
+1
+expr
+50
+32 expr_stmt
+mPropertyMap 3
+1
+type
+4
+0
+line
+16
+1
+expr
+51
+33 var_decl
+mPropertyMap 7
+1
+name
+52
+1
+type
+21
+1
+scpe
+11
+0
+srcp
+test.cpp:18    
+1
+size
+40
+0
+algn
+32
+0
+used
+1
+34 expr_stmt
+mPropertyMap 3
+1
+type
+4
+0
+line
+18
+1
+expr
+53
+35 truth_andif_expr
+mPropertyMap 3
+1
+type
+54
+1
+op 0
+55
+1
+op 1
+56
+36 cleanup_point_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+57
+37 nop_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+58
+38 init_expr
+mPropertyMap 3
+1
+type
+21
+1
+op 0
+22
+1
+op 1
+23
+39 type_decl
+mPropertyMap 4
+1
+name
+59
+1
+type
+21
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+40 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+32
+41 integer_cst
+mPropertyMap 2
+1
+type
+21
+0
+low
+-2147483648
+42 integer_cst
+mPropertyMap 2
+1
+type
+21
+0
+low
+2147483647
+43 identifier_node
+mPropertyMap 2
+0
+strg
+double
+0
+lngt
+6
+44 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+8
+45 tree_list
+mPropertyMap 1
+1
+valu
+4
+46 identifier_node
+mPropertyMap 2
+0
+strg
+bit_size_type
+0
+lngt
+13
+47 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+0
+48 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+-1
+49 identifier_node
+mPropertyMap 2
+0
+strg
+result
+0
+lngt
+6
+50 convert_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+60
+51 convert_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+61
+52 identifier_node
+mPropertyMap 2
+0
+strg
+res
+0
+lngt
+3
+53 convert_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+62
+54 boolean_type
+mPropertyMap 3
+1
+name
+63
+1
+size
+44
+0
+algn
+8
+55 ge_expr
+mPropertyMap 3
+1
+type
+54
+1
+op 0
+64
+1
+op 1
+5
+56 gt_expr
+mPropertyMap 3
+1
+type
+54
+1
+op 0
+65
+1
+op 1
+30
+57 expr_stmt
+mPropertyMap 3
+1
+type
+4
+0
+line
+21
+1
+expr
+66
+58 integer_cst
+mPropertyMap 2
+1
+type
+67
+0
+low
+0
+59 identifier_node
+mPropertyMap 2
+0
+strg
+int
+0
+lngt
+3
+60 modify_expr
+mPropertyMap 3
+1
+type
+10
+1
+op 0
+5
+1
+op 1
+68
+61 modify_expr
+mPropertyMap 3
+1
+type
+10
+1
+op 0
+30
+1
+op 1
+69
+62 init_expr
+mPropertyMap 3
+1
+type
+21
+1
+op 0
+33
+1
+op 1
+70
+63 type_decl
+mPropertyMap 4
+1
+name
+71
+1
+type
+54
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+64 float_expr
+mPropertyMap 2
+1
+type
+10
+1
+op 0
+33
+65 float_expr
+mPropertyMap 2
+1
+type
+10
+1
+op 0
+33
+66 convert_expr
+mPropertyMap 2
+1
+type
+4
+1
+op 0
+72
+67 integer_type
+mPropertyMap 7
+1
+name
+73
+1
+size
+12
+0
+algn
+64
+0
+prec
+64
+0
+sign
+unsigned
+1
+min
+74
+1
+max
+75
+68 real_cst
+mPropertyMap 2
+1
+type
+10
+0
+valu
+3.0e+1
+69 call_expr
+mPropertyMap 3
+1
+type
+10
+1
+fn
+76
+1
+0
+77
+70 call_expr
+mPropertyMap 6
+1
+type
+21
+1
+fn
+78
+1
+0
+79
+1
+1
+80
+1
+2
+81
+1
+3
+82
+71 identifier_node
+mPropertyMap 2
+0
+strg
+bool
+0
+lngt
+4
+72 modify_expr
+mPropertyMap 3
+1
+type
+21
+1
+op 0
+33
+1
+op 1
+83
+73 type_decl
+mPropertyMap 4
+1
+name
+84
+1
+type
+85
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+74 integer_cst
+mPropertyMap 2
+1
+type
+85
+0
+low
+0
+75 integer_cst
+mPropertyMap 2
+1
+type
+67
+0
+low
+-1
+76 addr_expr
+mPropertyMap 2
+1
+type
+86
+1
+op 0
+87
+77 nop_expr
+mPropertyMap 2
+1
+type
+10
+1
+op 0
+88
+78 addr_expr
+mPropertyMap 2
+1
+type
+89
+1
+op 0
+90
+79 integer_cst
+mPropertyMap 2
+1
+type
+21
+0
+low
+1
+80 integer_cst
+mPropertyMap 2
+1
+type
+21
+0
+low
+2
+81 integer_cst
+mPropertyMap 2
+1
+type
+21
+0
+low
+3
+82 integer_cst
+mPropertyMap 2
+1
+type
+21
+0
+low
+4
+83 plus_expr
+mPropertyMap 3
+1
+type
+21
+1
+op 0
+33
+1
+op 1
+79
+84 identifier_node
+mPropertyMap 2
+0
+strg
+long unsigned int
+0
+lngt
+17
+85 integer_type
+mPropertyMap 7
+1
+name
+73
+1
+size
+12
+0
+algn
+64
+0
+prec
+64
+0
+sign
+unsigned
+1
+min
+74
+1
+max
+91
+86 pointer_type
+mPropertyMap 3
+1
+size
+12
+0
+algn
+64
+1
+ptd
+92
+87 function_decl
+mPropertyMap 8
+1
+name
+93
+1
+type
+92
+1
+scpe
+28
+0
+srcp
+mathcalls.h:66    
+0
+lang
+C
+1
+args
+94
+0
+body
+undefined
+0
+link
+extern
+88 nop_expr
+mPropertyMap 2
+1
+type
+95
+1
+op 0
+96
+89 pointer_type
+mPropertyMap 3
+1
+size
+12
+0
+algn
+64
+1
+ptd
+97
+90 function_decl
+mPropertyMap 6
+1
+name
+98
+1
+type
+97
+1
+scpe
+28
+0
+srcp
+test.cpp:7     
+1
+args
+99
+0
+link
+extern
+91 integer_cst
+mPropertyMap 2
+1
+type
+85
+0
+low
+-1
+92 function_type
+mPropertyMap 5
+1
+unql
+100
+1
+size
+44
+0
+algn
+8
+1
+retn
+10
+1
+prms
+101
+93 identifier_node
+mPropertyMap 2
+0
+strg
+sin
+0
+lngt
+3
+94 parm_decl
+mPropertyMap 9
+1
+name
+102
+1
+type
+10
+1
+scpe
+87
+0
+srcp
+mathcalls.h:66    
+0
+lang
+C
+1
+argt
+10
+1
+size
+12
+0
+algn
+64
+0
+used
+0
+95 real_type
+mPropertyMap 3
+1
+name
+103
+1
+size
+40
+0
+algn
+32
+96 rdiv_expr
+mPropertyMap 3
+1
+type
+10
+1
+op 0
+104
+1
+op 1
+105
+97 function_type
+mPropertyMap 4
+1
+size
+44
+0
+algn
+8
+1
+retn
+21
+1
+prms
+106
+98 identifier_node
+mPropertyMap 2
+0
+strg
+myadd
+0
+lngt
+5
+99 parm_decl
+mPropertyMap 8
+1
+name
+107
+1
+type
+21
+1
+scpe
+90
+0
+srcp
+test.cpp:7     
+1
+argt
+21
+1
+size
+40
+0
+algn
+32
+0
+used
+1
+100 function_type
+mPropertyMap 4
+1
+size
+44
+0
+algn
+8
+1
+retn
+10
+1
+prms
+101
+101 tree_list
+mPropertyMap 2
+1
+valu
+10
+1
+chan
+45
+102 identifier_node
+mPropertyMap 2
+0
+strg
+__x
+0
+lngt
+3
+103 type_decl
+mPropertyMap 4
+1
+name
+108
+1
+type
+95
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+104 mult_expr
+mPropertyMap 3
+1
+type
+10
+1
+op 0
+5
+1
+op 1
+109
+105 real_cst
+mPropertyMap 2
+1
+type
+10
+0
+valu
+1.8e+2
+106 tree_list
+mPropertyMap 2
+1
+valu
+21
+1
+chan
+110
+107 identifier_node
+mPropertyMap 2
+0
+strg
+num1
+0
+lngt
+4
+108 identifier_node
+mPropertyMap 2
+0
+strg
+float
+0
+lngt
+5
+109 real_cst
+mPropertyMap 2
+1
+type
+10
+0
+valu
+3.1415926500000002086210316e+0
+110 tree_list
+mPropertyMap 2
+1
+valu
+21
+1
+chan
+111
+111 tree_list
+mPropertyMap 2
+1
+valu
+21
+1
+chan
+112
+112 tree_list
+mPropertyMap 2
+1
+valu
+21
+1
+chan
+45
+1313050426

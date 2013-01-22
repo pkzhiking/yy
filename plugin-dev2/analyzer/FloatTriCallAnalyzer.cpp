@@ -21,6 +21,7 @@ FloatTriCallAnalyzer::~FloatTriCallAnalyzer()
     void
 FloatTriCallAnalyzer::analyzeNode(GNode* node,const vector<int>& context)
 {
+    std::cout<< "This is FloatTriCallAnalyzer!!!" << endl;
     string calledFunction = NodeProcessor::getFunctionCallName(node);
     if(0 == calledFunction.compare("sin") || 0 == calledFunction.compare("cos") || 0 == calledFunction.compare("tan")){
         GNode* node1 = NodeProcessor::getFieldNode(node, "0");

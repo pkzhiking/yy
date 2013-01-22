@@ -18,7 +18,7 @@
 FunctionParameterAnalyzer::FunctionParameterAnalyzer() {
     setAnalyzerNodeType("parm_decl");
     setAnalyzerNodeType("function_decl");
-    threshold = 1;
+    threshold = 2;
     fun_decl_line_num = 0;
 }
 
@@ -28,6 +28,7 @@ FunctionParameterAnalyzer::~FunctionParameterAnalyzer() {
 
 void FunctionParameterAnalyzer::analyzeNode(GNode *node,
                                             const vector<int> &context) {
+    std::cout << "This is FunctionParameterAnalyzer!!!" << endl;
     function_name = globalASTTreePointer->_getFunctionName();
     if(NodeProcessor::isFunctionDecl(node)){
         string tmp_str = NodeProcessor::getFieldStr(node, "srcp");
@@ -65,7 +66,7 @@ void FunctionParameterAnalyzer::finishAnalyze() {
 }
 void FunctionParameterAnalyzer::clearAnalyzerState(){
     cout << "clear function:" << function_name << endl;
-    threshold = 1;
+    threshold = 2;
     function_name = "";
     fun_decl_line_num = 0;
     params.clear();

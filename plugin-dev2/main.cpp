@@ -63,56 +63,56 @@ GTree *globalASTTreePointer;
 void analyzerDir(string dirName)
 {
 
-	struct dirent* ent = NULL;
-	 DIR *pDir;
+    struct dirent* ent = NULL;
+    DIR *pDir;
 
-		if (dirName[dirName.size()-1] != '/'){
-			dirName += "/";
-		}
+    if (dirName[dirName.size()-1] != '/'){
+        dirName += "/";
+    }
 
-		if ((pDir = opendir(dirName.c_str())) == NULL){
-			cerr << "Can't open Directory " << dirName << endl;
-			return;
-		}
+    if ((pDir = opendir(dirName.c_str())) == NULL){
+        cerr << "Can't open Directory " << dirName << endl;
+        return;
+    }
 
-	while (NULL != (ent = readdir(pDir))){
-	  struct stat buf;
-	  string current_file;
-	  current_file = dirName + ent->d_name;
-	  if (lstat(current_file.c_str(), &buf) < 0)
-	  {
-	      cout << "error reading dir." << endl;
-	      continue;
-	  }
-	  if(S_ISREG(buf.st_mode)){
-	   //file
-	   string functionName(ent->d_name);
-	   if(functionName.find(".") == string::npos){
-	    	  continue;
-	       }
-	   ASTTreeRebuild *functionTree = new ASTTreeRebuild(dirName + functionName);
-	   globalASTTreePointer = functionTree->ASTTreePointer;
+    while (NULL != (ent = readdir(pDir))){
+        struct stat buf;
+        string current_file;
+        current_file = dirName + ent->d_name;
+        if (lstat(current_file.c_str(), &buf) < 0)
+        {
+            cout << "error reading dir." << endl;
+            continue;
+        }
+        if(S_ISREG(buf.st_mode)){
+            //file
+            string functionName(ent->d_name);
+            if(functionName.find(".") == string::npos){
+                continue;
+            }
+            ASTTreeRebuild *functionTree = new ASTTreeRebuild(dirName + functionName);
+            globalASTTreePointer = functionTree->ASTTreePointer;
 
-	   //cout << functionTree->ASTTreePointer->_getFullFileName() << "----" << functionName << endl;
+            //cout << functionTree->ASTTreePointer->_getFullFileName() << "----" << functionName << endl;
 
-	   TreePathWalker walker(functionTree->ASTTreePointer);
-	   SrcManager::getInstance().init(functionTree->ASTTreePointer->_getFullFileName());
-	   walker.startTreeWalk();
-	   //todo:change location
-	  // ReportManager::getInstance().flushReportToFileSystem("/home/dandelion/plugin-dev2/run-result/");
-	   manager.clearAnalyzerState();
+            TreePathWalker walker(functionTree->ASTTreePointer);
+            SrcManager::getInstance().init(functionTree->ASTTreePointer->_getFullFileName());
+            walker.startTreeWalk();
+            //todo:change location
+            // ReportManager::getInstance().flushReportToFileSystem("/home/dandelion/plugin-dev2/run-result/");
+            manager.clearAnalyzerState();
 
 
-           if(Config::GetInstance().IsOn("FindSameFunctionAnalyzer"))
-	       FindSameFunctionAnalyzer::getInstance().globalAnalyze(functionTree->ASTTreePointer->_getHashCode(), dirName + functionName);
+            if(Config::GetInstance().IsOn("FindSameFunctionAnalyzer"))
+                FindSameFunctionAnalyzer::getInstance().globalAnalyze(functionTree->ASTTreePointer->_getHashCode(), dirName + functionName);
 
-	   delete functionTree;
-	   delete globalASTTreePointer;
-		  }
-	  else if (S_ISDIR(buf.st_mode) && strcmp(ent->d_name, ".") != 0 && strcmp(ent->d_name, "..") != 0){
-		  	  	  analyzerDir(dirName + ent->d_name);
-	  	   }
-	  }
+            delete functionTree;
+            delete globalASTTreePointer;
+        }
+        else if (S_ISDIR(buf.st_mode) && strcmp(ent->d_name, ".") != 0 && strcmp(ent->d_name, "..") != 0){
+            analyzerDir(dirName + ent->d_name);
+        }
+    }
 }
 
 //initialize analyzer table through looking up database
@@ -126,8 +126,8 @@ void initWebAnalyzer(map<string, bool> &map_WebAnalyzerOn, int iSid)
 
     mysql_init(&mysql);
     if(!mysql_real_connect(&mysql, IP, USER, PASSWORD, DATABASE, 3306, NULL, 0)){
-	cout << "Error connecting database: " << mysql_error(&mysql) << endl;
-	return;
+        cout << "Error connecting database: " << mysql_error(&mysql) << endl;
+        return;
     }
     cout << "Connected..." << endl;
 
@@ -157,13 +157,13 @@ void initWebAnalyzer(map<string, bool> &map_WebAnalyzerOn, int iSid)
     int i = 0;
     while( row = mysql_fetch_row(res))
     {
-	string strAnalyzer = row[0];
-	map_WebAnalyzerOn.insert(map<string, bool>::value_type(strAnalyzer, (bool) (strTemp[i++] - '0') ));
+        string strAnalyzer = row[0];
+        map_WebAnalyzerOn.insert(map<string, bool>::value_type(strAnalyzer, (bool) (strTemp[i++] - '0') ));
     }
 
     for(map<string, bool>::iterator iter = map_WebAnalyzerOn.begin(); iter != map_WebAnalyzerOn.end(); iter++)
     {
-	cout << iter->first << " On:" << iter->second << endl;
+        cout << iter->first << " On:" << iter->second << endl;
     }
 
     mysql_free_result(res);
@@ -174,190 +174,188 @@ int main(int argc, char **argv)
 {
     if(argc < 2)
     {
-	cout << "please cin sid" << endl;
-	return -1;
+        cout << "please cin sid" << endl;
+        return -1;
     }
     map<string, bool> map_WebAnalyzerOn;
     initWebAnalyzer(map_WebAnalyzerOn, Util::stringToInt(argv[1]));
-	  	Config::GetInstance().Init();
-			
-			//manager.addAnalyzer(new VarDeclCollector());
-			map<string, bool>::iterator iter;
-			bool status = 0;
-			iter = map_WebAnalyzerOn.find("DivideByTwosExponentAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("DivideByTwosExponentAnalyzer") && status)
-			    manager.addAnalyzer(new DivideByTwosExponentAnalyzer());
+    Config::GetInstance().Init();
 
-			iter = map_WebAnalyzerOn.find("MemApplyAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("MemApplyAnalyzer") && status)
-			    manager.addAnalyzer(new MemApplyAnalyzer());
+    //manager.addAnalyzer(new VarDeclCollector());
+    map<string, bool>::iterator iter;
+    bool status = 0;
+    iter = map_WebAnalyzerOn.find("DivideByTwosExponentAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("DivideByTwosExponentAnalyzer") && status)
+        manager.addAnalyzer(new DivideByTwosExponentAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("StructSizeAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("StructSizeAnalyzer") && status)
-			    manager.addAnalyzer(new StructSizeAnalyzer());
+    iter = map_WebAnalyzerOn.find("MemApplyAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("MemApplyAnalyzer") && status)
+        manager.addAnalyzer(new MemApplyAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("BadMemOperationCallAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("BadMemOperationCallAnalyzer") && status)
-			    manager.addAnalyzer(new BadMemOperationCallAnalyzer());
+    iter = map_WebAnalyzerOn.find("StructSizeAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("StructSizeAnalyzer") && status)
+        manager.addAnalyzer(new StructSizeAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("AssignToConstantAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("AssignToConstantAnalyzer") && status)
-			    manager.addAnalyzer(new AssignToConstantAnalyzer());
+    iter = map_WebAnalyzerOn.find("BadMemOperationCallAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("BadMemOperationCallAnalyzer") && status)
+        manager.addAnalyzer(new BadMemOperationCallAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("InitializeArrayByForLoopAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("InitializeArrayByForLoopAnalyzer") && status)
-			    manager.addAnalyzer(new InitializeArrayByForLoopAnalyzer());
+    iter = map_WebAnalyzerOn.find("AssignToConstantAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("AssignToConstantAnalyzer") && status)
+        manager.addAnalyzer(new AssignToConstantAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("MultiplyByTwosExponentAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("MultiplyByTwosExponentAnalyzer") && status)
-			    manager.addAnalyzer(new MultiplyByTwosExponentAnalyzer());
+    iter = map_WebAnalyzerOn.find("InitializeArrayByForLoopAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("InitializeArrayByForLoopAnalyzer") && status)
+        manager.addAnalyzer(new InitializeArrayByForLoopAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("GeAnaLeCondAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("GeAndLeCondAnalyzer") && status)
-			    manager.addAnalyzer(new GeAndLeCondAnalyzer());
+    iter = map_WebAnalyzerOn.find("MultiplyByTwosExponentAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("MultiplyByTwosExponentAnalyzer") && status)
+        manager.addAnalyzer(new MultiplyByTwosExponentAnalyzer());
+
+    iter = map_WebAnalyzerOn.find("GeAnaLeCondAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("GeAndLeCondAnalyzer") && status)
+        manager.addAnalyzer(new GeAndLeCondAnalyzer());
 
 #if 1
-			iter = map_WebAnalyzerOn.find("SqrtAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("SqrtAnalyzer") && status)
-			    manager.addAnalyzer( new SqrtAnalyzer() );
+    iter = map_WebAnalyzerOn.find("SqrtAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("SqrtAnalyzer") && status)
+        manager.addAnalyzer( new SqrtAnalyzer() );
 #endif
 
-			iter = map_WebAnalyzerOn.find("RealDivisionAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("RealDivisionAnalyzer") && status)
-			    manager.addAnalyzer( new RealDivisionAnalyzer() );
+    iter = map_WebAnalyzerOn.find("RealDivisionAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("RealDivisionAnalyzer") && status)
+        manager.addAnalyzer( new RealDivisionAnalyzer() );
 
-			iter = map_WebAnalyzerOn.find("GlobalVarSizeAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("GlobalVarSizeAnalyzer") && status)
-			    manager.addAnalyzer( new GlobalVarSizeAnalyzer() );
+    iter = map_WebAnalyzerOn.find("GlobalVarSizeAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("GlobalVarSizeAnalyzer") && status)
+        manager.addAnalyzer( new GlobalVarSizeAnalyzer() );
 
-			iter = map_WebAnalyzerOn.find("BitNotExprAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("BitNotExprAnalyzer") && status)
-			    manager.addAnalyzer( new BitNotExprAnalyzer() );
+    iter = map_WebAnalyzerOn.find("BitNotExprAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("BitNotExprAnalyzer") && status)
+        manager.addAnalyzer( new BitNotExprAnalyzer() );
 
-			iter = map_WebAnalyzerOn.find("ForLoopToZeroAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("ForLoopToZeroAnalyzer") && status)
-			    manager.addAnalyzer( new ForLoopToZeroAnalyzer() );
+    iter = map_WebAnalyzerOn.find("ForLoopToZeroAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("ForLoopToZeroAnalyzer") && status)
+        manager.addAnalyzer( new ForLoopToZeroAnalyzer() );
 
-			iter = map_WebAnalyzerOn.find("ForLoopCombineAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("ForLoopCombineAnalyzer") && status)
-			    manager.addAnalyzer( new ForLoopCombineAnalyzer() );
+    iter = map_WebAnalyzerOn.find("ForLoopCombineAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("ForLoopCombineAnalyzer") && status)
+        manager.addAnalyzer( new ForLoopCombineAnalyzer() );
 
-			iter = map_WebAnalyzerOn.find("FunctionCallAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("FunctionCallAnalyzer") && status)
-			    manager.addAnalyzer( new FunctionCallAnalyzer());
+    iter = map_WebAnalyzerOn.find("FunctionCallAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("FunctionCallAnalyzer") && status)
+        manager.addAnalyzer( new FunctionCallAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("StringCopyAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("StringCopyAnalyzer")  && status)
-			    manager.addAnalyzer( new StringCopyAnalyzer());
+    iter = map_WebAnalyzerOn.find("StringCopyAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("StringCopyAnalyzer")  && status)
+        manager.addAnalyzer( new StringCopyAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("IfToSwitchAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("IfToSwitchAnalyzer") && status)
-			    manager.addAnalyzer( new IfToSwitchAnalyzer());
+    iter = map_WebAnalyzerOn.find("IfToSwitchAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("IfToSwitchAnalyzer") && status)
+        manager.addAnalyzer( new IfToSwitchAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("FunctionAsLoopVarAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("FunctionAsLoopVarAnalyzer") && status)
-			    manager.addAnalyzer( new FunctionAsLoopVarAnalyzer());
+    iter = map_WebAnalyzerOn.find("FunctionAsLoopVarAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("FunctionAsLoopVarAnalyzer") && status)
+        manager.addAnalyzer( new FunctionAsLoopVarAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("LoopDivideAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("LoopDivideAnalyzer") && status)
-			    manager.addAnalyzer(new LoopDivideAnalyzer());
+    iter = map_WebAnalyzerOn.find("LoopDivideAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("LoopDivideAnalyzer") && status)
+        manager.addAnalyzer(new LoopDivideAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("FunctionCodeSizeAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("FunctionCodeSizeAnalyzer") && status)
-			    manager.addAnalyzer(new FunctionCodeSizeAnalyzer());
+    iter = map_WebAnalyzerOn.find("FunctionCodeSizeAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("FunctionCodeSizeAnalyzer") && status)
+        manager.addAnalyzer(new FunctionCodeSizeAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("LocalVarSizeAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("LocalVarSizeAnalyzer") && status)
-			    manager.addAnalyzer(new LocalVarSizeAnalyzer());
+    iter = map_WebAnalyzerOn.find("LocalVarSizeAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("LocalVarSizeAnalyzer") && status)
+        manager.addAnalyzer(new LocalVarSizeAnalyzer());
 #if 1
-			iter = map_WebAnalyzerOn.find("IfToIfelseAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("IfToIfelseAnalyzer") && status)
-			    manager.addAnalyzer(new IfToIfelseAnalyzer());
+    iter = map_WebAnalyzerOn.find("IfToIfelseAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("IfToIfelseAnalyzer") && status)
+        manager.addAnalyzer(new IfToIfelseAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("ReducibleIfAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("ReducibleIfAnalyzer") && status)
-			    manager.addAnalyzer(new ReducibleIfAnalyzer());
+    iter = map_WebAnalyzerOn.find("ReducibleIfAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("ReducibleIfAnalyzer") && status)
+        manager.addAnalyzer(new ReducibleIfAnalyzer());
 #endif
 
-			iter = map_WebAnalyzerOn.find("ConditionInLoopAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("ConditionInLoopAnalyzer") && status)
-			    manager.addAnalyzer(new ConditionInLoopAnalyzer());
-#if 0
-			iter = map_WebAnalyzerOn.find("FloatTriCallAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("FloatTriCallAnalyzer") && status)
-			    manager.addAnalyzer(new FloatTriCallAnalyzer());
+    iter = map_WebAnalyzerOn.find("ConditionInLoopAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("ConditionInLoopAnalyzer") && status)
+        manager.addAnalyzer(new ConditionInLoopAnalyzer());
+    iter = map_WebAnalyzerOn.find("FloatTriCallAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("FloatTriCallAnalyzer") && status)
+        manager.addAnalyzer(new FloatTriCallAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("FunctionParameterAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("FunctionParameterAnalyzer") && status)
-			    manager.addAnalyzer(new FunctionParameterAnalyzer());
+    iter = map_WebAnalyzerOn.find("FunctionParameterAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("FunctionParameterAnalyzer") && status)
+        manager.addAnalyzer(new FunctionParameterAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("MultiConditionAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("MultiConditionAnalyzer") && status)
-			    manager.addAnalyzer(new MultiConditionAnalyzer());
-#endif
+    iter = map_WebAnalyzerOn.find("MultiConditionAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("MultiConditionAnalyzer") && status)
+        manager.addAnalyzer(new MultiConditionAnalyzer());
 
-			iter = map_WebAnalyzerOn.find("StructPrmsAnalyzer");
-			status = iter->second;
-			if(Config::GetInstance().IsOn("StructPrmsAnalyzer") && status)
-			    manager.addAnalyzer(new StructPrmsAnalyzer());
-			//if(Config::GetInstance().IsOn("FindSameFunctionAnalyzer"))
+    iter = map_WebAnalyzerOn.find("StructPrmsAnalyzer");
+    status = iter->second;
+    if(Config::GetInstance().IsOn("StructPrmsAnalyzer") && status)
+        manager.addAnalyzer(new StructPrmsAnalyzer());
+    //if(Config::GetInstance().IsOn("FindSameFunctionAnalyzer"))
 
-			
-			//manager.addAnalyzer(new CalcMemAnalyzer());
 
-	 ProblemList::GetInstance().Init();
+    //manager.addAnalyzer(new CalcMemAnalyzer());
 
-	 analyzerDir(INPUT_FOLD);
-	 
+    ProblemList::GetInstance().Init();
 
-	 ReportManager::getInstance().flushReportToFileSystem(REPORT_FOLD);
+    analyzerDir(INPUT_FOLD);
 
-	 ProblemList::GetInstance().DeduceProjName(Util::stringToInt(argv[1]));
 
-	 ProblemList::GetInstance().Print();
+    ReportManager::getInstance().flushReportToFileSystem(REPORT_FOLD);
 
-	 cout << "	AMENDRELATIVENAME	" << endl;
-	 ProblemList::GetInstance().AmendRelativeName();
-	 cout << "	print after amending	    " << endl;
-	 ProblemList::GetInstance().Print();
+    ProblemList::GetInstance().DeduceProjName(Util::stringToInt(argv[1]));
 
-	 ProblemList::GetInstance().PrintCommonDir();
-	 ProblemList::GetInstance().PrintCommonDirForDirs();
-	 //ProblemList::GetInstance().Print();
+    ProblemList::GetInstance().Print();
+
+    cout << "	AMENDRELATIVENAME	" << endl;
+    ProblemList::GetInstance().AmendRelativeName();
+    cout << "	print after amending	    " << endl;
+    ProblemList::GetInstance().Print();
+
+    ProblemList::GetInstance().PrintCommonDir();
+    ProblemList::GetInstance().PrintCommonDirForDirs();
+    //ProblemList::GetInstance().Print();
 #if 1
-	 ProblemList::GetInstance().OutputHtml();
-	 ProblemList::GetInstance().CalcDirPro();
-	 ProblemList::GetInstance().CalcFilePro();
-	 ProblemList::GetInstance().ReportFileProToDB(Util::stringToInt(argv[1]));
-	 ProblemList::GetInstance().ReportAnalyzerProToDB(Util::stringToInt(argv[1]));
-	 return 1;
+    ProblemList::GetInstance().OutputHtml();
+    ProblemList::GetInstance().CalcDirPro();
+    ProblemList::GetInstance().CalcFilePro();
+    ProblemList::GetInstance().ReportFileProToDB(Util::stringToInt(argv[1]));
+    ProblemList::GetInstance().ReportAnalyzerProToDB(Util::stringToInt(argv[1]));
+    return 1;
 #endif
 }
 

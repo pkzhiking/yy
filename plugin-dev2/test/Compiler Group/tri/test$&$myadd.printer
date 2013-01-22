@@ -1,0 +1,453 @@
+/home/damon/Workspace/yy/plugin-dev/test/Compiler Group/tri/test.cpp
+1 return_expr
+mPropertyMap 2
+1
+type
+2
+1
+expr
+3
+2 void_type
+mPropertyMap 2
+1
+name
+4
+0
+algn
+8
+3 init_expr
+mPropertyMap 3
+1
+type
+5
+1
+op 0
+6
+1
+op 1
+7
+4 type_decl
+mPropertyMap 4
+1
+name
+8
+1
+type
+2
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+5 integer_type
+mPropertyMap 7
+1
+name
+9
+1
+size
+10
+0
+algn
+32
+0
+prec
+32
+0
+sign
+signed
+1
+min
+11
+1
+max
+12
+6 result_decl
+mPropertyMap 6
+1
+type
+5
+1
+scpe
+13
+0
+srcp
+test.cpp:7     
+0
+note
+artificial
+1
+size
+10
+0
+algn
+32
+7 plus_expr
+mPropertyMap 3
+1
+type
+5
+1
+op 0
+14
+1
+op 1
+15
+8 identifier_node
+mPropertyMap 2
+0
+strg
+void
+0
+lngt
+4
+9 type_decl
+mPropertyMap 4
+1
+name
+16
+1
+type
+5
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+10 integer_cst
+mPropertyMap 2
+1
+type
+17
+0
+low
+32
+11 integer_cst
+mPropertyMap 2
+1
+type
+5
+0
+low
+-2147483648
+12 integer_cst
+mPropertyMap 2
+1
+type
+5
+0
+low
+2147483647
+13 function_decl
+mPropertyMap 6
+1
+name
+18
+1
+type
+19
+1
+scpe
+20
+0
+srcp
+test.cpp:7     
+1
+args
+21
+0
+link
+extern
+14 plus_expr
+mPropertyMap 3
+1
+type
+5
+1
+op 0
+22
+1
+op 1
+23
+15 parm_decl
+mPropertyMap 8
+1
+name
+24
+1
+type
+5
+1
+scpe
+13
+0
+srcp
+test.cpp:7     
+1
+argt
+5
+1
+size
+10
+0
+algn
+32
+0
+used
+1
+16 identifier_node
+mPropertyMap 2
+0
+strg
+int
+0
+lngt
+3
+17 integer_type
+mPropertyMap 7
+1
+name
+25
+1
+size
+26
+0
+algn
+64
+0
+prec
+64
+0
+sign
+unsigned
+1
+min
+27
+1
+max
+28
+18 identifier_node
+mPropertyMap 2
+0
+strg
+myadd
+0
+lngt
+5
+19 function_type
+mPropertyMap 4
+1
+size
+29
+0
+algn
+8
+1
+retn
+5
+1
+prms
+30
+20 translation_unit_decl
+mPropertyMap 0
+21 parm_decl
+mPropertyMap 8
+1
+name
+31
+1
+type
+5
+1
+scpe
+13
+0
+srcp
+test.cpp:7     
+1
+argt
+5
+1
+size
+10
+0
+algn
+32
+0
+used
+1
+22 plus_expr
+mPropertyMap 3
+1
+type
+5
+1
+op 0
+21
+1
+op 1
+32
+23 parm_decl
+mPropertyMap 8
+1
+name
+33
+1
+type
+5
+1
+scpe
+13
+0
+srcp
+test.cpp:7     
+1
+argt
+5
+1
+size
+10
+0
+algn
+32
+0
+used
+1
+24 identifier_node
+mPropertyMap 2
+0
+strg
+num4
+0
+lngt
+4
+25 identifier_node
+mPropertyMap 2
+0
+strg
+bit_size_type
+0
+lngt
+13
+26 integer_cst
+mPropertyMap 2
+1
+type
+17
+0
+low
+64
+27 integer_cst
+mPropertyMap 2
+1
+type
+17
+0
+low
+0
+28 integer_cst
+mPropertyMap 2
+1
+type
+17
+0
+low
+-1
+29 integer_cst
+mPropertyMap 2
+1
+type
+17
+0
+low
+8
+30 tree_list
+mPropertyMap 2
+1
+valu
+5
+1
+chan
+34
+31 identifier_node
+mPropertyMap 2
+0
+strg
+num1
+0
+lngt
+4
+32 parm_decl
+mPropertyMap 8
+1
+name
+35
+1
+type
+5
+1
+scpe
+13
+0
+srcp
+test.cpp:7     
+1
+argt
+5
+1
+size
+10
+0
+algn
+32
+0
+used
+1
+33 identifier_node
+mPropertyMap 2
+0
+strg
+num3
+0
+lngt
+4
+34 tree_list
+mPropertyMap 2
+1
+valu
+5
+1
+chan
+36
+35 identifier_node
+mPropertyMap 2
+0
+strg
+num2
+0
+lngt
+4
+36 tree_list
+mPropertyMap 2
+1
+valu
+5
+1
+chan
+37
+37 tree_list
+mPropertyMap 2
+1
+valu
+5
+1
+chan
+38
+38 tree_list
+mPropertyMap 1
+1
+valu
+2
+1919032681
