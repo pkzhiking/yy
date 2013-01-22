@@ -1,0 +1,1 @@
+[analyze][01-22 22:04:53][1][FloatTriCallAnalyzer]msg:The trigonometric function sin can be replaced with a float one like sinf for the parameter is a float type variable /home/damon/Workspace/yy/plugin-dev/test/Compiler Group/tri/test.cpp:16 	result = sin((float)(param * PI / 180));
