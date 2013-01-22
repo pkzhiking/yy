@@ -169,10 +169,6 @@ rm_huawei_cmd = "rm " + tomcat + "/huawei -rf"
 print rm_huawei_cmd
 os.system(rm_huawei_cmd)
 
-create_ln_cmd = "ln -s " + complete_sub_dir + " " + tomcat + "/huawei"
-print create_ln_cmd
-os.system(create_ln_cmd)
-
 os.chdir(cur_dir)
 ls_cmd = "ls"
 print ls_cmd
@@ -189,6 +185,10 @@ f = open(change_xml_file, 'wb')
 change_config_xml_sed = "s/ip\">[.0-9]*/ip\">" + ip + "/g\n" + "s/database_schema\">[^<]*/database_schema\">" + database + "/g\n"+ "s/db_user\">[^<]*/db_user\">" + user + "/g\n" + "s/db_password\">[^<]*/db_password\">" + password + "/g\n" + "s/test_path\">[^<]*/test_path\">" + test_path + "/g\n" + "s/run_path\">[^<]*/run_path\">" + run_sh_path + "/g\n" + "s/site_url\">[^<]*/site_url\">" + ip + ":8080\/huawei" + "/g"
 f.write(change_config_xml_sed)
 f.close()
+
+create_ln_cmd = "ln -s " + complete_sub_dir + " " + tomcat + "/huawei"
+print create_ln_cmd
+os.system(create_ln_cmd)
 
 exec_change_xml_sed_cmd = "sed -f " + change_xml_file + " " + config_xml_file + " > "  + temp_xml_file
 print exec_change_xml_sed_cmd

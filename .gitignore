@@ -1,4 +1,5 @@
 CPSA_web
 *.[oa]
+*.so
 *~
 *.out
