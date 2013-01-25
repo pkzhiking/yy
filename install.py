@@ -2,31 +2,63 @@ import os
 import sys
 import getpass
 
-print "please input gcc install dir"
-gcc_install_dir = raw_input()
+print "use last configure, yes or no?"
+use_last_config = raw_input()
 
-print "please input downloaded gcc dir"
-gcc_dl_dir = raw_input()
+#if the configure is changed, configure it again, and store the configure into file ".default_config"
+if("no" == use_last_config): 
+    print "please input gcc install dir"
+    gcc_install_dir = raw_input()
 
-print "please input gmp install dir"
-gmp_install_dir = raw_input()
+    print "please input downloaded gcc dir"
+    gcc_dl_dir = raw_input()
 
-print "please input tomcat dir"
-tomcat = raw_input()
+    print "please input gmp install dir"
+    gmp_install_dir = raw_input()
 
-print "please input the database server ip address"
-ip = raw_input()
+    print "please input tomcat dir"
+    tomcat = raw_input()
 
-print ip
+    print "please input the database server ip address"
+    ip = raw_input()
 
-print "please input mysql user name"
-user = raw_input()
+    print ip
 
-print "please input password of user"
-password = getpass.getpass()
+    print "please input mysql user name"
+    user = raw_input()
 
-print "please input related database name"
-database = raw_input()
+    print "please input password of user"
+    password = getpass.getpass()
+
+    print "please input related database name"
+    database = raw_input()
+    f = open(".default_config", 'wb')
+    str = gcc_install_dir + "\n" + gcc_dl_dir + "\n" + gmp_install_dir + "\n" + tomcat + "\n" + ip + "\n" + user + "\n" + password + "\n" + database
+    f.write(str)
+    f.close()
+    pass
+
+#if configure is not changed since last time, use the default config from file ".default_config"
+else:
+    f = open(".default_config", 'r')
+    gcc_install_dir = f.readline()
+    gcc_install_dir = gcc_install_dir.rstrip('\n')
+    gcc_dl_dir = f.readline()
+    gcc_dl_dir = gcc_dl_dir.rstrip('\n')
+    gmp_install_dir = f.readline()
+    gmp_install_dir = gmp_install_dir.rstrip('\n')
+    tomcat = f.readline()
+    tomcat = tomcat.rstrip('\n')
+    ip = f.readline()
+    ip = ip.rstrip('\n')
+    user = f.readline()
+    user = user.rstrip('\n')
+    password = f.readline()
+    password = password.rstrip('\n')
+    database = f.readline()
+    database = password.rstrip('\n')
+    f.close()
+    pass
 
 tomcat_dir = tomcat.replace('/', '\/')
 
@@ -95,6 +127,7 @@ rm_temp_config_file = "rm " + temp_config_file
 print rm_temp_config_file
 os.system(rm_temp_config_file)
 
+tomcat_dir = tomcat_dir + "\/webapps"
 exec_py_file = "plugin-dev/exec-plugin-dev.py"
 change_html_target_file = "change_html_target"
 temp_html_target_file = "temp_html"
@@ -148,6 +181,10 @@ os.system(make_cmd)
 sub_dir = "CPSA_web"
 jar_file = "CPSA_web.war"
 
+rmdir_cmd = "rm -rf " + sub_dir
+print rmdir_cmd
+os.system(rmdir_cmd)
+
 mkdir_cmd = "mkdir " + sub_dir;
 print mkdir_cmd
 os.system(mkdir_cmd)
@@ -165,9 +202,10 @@ extract_cmd = "jar -xvf " + jar_file
 print extract_cmd
 os.system(extract_cmd)
 
-rm_huawei_cmd = "rm " + tomcat + "/huawei -rf"
+rm_huawei_cmd = "rm " + tomcat + "/webapps/huawei -rf"
 print rm_huawei_cmd
 os.system(rm_huawei_cmd)
+
 
 os.chdir(cur_dir)
 ls_cmd = "ls"
@@ -186,10 +224,6 @@ change_config_xml_sed = "s/ip\">[.0-9]*/ip\">" + ip + "/g\n" + "s/database_schem
 f.write(change_config_xml_sed)
 f.close()
 
-create_ln_cmd = "ln -s " + complete_sub_dir + " " + tomcat + "/huawei"
-print create_ln_cmd
-os.system(create_ln_cmd)
-
 exec_change_xml_sed_cmd = "sed -f " + change_xml_file + " " + config_xml_file + " > "  + temp_xml_file
 print exec_change_xml_sed_cmd
 os.system(exec_change_xml_sed_cmd)
@@ -204,3 +238,7 @@ os.system(rm_change_xml_file_cmd)
 rm_temp_xml_file_cmd = "rm " + temp_xml_file
 print rm_temp_xml_file_cmd
 os.system(rm_temp_xml_file_cmd)
+
+create_ln_cmd = "ln -s " + complete_sub_dir + " " + tomcat + "/webapps/huawei"
+print create_ln_cmd
+os.system(create_ln_cmd)

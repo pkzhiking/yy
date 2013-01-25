@@ -479,3 +479,119 @@ void ProblemList::ReportAnalyzerProToDB(int iSid)
     }
     mysql_close(&mysql);
 }
+
+//After calculate all the errors of single files, calculate the errors of the dirs containing them
+void ProblemList::ReCalFatherDirProToDB(int iSid)
+{
+    MYSQL mysql;
+    MYSQL_RES *res;
+    MYSQL_ROW row;
+    char *pQuery;
+    int iQueryRet;
+
+    mysql_init(&mysql);
+    if(!mysql_real_connect(&mysql, IP, USER, PASSWORD, DATABASE, 3306, NULL, 0)){
+	cout << "Error connecting database: " << mysql_error(&mysql) << endl;
+	return;
+    }
+    cout << "Connected..." << endl;
+
+    char analyzer_name[255];
+    vector<pair<string, int> > vec_file_err;
+
+    string strGetFilesError;
+    strGetFilesError = "select name, error_num from SubmitFile where sid=" + Util::intToString(iSid);
+    cout << strGetFilesError << endl;
+    pQuery = (char*) strGetFilesError.c_str();
+    iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
+    if(iQueryRet){
+        cout << "Error executing query: " << mysql_error(&mysql) << endl;
+        return;
+    }
+    cout << pQuery << "executed..." << endl;
+
+    res = mysql_store_result(&mysql);
+
+    while(NULL != (row = mysql_fetch_row(res)))
+    {
+	pair<string, int> p;
+	p.first = row[0];
+	p.second = Util::stringToInt(row[1]);
+	vec_file_err.push_back(p);
+	
+    }
+
+    for(int i = 0; i < vec_file_err.size(); i++)
+    {
+	string str_last_2_cha = vec_file_err[i].first.substr(vec_file_err[i].first.size() - 2, 2);
+
+	string str_last_4_cha;
+	
+	if(vec_file_err[i].first.size() >= 4)
+	    str_last_4_cha = vec_file_err[i].first.substr(vec_file_err[i].first.size() - 4, 4);
+	else
+	    str_last_4_cha = "dir";
+	if(0 == strcmp(".c", str_last_2_cha.c_str()) || 0 == strcmp(".cpp", str_last_4_cha.c_str()))
+	    continue;
+	vec_file_err[i].second = 0;
+	for(int j = 0; j < vec_file_err.size(); j++)
+	{
+	    str_last_2_cha = vec_file_err[j].first.substr(vec_file_err[j].first.size() - 2, 2);
+	    if(vec_file_err[j].first.size() >= 4)
+		str_last_4_cha = vec_file_err[j].first.substr(vec_file_err[j].first.size() - 4, 4);
+	    else
+		str_last_4_cha = "dir";
+	    if(0 != strcmp(".c", str_last_2_cha.c_str()) && strcmp(".cpp", str_last_4_cha.c_str()))
+		continue;
+	    if(vec_file_err[j].first.size() > vec_file_err[i].first.size())
+	    {
+		string str_first_n = vec_file_err[j].first.substr(0, vec_file_err[i].first.size());
+		if(0 == strcmp(str_first_n.c_str(), vec_file_err[i].first.c_str()))
+		    vec_file_err[i].second += vec_file_err[j].second;
+	    }
+
+	}
+    }
+
+    for(int i = 0; i < vec_file_err.size(); i++)
+    {
+        cout << vec_file_err[i].first << ", " << vec_file_err[i].second << endl;
+    }
+
+#if 0	
+	tempStr = "insert into AnalyzeResult value(" + Util::intToString(iSid) + ", '" + vec_file_pro[i].fileName + "', " + Util::intToString(aid) + ", " + Util::intToString(vec_file_pro[i].err_num) + ")";
+	cout << tempStr << vec_file_pro[i].analyzer << endl;
+
+	pQuery = (char*) tempStr.c_str();
+	iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
+	if(iQueryRet){
+	    cout << "Error executing query: " << mysql_error(&mysql) << endl;
+	    return;
+	}
+	cout << pQuery << "executed..." << endl;
+    }
+#endif
+    for(int i = 0; i < vec_file_err.size(); i++)
+    {
+	string str_last_2_cha = vec_file_err[i].first.substr(vec_file_err[i].first.size() - 2, 2);
+
+	string str_last_4_cha;
+	
+	if(vec_file_err[i].first.size() >= 4)
+	    str_last_4_cha = vec_file_err[i].first.substr(vec_file_err[i].first.size() - 4, 4);
+	else
+	    str_last_4_cha = "dir";
+	if(0 == strcmp(".c", str_last_2_cha.c_str()) || 0 == strcmp(".cpp", str_last_4_cha.c_str()))
+	    continue;
+	string strTemp = "update SubmitFile set error_num=" + Util::intToString(vec_file_err[i].second) + " where sid = " + Util::intToString(iSid) + " and name =\'" + vec_file_err[i].first + "\'";
+	cout << strTemp << endl;
+	pQuery = (char*) strTemp.c_str();
+	iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
+	if(iQueryRet){
+	    cout << "Error executing query: " << mysql_error(&mysql) << endl;
+	    return;
+	}
+	cout << pQuery << "executed..." << endl;
+    }
+    mysql_close(&mysql);
+}

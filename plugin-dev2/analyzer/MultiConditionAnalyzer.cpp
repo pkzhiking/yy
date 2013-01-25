@@ -27,7 +27,6 @@ MultiConditionAnalyzer::~MultiConditionAnalyzer()
 
 void MultiConditionAnalyzer::analyzeNode(GNode * node, const vector < int >&context)
 {
-    std::cout << "This is MultiConditionAnalyzer!!!" << endl;
     int condition_number = 0;
     GNode *op0 = NodeProcessor::getOperand(node, 0);
     GNode *op1 = NodeProcessor::getOperand(node, 1);
@@ -47,7 +46,7 @@ void MultiConditionAnalyzer::analyzeNode(GNode * node, const vector < int >&cont
     }
 
     if (condition_number >= threshold) {
-        Logger::a("MultiConditionAnalyzer")
+        Logger::a("GeAndLeCondAnalyzer")
             << " " << SrcManager::getInstance().getFullFileName()
             << ":" << ContextProcessor::inferSrcPositon(context)
             << SrcManager::getInstance().getLine(ContextProcessor::inferSrcPositon(context)) << endl;

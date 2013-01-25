@@ -121,6 +121,7 @@ public:
     void AmendRelativeName();
     void PrintCommonDir(){cout << proj_name << endl;}
     void PrintCommonDirForDirs();
+    void ReCalFatherDirProToDB(int);
 };
 
 #endif
