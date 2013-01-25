@@ -1,0 +1,2450 @@
+/root/plugin/yy-back/yy/plugin-dev/test/Compiler_Group/345/test/mem_test.cpp
+1 bind_expr
+mPropertyMap 4
+1
+type
+2
+0
+line
+84
+1
+vars
+3
+1
+body
+4
+2 void_type
+mPropertyMap 2
+1
+name
+5
+0
+algn
+8
+3 var_decl
+mPropertyMap 7
+1
+name
+6
+1
+type
+7
+1
+scpe
+8
+0
+srcp
+mem_test.cpp:72    
+1
+size
+9
+0
+algn
+32
+0
+used
+1
+4 statement_list
+mPropertyMap 12
+1
+0
+10
+1
+1
+11
+1
+2
+12
+1
+3
+13
+1
+4
+14
+1
+5
+15
+1
+6
+16
+1
+7
+17
+1
+8
+18
+1
+9
+19
+1
+10
+20
+1
+11
+21
+5 type_decl
+mPropertyMap 4
+1
+name
+22
+1
+type
+2
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+6 identifier_node
+mPropertyMap 2
+0
+strg
+nonPOD_var
+0
+lngt
+10
+7 record_type
+mPropertyMap 6
+1
+name
+23
+1
+size
+9
+0
+algn
+32
+0
+tag
+struct
+1
+flds
+24
+1
+binf
+25
+8 function_decl
+mPropertyMap 5
+1
+name
+26
+1
+type
+27
+1
+scpe
+28
+0
+srcp
+mem_test.cpp:70    
+0
+link
+extern
+9 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+288
+10 decl_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+3
+11 decl_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+30
+12 decl_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+31
+13 decl_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+32
+14 cleanup_point_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+33
+15 cleanup_point_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+34
+16 cleanup_point_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+35
+17 cleanup_point_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+36
+18 cleanup_point_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+37
+19 cleanup_point_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+38
+20 cleanup_point_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+39
+21 cleanup_point_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+40
+22 identifier_node
+mPropertyMap 2
+0
+strg
+void
+0
+lngt
+4
+23 type_decl
+mPropertyMap 5
+1
+name
+41
+1
+type
+7
+1
+scpe
+28
+0
+srcp
+mem_test.cpp:47    
+0
+note
+artificial
+24 field_decl
+mPropertyMap 8
+1
+name
+42
+1
+type
+43
+1
+scpe
+7
+0
+srcp
+mem_test.cpp:49    
+1
+size
+44
+0
+algn
+32
+1
+bpos
+45
+1
+chan
+46
+25 binfo
+mPropertyMap 2
+1
+type
+7
+0
+bases
+0
+26 identifier_node
+mPropertyMap 2
+0
+strg
+pod_test
+0
+lngt
+8
+27 function_type
+mPropertyMap 4
+1
+size
+47
+0
+algn
+8
+1
+retn
+2
+1
+prms
+48
+28 translation_unit_decl
+mPropertyMap 0
+29 integer_type
+mPropertyMap 7
+1
+name
+49
+1
+size
+50
+0
+algn
+64
+0
+prec
+64
+0
+sign
+unsigned
+1
+min
+45
+1
+max
+51
+30 var_decl
+mPropertyMap 7
+1
+name
+52
+1
+type
+53
+1
+scpe
+8
+0
+srcp
+mem_test.cpp:73    
+1
+size
+54
+0
+algn
+32
+0
+used
+1
+31 var_decl
+mPropertyMap 7
+1
+name
+55
+1
+type
+56
+1
+scpe
+8
+0
+srcp
+mem_test.cpp:74    
+1
+size
+44
+0
+algn
+32
+0
+used
+1
+32 var_decl
+mPropertyMap 7
+1
+name
+57
+1
+type
+58
+1
+scpe
+8
+0
+srcp
+mem_test.cpp:75    
+1
+size
+44
+0
+algn
+32
+0
+used
+1
+33 expr_stmt
+mPropertyMap 3
+1
+type
+2
+0
+line
+77
+1
+expr
+59
+34 expr_stmt
+mPropertyMap 3
+1
+type
+2
+0
+line
+78
+1
+expr
+60
+35 expr_stmt
+mPropertyMap 3
+1
+type
+2
+0
+line
+79
+1
+expr
+61
+36 expr_stmt
+mPropertyMap 3
+1
+type
+2
+0
+line
+80
+1
+expr
+62
+37 expr_stmt
+mPropertyMap 3
+1
+type
+2
+0
+line
+81
+1
+expr
+63
+38 expr_stmt
+mPropertyMap 3
+1
+type
+2
+0
+line
+82
+1
+expr
+64
+39 expr_stmt
+mPropertyMap 3
+1
+type
+2
+0
+line
+83
+1
+expr
+65
+40 expr_stmt
+mPropertyMap 3
+1
+type
+2
+0
+line
+84
+1
+expr
+66
+41 identifier_node
+mPropertyMap 2
+0
+strg
+nonPOD_with_nonPOD_mem
+0
+lngt
+22
+42 identifier_node
+mPropertyMap 2
+0
+strg
+p
+0
+lngt
+1
+43 integer_type
+mPropertyMap 7
+1
+name
+67
+1
+size
+44
+0
+algn
+32
+0
+prec
+32
+0
+sign
+signed
+1
+min
+68
+1
+max
+69
+44 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+32
+45 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+0
+46 field_decl
+mPropertyMap 8
+1
+name
+70
+1
+type
+71
+1
+scpe
+7
+0
+srcp
+mem_test.cpp:50    
+1
+size
+50
+0
+algn
+32
+1
+bpos
+44
+1
+chan
+72
+47 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+8
+48 tree_list
+mPropertyMap 1
+1
+valu
+2
+49 identifier_node
+mPropertyMap 2
+0
+strg
+bit_size_type
+0
+lngt
+13
+50 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+64
+51 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+-1
+52 identifier_node
+mPropertyMap 2
+0
+strg
+pod_var
+0
+lngt
+7
+53 record_type
+mPropertyMap 6
+1
+name
+73
+1
+size
+54
+0
+algn
+32
+0
+tag
+struct
+1
+flds
+74
+1
+binf
+75
+54 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+352
+55 identifier_node
+mPropertyMap 2
+0
+strg
+nonPOD_ptr
+0
+lngt
+10
+56 pointer_type
+mPropertyMap 3
+1
+size
+44
+0
+algn
+32
+1
+ptd
+7
+57 identifier_node
+mPropertyMap 2
+0
+strg
+pod_ptr
+0
+lngt
+7
+58 pointer_type
+mPropertyMap 3
+1
+size
+44
+0
+algn
+32
+1
+ptd
+53
+59 convert_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+76
+60 convert_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+77
+61 convert_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+78
+62 convert_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+79
+63 convert_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+80
+64 convert_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+81
+65 convert_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+82
+66 convert_expr
+mPropertyMap 2
+1
+type
+2
+1
+op 0
+83
+67 type_decl
+mPropertyMap 4
+1
+name
+84
+1
+type
+43
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+68 integer_cst
+mPropertyMap 2
+1
+type
+43
+0
+low
+-2147483648
+69 integer_cst
+mPropertyMap 2
+1
+type
+43
+0
+low
+2147483647
+70 identifier_node
+mPropertyMap 2
+0
+strg
+v
+0
+lngt
+1
+71 real_type
+mPropertyMap 3
+1
+name
+85
+1
+size
+50
+0
+algn
+64
+72 field_decl
+mPropertyMap 8
+1
+name
+86
+1
+type
+87
+1
+scpe
+7
+0
+srcp
+mem_test.cpp:51    
+1
+size
+50
+0
+algn
+32
+1
+bpos
+88
+1
+chan
+89
+73 type_decl
+mPropertyMap 5
+1
+name
+90
+1
+type
+53
+1
+scpe
+28
+0
+srcp
+mem_test.cpp:36    
+0
+note
+artificial
+74 field_decl
+mPropertyMap 8
+1
+name
+91
+1
+type
+92
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:38    
+1
+size
+47
+0
+algn
+8
+1
+bpos
+45
+1
+chan
+93
+75 binfo
+mPropertyMap 2
+1
+type
+53
+0
+bases
+0
+76 call_expr
+mPropertyMap 5
+1
+type
+94
+1
+fn
+95
+1
+0
+96
+1
+1
+97
+1
+2
+98
+77 call_expr
+mPropertyMap 5
+1
+type
+94
+1
+fn
+99
+1
+0
+100
+1
+1
+97
+1
+2
+98
+78 call_expr
+mPropertyMap 5
+1
+type
+94
+1
+fn
+101
+1
+0
+102
+1
+1
+97
+1
+2
+98
+79 call_expr
+mPropertyMap 5
+1
+type
+94
+1
+fn
+103
+1
+0
+104
+1
+1
+97
+1
+2
+98
+80 call_expr
+mPropertyMap 5
+1
+type
+94
+1
+fn
+105
+1
+0
+106
+1
+1
+97
+1
+2
+98
+81 call_expr
+mPropertyMap 5
+1
+type
+94
+1
+fn
+107
+1
+0
+108
+1
+1
+97
+1
+2
+98
+82 call_expr
+mPropertyMap 5
+1
+type
+94
+1
+fn
+109
+1
+0
+110
+1
+1
+97
+1
+2
+98
+83 call_expr
+mPropertyMap 5
+1
+type
+94
+1
+fn
+111
+1
+0
+112
+1
+1
+97
+1
+2
+98
+84 identifier_node
+mPropertyMap 2
+0
+strg
+int
+0
+lngt
+3
+85 type_decl
+mPropertyMap 4
+1
+name
+113
+1
+type
+71
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+86 identifier_node
+mPropertyMap 2
+0
+strg
+POD_mem
+0
+lngt
+7
+87 record_type
+mPropertyMap 6
+1
+name
+114
+1
+size
+50
+0
+algn
+32
+0
+tag
+struct
+1
+flds
+115
+1
+binf
+116
+88 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+96
+89 field_decl
+mPropertyMap 8
+1
+name
+117
+1
+type
+118
+1
+scpe
+7
+0
+srcp
+mem_test.cpp:52    
+1
+size
+119
+0
+algn
+32
+1
+bpos
+120
+1
+chan
+121
+90 identifier_node
+mPropertyMap 2
+0
+strg
+podStruct
+0
+lngt
+9
+91 identifier_node
+mPropertyMap 2
+0
+strg
+x
+0
+lngt
+1
+92 integer_type
+mPropertyMap 7
+1
+name
+122
+1
+size
+47
+0
+algn
+8
+0
+prec
+8
+0
+sign
+signed
+1
+min
+123
+1
+max
+124
+93 field_decl
+mPropertyMap 8
+1
+name
+70
+1
+type
+43
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:39    
+1
+size
+44
+0
+algn
+32
+1
+bpos
+44
+1
+chan
+125
+94 pointer_type
+mPropertyMap 3
+1
+size
+44
+0
+algn
+32
+1
+ptd
+2
+95 addr_expr
+mPropertyMap 2
+1
+type
+126
+1
+op 0
+127
+96 nop_expr
+mPropertyMap 2
+1
+type
+94
+1
+op 0
+128
+97 integer_cst
+mPropertyMap 2
+1
+type
+43
+0
+low
+0
+98 integer_cst
+mPropertyMap 2
+1
+type
+129
+0
+low
+100
+99 addr_expr
+mPropertyMap 2
+1
+type
+126
+1
+op 0
+127
+100 nop_expr
+mPropertyMap 2
+1
+type
+94
+1
+op 0
+130
+101 addr_expr
+mPropertyMap 2
+1
+type
+126
+1
+op 0
+127
+102 nop_expr
+mPropertyMap 2
+1
+type
+94
+1
+op 0
+31
+103 addr_expr
+mPropertyMap 2
+1
+type
+126
+1
+op 0
+127
+104 nop_expr
+mPropertyMap 2
+1
+type
+94
+1
+op 0
+32
+105 addr_expr
+mPropertyMap 2
+1
+type
+126
+1
+op 0
+127
+106 nop_expr
+mPropertyMap 2
+1
+type
+94
+1
+op 0
+131
+107 addr_expr
+mPropertyMap 2
+1
+type
+126
+1
+op 0
+127
+108 nop_expr
+mPropertyMap 2
+1
+type
+94
+1
+op 0
+132
+109 addr_expr
+mPropertyMap 2
+1
+type
+126
+1
+op 0
+127
+110 nop_expr
+mPropertyMap 2
+1
+type
+94
+1
+op 0
+133
+111 addr_expr
+mPropertyMap 2
+1
+type
+126
+1
+op 0
+127
+112 nop_expr
+mPropertyMap 2
+1
+type
+94
+1
+op 0
+134
+113 identifier_node
+mPropertyMap 2
+0
+strg
+double
+0
+lngt
+6
+114 type_decl
+mPropertyMap 5
+1
+name
+135
+1
+type
+87
+1
+scpe
+28
+0
+srcp
+mem_test.cpp:15    
+0
+note
+artificial
+115 field_decl
+mPropertyMap 8
+1
+name
+91
+1
+type
+43
+1
+scpe
+87
+0
+srcp
+mem_test.cpp:17    
+1
+size
+44
+0
+algn
+32
+1
+bpos
+45
+1
+chan
+136
+116 binfo
+mPropertyMap 2
+1
+type
+87
+0
+bases
+0
+117 identifier_node
+mPropertyMap 2
+0
+strg
+nonPOD_mem
+0
+lngt
+10
+118 record_type
+mPropertyMap 6
+1
+name
+137
+1
+size
+119
+0
+algn
+32
+0
+tag
+struct
+1
+flds
+138
+1
+binf
+139
+119 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+128
+120 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+160
+121 type_decl
+mPropertyMap 5
+1
+name
+41
+1
+type
+140
+1
+scpe
+7
+0
+srcp
+mem_test.cpp:48    
+0
+note
+artificial
+122 type_decl
+mPropertyMap 4
+1
+name
+141
+1
+type
+92
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+123 integer_cst
+mPropertyMap 2
+1
+type
+92
+0
+low
+-128
+124 integer_cst
+mPropertyMap 2
+1
+type
+92
+0
+low
+127
+125 var_decl
+mPropertyMap 9
+1
+name
+142
+1
+type
+143
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:40    
+1
+init
+144
+1
+size
+44
+0
+algn
+32
+1
+chan
+145
+0
+used
+0
+126 pointer_type
+mPropertyMap 3
+1
+size
+44
+0
+algn
+32
+1
+ptd
+146
+127 function_decl
+mPropertyMap 8
+1
+name
+147
+1
+type
+146
+1
+scpe
+28
+0
+srcp
+string.h:65    
+0
+lang
+C
+1
+args
+148
+0
+body
+undefined
+0
+link
+extern
+128 addr_expr
+mPropertyMap 2
+1
+type
+56
+1
+op 0
+3
+129 integer_type
+mPropertyMap 8
+1
+name
+149
+1
+unql
+150
+1
+size
+44
+0
+algn
+32
+0
+prec
+32
+0
+sign
+unsigned
+1
+min
+151
+1
+max
+152
+130 addr_expr
+mPropertyMap 2
+1
+type
+58
+1
+op 0
+30
+131 addr_expr
+mPropertyMap 2
+1
+type
+153
+1
+op 0
+154
+132 addr_expr
+mPropertyMap 2
+1
+type
+155
+1
+op 0
+156
+133 addr_expr
+mPropertyMap 2
+1
+type
+153
+1
+op 0
+157
+134 addr_expr
+mPropertyMap 2
+1
+type
+155
+1
+op 0
+158
+135 identifier_node
+mPropertyMap 2
+0
+strg
+simplepod
+0
+lngt
+9
+136 field_decl
+mPropertyMap 8
+1
+name
+159
+1
+type
+43
+1
+scpe
+87
+0
+srcp
+mem_test.cpp:18    
+1
+size
+44
+0
+algn
+32
+1
+bpos
+44
+1
+chan
+160
+137 type_decl
+mPropertyMap 5
+1
+name
+161
+1
+type
+118
+1
+scpe
+28
+0
+srcp
+mem_test.cpp:20    
+0
+note
+artificial
+138 field_decl
+mPropertyMap 8
+1
+name
+42
+1
+type
+162
+1
+scpe
+118
+0
+srcp
+mem_test.cpp:22    
+1
+size
+44
+0
+algn
+32
+1
+bpos
+45
+1
+chan
+163
+139 binfo
+mPropertyMap 2
+1
+type
+118
+0
+bases
+0
+140 record_type
+mPropertyMap 7
+1
+name
+121
+1
+unql
+7
+1
+size
+9
+0
+algn
+32
+0
+tag
+struct
+1
+flds
+24
+1
+binf
+25
+141 identifier_node
+mPropertyMap 2
+0
+strg
+char
+0
+lngt
+4
+142 identifier_node
+mPropertyMap 2
+0
+strg
+var
+0
+lngt
+3
+143 integer_type
+mPropertyMap 9
+0
+qual
+c       
+1
+name
+67
+1
+unql
+43
+1
+size
+44
+0
+algn
+32
+0
+prec
+32
+0
+sign
+signed
+1
+min
+68
+1
+max
+69
+144 integer_cst
+mPropertyMap 2
+1
+type
+43
+0
+low
+1024
+145 field_decl
+mPropertyMap 8
+1
+name
+164
+1
+type
+71
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:41    
+1
+size
+50
+0
+algn
+32
+1
+bpos
+50
+1
+chan
+165
+146 function_type
+mPropertyMap 4
+1
+size
+47
+0
+algn
+8
+1
+retn
+94
+1
+prms
+166
+147 identifier_node
+mPropertyMap 2
+0
+strg
+memset
+0
+lngt
+6
+148 parm_decl
+mPropertyMap 9
+1
+name
+167
+1
+type
+94
+1
+scpe
+127
+0
+srcp
+string.h:65    
+0
+lang
+C
+1
+argt
+94
+1
+size
+44
+0
+algn
+32
+0
+used
+0
+149 type_decl
+mPropertyMap 4
+1
+name
+168
+1
+type
+129
+1
+scpe
+28
+0
+srcp
+stddef.h:212   
+150 integer_type
+mPropertyMap 7
+1
+name
+169
+1
+size
+44
+0
+algn
+32
+0
+prec
+32
+0
+sign
+unsigned
+1
+min
+151
+1
+max
+152
+151 integer_cst
+mPropertyMap 2
+1
+type
+150
+0
+low
+0
+152 integer_cst
+mPropertyMap 2
+1
+type
+150
+0
+low
+-1
+153 pointer_type
+mPropertyMap 3
+1
+size
+44
+0
+algn
+32
+1
+ptd
+87
+154 component_ref
+mPropertyMap 3
+1
+type
+87
+1
+op 0
+3
+1
+op 1
+72
+155 pointer_type
+mPropertyMap 3
+1
+size
+44
+0
+algn
+32
+1
+ptd
+118
+156 component_ref
+mPropertyMap 3
+1
+type
+118
+1
+op 0
+3
+1
+op 1
+89
+157 component_ref
+mPropertyMap 3
+1
+type
+87
+1
+op 0
+170
+1
+op 1
+72
+158 component_ref
+mPropertyMap 3
+1
+type
+118
+1
+op 0
+171
+1
+op 1
+89
+159 identifier_node
+mPropertyMap 2
+0
+strg
+y
+0
+lngt
+1
+160 type_decl
+mPropertyMap 5
+1
+name
+135
+1
+type
+172
+1
+scpe
+87
+0
+srcp
+mem_test.cpp:16    
+0
+note
+artificial
+161 identifier_node
+mPropertyMap 2
+0
+strg
+simple_nonpod
+0
+lngt
+13
+162 pointer_type
+mPropertyMap 3
+1
+size
+44
+0
+algn
+32
+1
+ptd
+43
+163 field_decl
+mPropertyMap 8
+1
+name
+91
+1
+type
+71
+1
+scpe
+118
+0
+srcp
+mem_test.cpp:23    
+1
+size
+50
+0
+algn
+32
+1
+bpos
+44
+1
+chan
+173
+164 identifier_node
+mPropertyMap 2
+0
+strg
+item
+0
+lngt
+4
+165 field_decl
+mPropertyMap 8
+1
+name
+174
+1
+type
+71
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:42    
+1
+size
+50
+0
+algn
+32
+1
+bpos
+119
+1
+chan
+175
+166 tree_list
+mPropertyMap 2
+1
+valu
+94
+1
+chan
+176
+167 identifier_node
+mPropertyMap 2
+0
+strg
+__s
+0
+lngt
+3
+168 identifier_node
+mPropertyMap 2
+0
+strg
+size_t
+0
+lngt
+6
+169 type_decl
+mPropertyMap 4
+1
+name
+177
+1
+type
+150
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+170 indirect_ref
+mPropertyMap 2
+1
+type
+7
+1
+op 0
+31
+171 indirect_ref
+mPropertyMap 2
+1
+type
+7
+1
+op 0
+31
+172 record_type
+mPropertyMap 7
+1
+name
+160
+1
+unql
+87
+1
+size
+50
+0
+algn
+32
+0
+tag
+struct
+1
+flds
+115
+1
+binf
+116
+173 field_decl
+mPropertyMap 8
+1
+name
+159
+1
+type
+178
+1
+scpe
+118
+0
+srcp
+mem_test.cpp:24    
+1
+size
+44
+0
+algn
+32
+1
+bpos
+88
+1
+chan
+179
+174 identifier_node
+mPropertyMap 2
+0
+strg
+radius
+0
+lngt
+6
+175 field_decl
+mPropertyMap 8
+1
+name
+180
+1
+type
+71
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:43    
+1
+size
+50
+0
+algn
+32
+1
+bpos
+181
+1
+chan
+182
+176 tree_list
+mPropertyMap 2
+1
+valu
+43
+1
+chan
+183
+177 identifier_node
+mPropertyMap 2
+0
+strg
+unsigned int
+0
+lngt
+12
+178 real_type
+mPropertyMap 3
+1
+name
+184
+1
+size
+44
+0
+algn
+32
+179 type_decl
+mPropertyMap 5
+1
+name
+161
+1
+type
+185
+1
+scpe
+118
+0
+srcp
+mem_test.cpp:21    
+0
+note
+artificial
+180 identifier_node
+mPropertyMap 2
+0
+strg
+length
+0
+lngt
+6
+181 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+192
+182 field_decl
+mPropertyMap 8
+1
+name
+186
+1
+type
+178
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:44    
+1
+size
+44
+0
+algn
+32
+1
+bpos
+187
+1
+chan
+188
+183 tree_list
+mPropertyMap 2
+1
+valu
+129
+1
+chan
+48
+184 type_decl
+mPropertyMap 4
+1
+name
+189
+1
+type
+178
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+185 record_type
+mPropertyMap 7
+1
+name
+179
+1
+unql
+118
+1
+size
+119
+0
+algn
+32
+0
+tag
+struct
+1
+flds
+138
+1
+binf
+139
+186 identifier_node
+mPropertyMap 2
+0
+strg
+v1
+0
+lngt
+2
+187 integer_cst
+mPropertyMap 2
+1
+type
+29
+0
+low
+256
+188 field_decl
+mPropertyMap 8
+1
+name
+190
+1
+type
+87
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:45    
+1
+size
+50
+0
+algn
+32
+1
+bpos
+9
+1
+chan
+191
+189 identifier_node
+mPropertyMap 2
+0
+strg
+float
+0
+lngt
+5
+190 identifier_node
+mPropertyMap 2
+0
+strg
+x2
+0
+lngt
+2
+191 type_decl
+mPropertyMap 5
+1
+name
+90
+1
+type
+192
+1
+scpe
+53
+0
+srcp
+mem_test.cpp:37    
+0
+note
+artificial
+192 record_type
+mPropertyMap 7
+1
+name
+191
+1
+unql
+53
+1
+size
+54
+0
+algn
+32
+0
+tag
+struct
+1
+flds
+74
+1
+binf
+75
+1031733632

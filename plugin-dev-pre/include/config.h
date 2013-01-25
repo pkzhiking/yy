@@ -1,7 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define CURRENT_PROJS_DIR "/root/plugin/yy"
+#define CURRENT_PROJS_DIR "/root/plugin/yy-back/yy"
 #define FILES_DIR CURRENT_PROJS_DIR "/plugin-dev-pre/files"
 #define DEFAULT_PROJS_DIR CURRENT_PROJS_DIR "/plugin-dev/test/"
 #define IP "localhost"

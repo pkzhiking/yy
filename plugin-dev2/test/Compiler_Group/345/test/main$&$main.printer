@@ -1,0 +1,287 @@
+/root/plugin/yy-back/yy/plugin-dev/test/Compiler_Group/345/test/main.cpp
+1 statement_list
+mPropertyMap 2
+1
+0
+2
+1
+1
+3
+2 return_expr
+mPropertyMap 2
+1
+type
+4
+1
+expr
+5
+3 return_expr
+mPropertyMap 2
+1
+type
+4
+1
+expr
+6
+4 void_type
+mPropertyMap 2
+1
+name
+7
+0
+algn
+8
+5 init_expr
+mPropertyMap 3
+1
+type
+8
+1
+op 0
+9
+1
+op 1
+10
+6 init_expr
+mPropertyMap 3
+1
+type
+8
+1
+op 0
+9
+1
+op 1
+10
+7 type_decl
+mPropertyMap 4
+1
+name
+11
+1
+type
+4
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+8 integer_type
+mPropertyMap 7
+1
+name
+12
+1
+size
+13
+0
+algn
+32
+0
+prec
+32
+0
+sign
+signed
+1
+min
+14
+1
+max
+15
+9 result_decl
+mPropertyMap 6
+1
+type
+8
+1
+scpe
+16
+0
+srcp
+main.cpp:1     
+0
+note
+artificial
+1
+size
+13
+0
+algn
+32
+10 integer_cst
+mPropertyMap 2
+1
+type
+8
+0
+low
+0
+11 identifier_node
+mPropertyMap 2
+0
+strg
+void
+0
+lngt
+4
+12 type_decl
+mPropertyMap 4
+1
+name
+17
+1
+type
+8
+0
+srcp
+<built-in>:0     
+0
+note
+artificial
+13 integer_cst
+mPropertyMap 2
+1
+type
+18
+0
+low
+32
+14 integer_cst
+mPropertyMap 2
+1
+type
+8
+0
+low
+-2147483648
+15 integer_cst
+mPropertyMap 2
+1
+type
+8
+0
+low
+2147483647
+16 function_decl
+mPropertyMap 6
+1
+name
+19
+1
+type
+20
+1
+scpe
+21
+0
+srcp
+main.cpp:1     
+0
+lang
+C
+0
+link
+extern
+17 identifier_node
+mPropertyMap 2
+0
+strg
+int
+0
+lngt
+3
+18 integer_type
+mPropertyMap 7
+1
+name
+22
+1
+size
+23
+0
+algn
+64
+0
+prec
+64
+0
+sign
+unsigned
+1
+min
+24
+1
+max
+25
+19 identifier_node
+mPropertyMap 2
+0
+strg
+main
+0
+lngt
+4
+20 function_type
+mPropertyMap 4
+1
+size
+26
+0
+algn
+8
+1
+retn
+8
+1
+prms
+27
+21 translation_unit_decl
+mPropertyMap 0
+22 identifier_node
+mPropertyMap 2
+0
+strg
+bit_size_type
+0
+lngt
+13
+23 integer_cst
+mPropertyMap 2
+1
+type
+18
+0
+low
+64
+24 integer_cst
+mPropertyMap 2
+1
+type
+18
+0
+low
+0
+25 integer_cst
+mPropertyMap 2
+1
+type
+18
+0
+low
+-1
+26 integer_cst
+mPropertyMap 2
+1
+type
+18
+0
+low
+8
+27 tree_list
+mPropertyMap 1
+1
+valu
+4
+1404703074

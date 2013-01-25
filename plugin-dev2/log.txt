@@ -338,3 +338,11 @@
 [analyze][01-25 05:58:11][221][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_stack_full is 3392. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:35 int test_stack_full()
 =======
 >>>>>>> 74f22e8d60a04a9e0846ca34fb50145445472c3a
+[analyze][01-25 11:59:45][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:1 int mymax(int a, int b)
+[analyze][01-25 11:59:45][2][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:27 	do {
+[analyze][01-25 11:59:45][3][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:22 	while (sum < 3000) {
+[analyze][01-25 11:59:45][4][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:23 		for (int i = 0; i < 5; i++) {
+[analyze][01-25 11:59:45][5][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 5 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:10 	for (int i = 0; i < 10; i++) {
+[analyze][01-25 11:59:45][6][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:14 		for (int j = 0; j < 5; j++) {
+[analyze][01-25 11:59:45][7][FunctionCodeSizeAnalyzer]msg:Function: main has only 21 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:6 int main()
+[analyze][01-25 11:59:45][8][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 128. /root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:6 int main()

@@ -90,12 +90,8 @@ run:
 	echo $(GCCPLUGINS_INCLUDE_FLAGS)
 
 #	$(foreach file, $(INPUT_FILES), $(shell $(G++) -fsyntax-only  -iplugindir=/root/plugin-dev/ -D_GNU_SOURCE $(file) -c -dumpbase -mtune=generic -march=pentiumpro -fplugin=$(PWD)/plugin.so))
-	$(shell $(G++) $(PROJ_HEADER_DIR) -fsyntax-only  -iplugindir=$(PWD) -D_GNU_SOURCE $(INPUT_FILE) -c -dumpbase -mtune=generic $(MARCH) -fplugin=$(PWD)/plugin.so)
+	$(shell $(G++) $(PROJ_HEADER_DIR) -fsyntax-only  -iplugindir=$(PWD) -D_GNU_SOURCE $(INPUT_FILE) -c -dumpbase -mtune=generic -fplugin=$(PWD)/plugin.so)
 
-	$(shell $(G++) -fsyntax-only  -iplugindir=$(PWD) -D_GNU_SOURCE $(INPUT_FILE) -c -dumpbase -mtune=generic $(MARCH) -fplugin=$(PWD)/plugin.so)
-
-
-		
 	echo $(HTML_TARGET_DIR)
 
 		

@@ -1,0 +1,5465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>检测报告</title
+<meta name="viewport" content="user-scalable=no, width=device-width height=device-height" />
+<link rel="stylesheet" type="text/css" href="report_style.css"/>
+</head>
+
+<body>
+<table class="code">
+<tbody>
+<tr>
+<td class="num">
+1
+</td>
+<td class="line">
+#include &lt;memory.h&gt;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FindSameFunctionAnalyzer: /root/plugin/yy/plugin-dev2/test/Compiler_Group/1111/test/hello2$&amp;$do_calc.printermaybe same as the /root/plugin/yy/plugin-dev2/test/Compiler_Group/1111/test/hello$&amp;$do_calc.printer
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+2
+</td>
+<td class="line">
+#include &lt;stdio.h&gt;
+</td>
+</tr>
+<tr>
+<td class="num">
+3
+</td>
+<td class="line">
+#include &lt;stdlib.h&gt;
+</td>
+</tr>
+<tr>
+<td class="num">
+4
+</td>
+<td class="line">
+#include &lt;string.h&gt;
+</td>
+</tr>
+<tr>
+<td class="num">
+5
+</td>
+<td class="line">
+#include &lt;cmath&gt;
+</td>
+</tr>
+<tr>
+<td class="num">
+6
+</td>
+<td class="line">
+using std::sqrt;
+</td>
+</tr>
+<tr>
+<td class="num">
+7
+</td>
+<td class="line">
+struct cstruct {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+8
+</td>
+<td class="line">
+	char p;
+</td>
+</tr>
+<tr>
+<td class="num">
+9
+</td>
+<td class="line">
+	static const int x = 10;
+</td>
+</tr>
+<tr>
+<td class="num">
+10
+</td>
+<td class="line">
+	double y;
+</td>
+</tr>
+<tr>
+<td class="num">
+11
+</td>
+<td class="line">
+	int *intarray;
+</td>
+</tr>
+<tr>
+<td class="num">
+12
+</td>
+<td class="line">
+	double *doublearray;
+</td>
+</tr>
+<tr>
+<td class="num">
+13
+</td>
+<td class="line">
+	int z;
+</td>
+</tr>
+<tr>
+<td class="num">
+14
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+15
+</td>
+<td class="line">
+void my_memcpy(void*,int value,int num);
+</td>
+</tr>
+<tr>
+<td class="num">
+16
+</td>
+<td class="line">
+void strncpy(char*,char*,int n);
+</td>
+</tr>
+<tr>
+<td class="num">
+17
+</td>
+<td class="line">
+struct simplepod {
+</td>
+</tr>
+<tr>
+<td class="num">
+18
+</td>
+<td class="line">
+	static const int x = 10;
+</td>
+</tr>
+<tr>
+<td class="num">
+19
+</td>
+<td class="line">
+	static const int y = 10;
+</td>
+</tr>
+<tr>
+<td class="num">
+20
+</td>
+<td class="line">
+	static const int z = x / 3;
+</td>
+</tr>
+<tr>
+<td class="num">
+21
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+22
+</td>
+<td class="line">
+struct empty {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+23
+</td>
+<td class="line">
+	char tt;
+</td>
+</tr>
+<tr>
+<td class="num">
+24
+</td>
+<td class="line">
+	short int ttt;
+</td>
+</tr>
+<tr>
+<td class="num">
+25
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+26
+</td>
+<td class="line">
+struct podStruct {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+27
+</td>
+<td class="line">
+	union {
+</td>
+</tr>
+<tr>
+<td class="num">
+28
+</td>
+<td class="line">
+		int a;
+</td>
+</tr>
+<tr>
+<td class="num">
+29
+</td>
+<td class="line">
+		char d;
+</td>
+</tr>
+<tr>
+<td class="num">
+30
+</td>
+<td class="line">
+		char k[6];
+</td>
+</tr>
+<tr>
+<td class="num">
+31
+</td>
+<td class="line">
+	} ttt;
+</td>
+</tr>
+<tr>
+<td class="num">
+32
+</td>
+<td class="line">
+	empty x2[4];
+</td>
+</tr>
+<tr>
+<td class="num">
+33
+</td>
+<td class="line">
+	char t3;
+</td>
+</tr>
+<tr>
+<td class="num">
+34
+</td>
+<td class="line">
+	int v;
+</td>
+</tr>
+<tr>
+<td class="num">
+35
+</td>
+<td class="line">
+	static int var;
+</td>
+</tr>
+<tr>
+<td class="num">
+36
+</td>
+<td class="line">
+	double item;
+</td>
+</tr>
+<tr>
+<td class="num">
+37
+</td>
+<td class="line">
+	double radius;
+</td>
+</tr>
+<tr>
+<td class="num">
+38
+</td>
+<td class="line">
+	double length;
+</td>
+</tr>
+<tr>
+<td class="num">
+39
+</td>
+<td class="line">
+	float v1;
+</td>
+</tr>
+<tr>
+<td class="num">
+40
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+41
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+42
+</td>
+<td class="line">
+struct nn {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+43
+</td>
+<td class="line">
+	char a;
+</td>
+</tr>
+<tr>
+<td class="num">
+44
+</td>
+<td class="line">
+	empty tt;
+</td>
+</tr>
+<tr>
+<td class="num">
+45
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+46
+</td>
+<td class="line">
+struct ok {
+</td>
+</tr>
+<tr>
+<td class="num">
+47
+</td>
+<td class="line">
+	char aaa[6][4];
+</td>
+</tr>
+<tr>
+<td class="num">
+48
+</td>
+<td class="line">
+	static int x;
+</td>
+</tr>
+<tr>
+<td class="num">
+49
+</td>
+<td class="line">
+	int a;
+</td>
+</tr>
+<tr>
+<td class="num">
+50
+</td>
+<td class="line">
+	char av[4];
+</td>
+</tr>
+<tr>
+<td class="num">
+51
+</td>
+<td class="line">
+	short int aa;
+</td>
+</tr>
+<tr>
+<td class="num">
+52
+</td>
+<td class="line">
+	char b[7][4];
+</td>
+</tr>
+<tr>
+<td class="num">
+53
+</td>
+<td class="line">
+	short int ak;
+</td>
+</tr>
+<tr>
+<td class="num">
+54
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+55
+</td>
+<td class="line">
+cstruct globalvar;
+</td>
+</tr>
+<tr>
+<td class="num">
+56
+</td>
+<td class="line">
+void test_record()
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: test_record has only 2 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function test_record is 736. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+57
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+58
+</td>
+<td class="line">
+	struct podStruct pod_var;
+</td>
+</tr>
+<tr>
+<td class="num">
+59
+</td>
+<td class="line">
+	struct cstruct non_pod_var;
+</td>
+</tr>
+<tr>
+<td class="num">
+60
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+61
+</td>
+<td class="line">
+/*
+</td>
+</tr>
+<tr>
+<td class="num">
+62
+</td>
+<td class="line">
+int test_stack_simple()
+</td>
+</tr>
+<tr>
+<td class="num">
+63
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+64
+</td>
+<td class="line">
+    int intVar1;
+</td>
+</tr>
+<tr>
+<td class="num">
+65
+</td>
+<td class="line">
+    int intVar2;
+</td>
+</tr>
+<tr>
+<td class="num">
+66
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+67
+</td>
+<td class="line">
+*/
+</td>
+</tr>
+<tr>
+<td class="num">
+68
+</td>
+<td class="line">
+/*
+</td>
+</tr>
+<tr>
+<td class="num">
+69
+</td>
+<td class="line">
+int test_stack_full()
+</td>
+</tr>
+<tr>
+<td class="num">
+70
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+71
+</td>
+<td class="line">
+    int intVar1;
+</td>
+</tr>
+<tr>
+<td class="num">
+72
+</td>
+<td class="line">
+    int intVar2;
+</td>
+</tr>
+<tr>
+<td class="num">
+73
+</td>
+<td class="line">
+    if(intVar1&gt;0)
+</td>
+</tr>
+<tr>
+<td class="num">
+74
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+75
+</td>
+<td class="line">
+        int arrVar1[10];
+</td>
+</tr>
+<tr>
+<td class="num">
+76
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+77
+</td>
+<td class="line">
+    else
+</td>
+</tr>
+<tr>
+<td class="num">
+78
+</td>
+<td class="line">
+    { if(intVar2&gt;10)
+</td>
+</tr>
+<tr>
+<td class="num">
+79
+</td>
+<td class="line">
+        {
+</td>
+</tr>
+<tr>
+<td class="num">
+80
+</td>
+<td class="line">
+            double doubleArrVar1[20]; 
+</td>
+</tr>
+<tr>
+<td class="num">
+81
+</td>
+<td class="line">
+        }
+</td>
+</tr>
+<tr>
+<td class="num">
+82
+</td>
+<td class="line">
+        else
+</td>
+</tr>
+<tr>
+<td class="num">
+83
+</td>
+<td class="line">
+        {
+</td>
+</tr>
+<tr>
+<td class="num">
+84
+</td>
+<td class="line">
+            float floatArrVar2[33]; 
+</td>
+</tr>
+<tr>
+<td class="num">
+85
+</td>
+<td class="line">
+        }
+</td>
+</tr>
+<tr>
+<td class="num">
+86
+</td>
+<td class="line">
+        int var2[20];
+</td>
+</tr>
+<tr>
+<td class="num">
+87
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+88
+</td>
+<td class="line">
+    return 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+89
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+90
+</td>
+<td class="line">
+*/
+</td>
+</tr>
+<tr>
+<td class="num">
+91
+</td>
+<td class="line">
+int func5() {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: func5 has only 11 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function func5 is 1880. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+92
+</td>
+<td class="line">
+	memset(&amp;globalvar,0,100);
+</td>
+</tr>
+<tr>
+<td class="num">
+93
+</td>
+<td class="line">
+	ok tok;
+</td>
+</tr>
+<tr>
+<td class="num">
+94
+</td>
+<td class="line">
+	podStruct testPodVar;
+</td>
+</tr>
+<tr>
+<td class="num">
+95
+</td>
+<td class="line">
+	simplepod test1;
+</td>
+</tr>
+<tr>
+<td class="num">
+96
+</td>
+<td class="line">
+	nn test2;
+</td>
+</tr>
+<tr>
+<td class="num">
+97
+</td>
+<td class="line">
+	ok tok1;
+</td>
+</tr>
+<tr>
+<td class="num">
+98
+</td>
+<td class="line">
+	memset(&amp;globalvar,0,100);
+</td>
+</tr>
+<tr>
+<td class="num">
+99
+</td>
+<td class="line">
+	//nn t2;
+</td>
+</tr>
+<tr>
+<td class="num">
+100
+</td>
+<td class="line">
+	//cstruct test1;
+</td>
+</tr>
+<tr>
+<td class="num">
+101
+</td>
+<td class="line">
+	return 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+102
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+103
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+104
+</td>
+<td class="line">
+#define VOS_MemAlloc(size) (char *)malloc(size)
+</td>
+</tr>
+<tr>
+<td class="num">
+105
+</td>
+<td class="line">
+void test() {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function test is 6360. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+106
+</td>
+<td class="line">
+	memset(&amp;globalvar,0,100);
+</td>
+</tr>
+<tr>
+<td class="num">
+107
+</td>
+<td class="line">
+	ok tok;
+</td>
+</tr>
+<tr>
+<td class="num">
+108
+</td>
+<td class="line">
+	nn test2;
+</td>
+</tr>
+<tr>
+<td class="num">
+109
+</td>
+<td class="line">
+	podStruct testPodVar1;
+</td>
+</tr>
+<tr>
+<td class="num">
+110
+</td>
+<td class="line">
+	char *str;
+</td>
+</tr>
+<tr>
+<td class="num">
+111
+</td>
+<td class="line">
+	int i;
+</td>
+</tr>
+<tr>
+<td class="num">
+112
+</td>
+<td class="line">
+	for (i = 0; i &lt; 10; i++) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+ForLoopToZeroAnalyzer: Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+113
+</td>
+<td class="line">
+		VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+114
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+115
+</td>
+<td class="line">
+	while (true)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+116
+</td>
+<td class="line">
+		VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+117
+</td>
+<td class="line">
+	for (i = 1; i &lt; 10; i++) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+ForLoopToZeroAnalyzer: Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=1)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+118
+</td>
+<td class="line">
+		if (i &gt; 5) {
+</td>
+</tr>
+<tr>
+<td class="num">
+119
+</td>
+<td class="line">
+			VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+120
+</td>
+<td class="line">
+		} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+121
+</td>
+<td class="line">
+			while (true)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+122
+</td>
+<td class="line">
+				VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+123
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+124
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+125
+</td>
+<td class="line">
+int intVar1 = 0x16;
+</td>
+</tr>
+<tr>
+<td class="num">
+126
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+127
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+128
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+129
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+130
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+131
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: Total MemApplyCall find in function 6 times! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+132
+</td>
+<td class="line">
+int testBitNot = ~intVar1;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+BitNotExprAnalyzer: Bit not expression found (may result in unwanted result) 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+133
+</td>
+<td class="line">
+for ( intVar1 = 0; intVar1 == 0 &amp;&amp; intVar1 != 111 || intVar1 ==3213; intVar1++ )
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+ForLoopToZeroAnalyzer: Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+134
+</td>
+<td class="line">
+	testBitNot++;
+</td>
+</tr>
+<tr>
+<td class="num">
+135
+</td>
+<td class="line">
+for ( intVar1 = 0; intVar1 == 0 &amp;&amp; intVar1 != 111 || intVar1 ==3213; intVar1++ )
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+ForLoopToZeroAnalyzer: Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+ForLoopCombineAnalyzer: This for loop may be combine with previous for loop 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+136
+</td>
+<td class="line">
+        testBitNot++;
+</td>
+</tr>
+<tr>
+<td class="num">
+137
+</td>
+<td class="line">
+double a = 1.0;
+</td>
+</tr>
+<tr>
+<td class="num">
+138
+</td>
+<td class="line">
+double b = sqrt( (double)a );
+</td>
+</tr>
+<tr>
+<td class="num">
+139
+</td>
+<td class="line">
+double c = a / 2;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+RealDivisionAnalyzer: Real divided by const found 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+140
+</td>
+<td class="line">
+c = a / 2.3;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+RealDivisionAnalyzer: Real divided by const found 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+141
+</td>
+<td class="line">
+b = a / c;
+</td>
+</tr>
+<tr>
+<td class="num">
+142
+</td>
+<td class="line">
+float fa;
+</td>
+</tr>
+<tr>
+<td class="num">
+143
+</td>
+<td class="line">
+fa = fa / 2;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+RealDivisionAnalyzer: Real divided by const found 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+144
+</td>
+<td class="line">
+fa = fa / 2.2;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+RealDivisionAnalyzer: Real divided by const found 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+145
+</td>
+<td class="line">
+float fb;
+</td>
+</tr>
+<tr>
+<td class="num">
+146
+</td>
+<td class="line">
+fb = fb / fa;
+</td>
+</tr>
+<tr>
+<td class="num">
+147
+</td>
+<td class="line">
+    int xxxx;
+</td>
+</tr>
+<tr>
+<td class="num">
+148
+</td>
+<td class="line">
+    const int ycst = 20;
+</td>
+</tr>
+<tr>
+<td class="num">
+149
+</td>
+<td class="line">
+    int *yptr; //var_decl pointer_type
+</td>
+</tr>
+<tr>
+<td class="num">
+150
+</td>
+<td class="line">
+    yptr = &amp;xxxx;
+</td>
+</tr>
+<tr>
+<td class="num">
+151
+</td>
+<td class="line">
+    int intVar = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+152
+</td>
+<td class="line">
+    float floatVar = 0.0f;
+</td>
+</tr>
+<tr>
+<td class="num">
+153
+</td>
+<td class="line">
+    double doubleVar = 0.0;
+</td>
+</tr>
+<tr>
+<td class="num">
+154
+</td>
+<td class="line">
+    strncpy(NULL,NULL,xxxx); //var_decl
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+155
+</td>
+<td class="line">
+    strncpy(NULL,NULL,globalvar.x); //component_ref
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+156
+</td>
+<td class="line">
+    cstruct * structPtr = &amp;globalvar;
+</td>
+</tr>
+<tr>
+<td class="num">
+157
+</td>
+<td class="line">
+    strncpy(NULL,NULL,structPtr-&gt;z);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+158
+</td>
+<td class="line">
+    strncpy(NULL,NULL,10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+159
+</td>
+<td class="line">
+    strncpy(NULL,NULL,ycst);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+160
+</td>
+<td class="line">
+    strncpy(NULL,NULL,structPtr-&gt;x);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+161
+</td>
+<td class="line">
+    doubleVar = 0.2;
+</td>
+</tr>
+<tr>
+<td class="num">
+162
+</td>
+<td class="line">
+    podStruct testPodVar;
+</td>
+</tr>
+<tr>
+<td class="num">
+163
+</td>
+<td class="line">
+    my_memcpy(&amp;testPodVar,NULL,10);
+</td>
+</tr>
+<tr>
+<td class="num">
+164
+</td>
+<td class="line">
+    char *arr1 = new char[100];
+</td>
+</tr>
+<tr>
+<td class="num">
+165
+</td>
+<td class="line">
+    char arr2[100];
+</td>
+</tr>
+<tr>
+<td class="num">
+166
+</td>
+<td class="line">
+    const int con_int = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+167
+</td>
+<td class="line">
+    for(int i=0;i&lt;100;++i)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+168
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+169
+</td>
+<td class="line">
+        arr1[i] = 0;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+InitializeArrayByForLoopAnalyzer: init array in for loop 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+170
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+171
+</td>
+<td class="line">
+    cstruct structVar;
+</td>
+</tr>
+<tr>
+<td class="num">
+172
+</td>
+<td class="line">
+    globalvar.intarray = NULL;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+173
+</td>
+<td class="line">
+    int *ptr2 = new int [100];
+</td>
+</tr>
+<tr>
+<td class="num">
+174
+</td>
+<td class="line">
+    for(int i=0;i&lt;100;++i)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+175
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+176
+</td>
+<td class="line">
+        ptr2[i] = 0x0;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+InitializeArrayByForLoopAnalyzer: init array in for loop 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+177
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+178
+</td>
+<td class="line">
+    int p;
+</td>
+</tr>
+<tr>
+<td class="num">
+179
+</td>
+<td class="line">
+    p = 0x0;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+180
+</td>
+<td class="line">
+    char n;
+</td>
+</tr>
+<tr>
+<td class="num">
+181
+</td>
+<td class="line">
+    strcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+182
+</td>
+<td class="line">
+    int value_pred = 100;
+</td>
+</tr>
+<tr>
+<td class="num">
+183
+</td>
+<td class="line">
+    if(value_pred&gt;10)
+</td>
+</tr>
+<tr>
+<td class="num">
+184
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+185
+</td>
+<td class="line">
+        int def_var1 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+186
+</td>
+<td class="line">
+        while(def_var1&gt;=1 &amp;&amp; (def_var1&lt;=1 || value_pred&gt;10))
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 4 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+187
+</td>
+<td class="line">
+            {
+</td>
+</tr>
+<tr>
+<td class="num">
+188
+</td>
+<td class="line">
+                strncpy(NULL,NULL,100);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+189
+</td>
+<td class="line">
+                for(int index = 0;index&lt;10;++index)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+190
+</td>
+<td class="line">
+                {
+</td>
+</tr>
+<tr>
+<td class="num">
+191
+</td>
+<td class="line">
+                    my_memcpy(&amp;globalvar.p,&apos;-&apos;,4);
+</td>
+</tr>
+<tr>
+<td class="num">
+192
+</td>
+<td class="line">
+                }
+</td>
+</tr>
+<tr>
+<td class="num">
+193
+</td>
+<td class="line">
+            }
+</td>
+</tr>
+<tr>
+<td class="num">
+194
+</td>
+<td class="line">
+    int x = 32;
+</td>
+</tr>
+<tr>
+<td class="num">
+195
+</td>
+<td class="line">
+    int y = 100/x;
+</td>
+</tr>
+<tr>
+<td class="num">
+196
+</td>
+<td class="line">
+    int n = 100/x;
+</td>
+</tr>
+<tr>
+<td class="num">
+197
+</td>
+<td class="line">
+    int z = x/64;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+DivideByTwosExponentAnalyzer: divide by 2&apos;s exponent value=64
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+198
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+199
+</td>
+<td class="line">
+    else
+</td>
+</tr>
+<tr>
+<td class="num">
+200
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+201
+</td>
+<td class="line">
+        strcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+202
+</td>
+<td class="line">
+        int def_var2 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+203
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+204
+</td>
+<td class="line">
+    while(true)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 7 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+205
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+206
+</td>
+<td class="line">
+                for(int index = 0;index&lt;10;++index)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 3 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+207
+</td>
+<td class="line">
+                {
+</td>
+</tr>
+<tr>
+<td class="num">
+208
+</td>
+<td class="line">
+                    //my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+209
+</td>
+<td class="line">
+                    for(int j=0;j&lt;100;++j)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+210
+</td>
+<td class="line">
+                    {
+</td>
+</tr>
+<tr>
+<td class="num">
+211
+</td>
+<td class="line">
+                        strncpy(NULL,NULL,j);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+212
+</td>
+<td class="line">
+                    }
+</td>
+</tr>
+<tr>
+<td class="num">
+213
+</td>
+<td class="line">
+                }
+</td>
+</tr>
+<tr>
+<td class="num">
+214
+</td>
+<td class="line">
+                //my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+215
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+216
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+217
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+218
+</td>
+<td class="line">
+int test_stack_simple() {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: test_stack_simple has only 6 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function test_stack_simple is 624. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+219
+</td>
+<td class="line">
+	int intVar1;
+</td>
+</tr>
+<tr>
+<td class="num">
+220
+</td>
+<td class="line">
+	int intVar2;
+</td>
+</tr>
+<tr>
+<td class="num">
+221
+</td>
+<td class="line">
+	nn test2;
+</td>
+</tr>
+<tr>
+<td class="num">
+222
+</td>
+<td class="line">
+	podStruct testPodVar1;
+</td>
+</tr>
+<tr>
+<td class="num">
+223
+</td>
+<td class="line">
+	return 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+224
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+225
+</td>
+<td class="line">
+int test_stack_full() {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: test_stack_full has only 35 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function test_stack_full is 3392. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+226
+</td>
+<td class="line">
+	int intVar1;
+</td>
+</tr>
+<tr>
+<td class="num">
+227
+</td>
+<td class="line">
+	int intVar2;
+</td>
+</tr>
+<tr>
+<td class="num">
+228
+</td>
+<td class="line">
+	if (intVar1 &gt; 0) {
+</td>
+</tr>
+<tr>
+<td class="num">
+229
+</td>
+<td class="line">
+		int arrVar1[10];
+</td>
+</tr>
+<tr>
+<td class="num">
+230
+</td>
+<td class="line">
+	} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+231
+</td>
+<td class="line">
+		if (intVar2 &gt; 10) {
+</td>
+</tr>
+<tr>
+<td class="num">
+232
+</td>
+<td class="line">
+			double doubleArrVar1[20];
+</td>
+</tr>
+<tr>
+<td class="num">
+233
+</td>
+<td class="line">
+		} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+234
+</td>
+<td class="line">
+			float floatArrVar2[33];
+</td>
+</tr>
+<tr>
+<td class="num">
+235
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+236
+</td>
+<td class="line">
+		int var2[20];
+</td>
+</tr>
+<tr>
+<td class="num">
+237
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+238
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+239
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+240
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+241
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+242
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+243
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+244
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+245
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+246
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+247
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+248
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+249
+</td>
+<td class="line">
+VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: Total MemApplyCall find in function 12 times! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+250
+</td>
+<td class="line">
+return 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+251
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+252
+</td>
+<td class="line">
+int test_stack() {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: test_stack has only 6 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function test_stack is 992. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+253
+</td>
+<td class="line">
+	int x;
+</td>
+</tr>
+<tr>
+<td class="num">
+254
+</td>
+<td class="line">
+	if (x &gt; 0) {
+</td>
+</tr>
+<tr>
+<td class="num">
+255
+</td>
+<td class="line">
+		int var1[10];
+</td>
+</tr>
+<tr>
+<td class="num">
+256
+</td>
+<td class="line">
+	} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+257
+</td>
+<td class="line">
+		int var2[20];
+</td>
+</tr>
+<tr>
+<td class="num">
+258
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+259
+</td>
+<td class="line">
+	return 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+260
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+261
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+262
+</td>
+<td class="line">
+void test1() {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: test1 has only 24 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function test1 is 288. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+263
+</td>
+<td class="line">
+	char *str;
+</td>
+</tr>
+<tr>
+<td class="num">
+264
+</td>
+<td class="line">
+	int i;
+</td>
+</tr>
+<tr>
+<td class="num">
+265
+</td>
+<td class="line">
+	for (i = 0; i &lt; 100; i++) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+ForLoopToZeroAnalyzer: Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+266
+</td>
+<td class="line">
+		VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+267
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+268
+</td>
+<td class="line">
+	while (true)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+269
+</td>
+<td class="line">
+		VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+270
+</td>
+<td class="line">
+	for (i = 1; i &lt; 10; i++) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+ForLoopToZeroAnalyzer: Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=1)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+271
+</td>
+<td class="line">
+		if (i &gt; 5) {
+</td>
+</tr>
+<tr>
+<td class="num">
+272
+</td>
+<td class="line">
+			VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+273
+</td>
+<td class="line">
+		} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+274
+</td>
+<td class="line">
+			while (true)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+275
+</td>
+<td class="line">
+				VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+276
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+277
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+278
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+279
+</td>
+<td class="line">
+int func2()
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: func2 has only 40 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function func2 is 712. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+280
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+281
+</td>
+<td class="line">
+    globalvar.intarray = NULL;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+282
+</td>
+<td class="line">
+    int *ptr2 = new int [100];
+</td>
+</tr>
+<tr>
+<td class="num">
+283
+</td>
+<td class="line">
+    for(int i=0;i&lt;100;++i)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+284
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+285
+</td>
+<td class="line">
+        ptr2[i] = 0x0;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+InitializeArrayByForLoopAnalyzer: init array in for loop 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+286
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+287
+</td>
+<td class="line">
+    int p;
+</td>
+</tr>
+<tr>
+<td class="num">
+288
+</td>
+<td class="line">
+    p = 0x0;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+289
+</td>
+<td class="line">
+    char n;
+</td>
+</tr>
+<tr>
+<td class="num">
+290
+</td>
+<td class="line">
+ //   strcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+291
+</td>
+<td class="line">
+    int value_pred = 100;
+</td>
+</tr>
+<tr>
+<td class="num">
+292
+</td>
+<td class="line">
+    if(value_pred&gt;10)
+</td>
+</tr>
+<tr>
+<td class="num">
+293
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+294
+</td>
+<td class="line">
+        int def_var1 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+295
+</td>
+<td class="line">
+        while(def_var1&gt;=1 &amp;&amp; (def_var1&lt;=1 || value_pred&gt;10))
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+296
+</td>
+<td class="line">
+            {
+</td>
+</tr>
+<tr>
+<td class="num">
+297
+</td>
+<td class="line">
+  //              strncpy(NULL,NULL,100);
+</td>
+</tr>
+<tr>
+<td class="num">
+298
+</td>
+<td class="line">
+                for(int index = 0;index&lt;10;++index)
+</td>
+</tr>
+<tr>
+<td class="num">
+299
+</td>
+<td class="line">
+                {
+</td>
+</tr>
+<tr>
+<td class="num">
+300
+</td>
+<td class="line">
+                    //my_memcpy(&amp;globalvar.p,&apos;-&apos;,4);
+</td>
+</tr>
+<tr>
+<td class="num">
+301
+</td>
+<td class="line">
+                }
+</td>
+</tr>
+<tr>
+<td class="num">
+302
+</td>
+<td class="line">
+            }
+</td>
+</tr>
+<tr>
+<td class="num">
+303
+</td>
+<td class="line">
+    int x = 32;
+</td>
+</tr>
+<tr>
+<td class="num">
+304
+</td>
+<td class="line">
+    int y = 100/x;
+</td>
+</tr>
+<tr>
+<td class="num">
+305
+</td>
+<td class="line">
+    int n = 100/x;
+</td>
+</tr>
+<tr>
+<td class="num">
+306
+</td>
+<td class="line">
+    int z = x/64;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+DivideByTwosExponentAnalyzer: divide by 2&apos;s exponent value=64
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+307
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+308
+</td>
+<td class="line">
+    else
+</td>
+</tr>
+<tr>
+<td class="num">
+309
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+310
+</td>
+<td class="line">
+//        strcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+311
+</td>
+<td class="line">
+        int def_var2 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+312
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+313
+</td>
+<td class="line">
+    while(true)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 7 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+314
+</td>
+<td class="line">
+    {
+</td>
+</tr>
+<tr>
+<td class="num">
+315
+</td>
+<td class="line">
+                for(int index = 0;index&lt;10;++index)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 3 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+316
+</td>
+<td class="line">
+                {
+</td>
+</tr>
+<tr>
+<td class="num">
+317
+</td>
+<td class="line">
+                    //my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+318
+</td>
+<td class="line">
+                    for(int j=0;j&lt;100;++j)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+319
+</td>
+<td class="line">
+                    {
+</td>
+</tr>
+<tr>
+<td class="num">
+320
+</td>
+<td class="line">
+                        strncpy(NULL,NULL,j);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StringCopyAnalyzer: string copy function strcpy || strncpy found
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+321
+</td>
+<td class="line">
+                    }
+</td>
+</tr>
+<tr>
+<td class="num">
+322
+</td>
+<td class="line">
+                }
+</td>
+</tr>
+<tr>
+<td class="num">
+323
+</td>
+<td class="line">
+                //my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+324
+</td>
+<td class="line">
+    }
+</td>
+</tr>
+<tr>
+<td class="num">
+325
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+326
+</td>
+<td class="line">
+/*
+</td>
+</tr>
+<tr>
+<td class="num">
+327
+</td>
+<td class="line">
+int func1() {
+</td>
+</tr>
+<tr>
+<td class="num">
+328
+</td>
+<td class="line">
+	int intVar1;
+</td>
+</tr>
+<tr>
+<td class="num">
+329
+</td>
+<td class="line">
+	int intVar2;
+</td>
+</tr>
+<tr>
+<td class="num">
+330
+</td>
+<td class="line">
+	if (intVar1 &gt; 0) {
+</td>
+</tr>
+<tr>
+<td class="num">
+331
+</td>
+<td class="line">
+		int arrVar1[10];
+</td>
+</tr>
+<tr>
+<td class="num">
+332
+</td>
+<td class="line">
+	} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+333
+</td>
+<td class="line">
+		if (intVar2 &gt; 10) {
+</td>
+</tr>
+<tr>
+<td class="num">
+334
+</td>
+<td class="line">
+			double doubleArrVar1[20];
+</td>
+</tr>
+<tr>
+<td class="num">
+335
+</td>
+<td class="line">
+		} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+336
+</td>
+<td class="line">
+			float floatArrVar2[33];
+</td>
+</tr>
+<tr>
+<td class="num">
+337
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+338
+</td>
+<td class="line">
+		int var2[20];
+</td>
+</tr>
+<tr>
+<td class="num">
+339
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+340
+</td>
+<td class="line">
+	memset(&amp;intVar1, 100, 10);
+</td>
+</tr>
+<tr>
+<td class="num">
+341
+</td>
+<td class="line">
+	int xxxx;
+</td>
+</tr>
+<tr>
+<td class="num">
+342
+</td>
+<td class="line">
+	const int ycst = 20;
+</td>
+</tr>
+<tr>
+<td class="num">
+343
+</td>
+<td class="line">
+	int *yptr; //var_decl pointer_type
+</td>
+</tr>
+<tr>
+<td class="num">
+344
+</td>
+<td class="line">
+	yptr = &amp;xxxx;
+</td>
+</tr>
+<tr>
+<td class="num">
+345
+</td>
+<td class="line">
+	int intVar = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+346
+</td>
+<td class="line">
+	float floatVar = 0.0f;
+</td>
+</tr>
+<tr>
+<td class="num">
+347
+</td>
+<td class="line">
+	double doubleVar = 0.0;
+</td>
+</tr>
+<tr>
+<td class="num">
+348
+</td>
+<td class="line">
+	strncpy(NULL, NULL, xxxx); //var_decl
+</td>
+</tr>
+<tr>
+<td class="num">
+349
+</td>
+<td class="line">
+	strncpy(NULL, NULL, globalvar.x); //component_ref
+</td>
+</tr>
+<tr>
+<td class="num">
+350
+</td>
+<td class="line">
+	cstruct * structPtr = &amp;globalvar;
+</td>
+</tr>
+<tr>
+<td class="num">
+351
+</td>
+<td class="line">
+	strncpy(NULL, NULL, structPtr-&gt;z);
+</td>
+</tr>
+<tr>
+<td class="num">
+352
+</td>
+<td class="line">
+	strncpy(NULL, NULL, 10);
+</td>
+</tr>
+<tr>
+<td class="num">
+353
+</td>
+<td class="line">
+	strncpy(NULL, NULL, ycst);
+</td>
+</tr>
+<tr>
+<td class="num">
+354
+</td>
+<td class="line">
+	strncpy(NULL, NULL, structPtr-&gt;x);
+</td>
+</tr>
+<tr>
+<td class="num">
+355
+</td>
+<td class="line">
+	doubleVar = 0.2;
+</td>
+</tr>
+<tr>
+<td class="num">
+356
+</td>
+<td class="line">
+	podStruct testPodVar;
+</td>
+</tr>
+<tr>
+<td class="num">
+357
+</td>
+<td class="line">
+	char *arr1 = new char[100];
+</td>
+</tr>
+<tr>
+<td class="num">
+358
+</td>
+<td class="line">
+	char arr2[100];
+</td>
+</tr>
+<tr>
+<td class="num">
+359
+</td>
+<td class="line">
+	const int con_int = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+360
+</td>
+<td class="line">
+	for (int i = 0; i &lt; 100; ++i) {
+</td>
+</tr>
+<tr>
+<td class="num">
+361
+</td>
+<td class="line">
+		arr1[i] = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+362
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+363
+</td>
+<td class="line">
+	cstruct structVar;
+</td>
+</tr>
+<tr>
+<td class="num">
+364
+</td>
+<td class="line">
+	globalvar.intarray = NULL;
+</td>
+</tr>
+<tr>
+<td class="num">
+365
+</td>
+<td class="line">
+	int *ptr2 = new int[100];
+</td>
+</tr>
+<tr>
+<td class="num">
+366
+</td>
+<td class="line">
+	for (int i = 0; i &lt; 100; i) {
+</td>
+</tr>
+<tr>
+<td class="num">
+367
+</td>
+<td class="line">
+		ptr2[i] = 0x0;
+</td>
+</tr>
+<tr>
+<td class="num">
+368
+</td>
+<td class="line">
+		intVar = 1001;
+</td>
+</tr>
+<tr>
+<td class="num">
+369
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+370
+</td>
+<td class="line">
+	memset(ptr2, 0, 100);
+</td>
+</tr>
+<tr>
+<td class="num">
+371
+</td>
+<td class="line">
+	memset(&amp;globalvar.y, 5, 3);
+</td>
+</tr>
+<tr>
+<td class="num">
+372
+</td>
+<td class="line">
+	int p;
+</td>
+</tr>
+<tr>
+<td class="num">
+373
+</td>
+<td class="line">
+	p = 0x0;
+</td>
+</tr>
+<tr>
+<td class="num">
+374
+</td>
+<td class="line">
+	char n;
+</td>
+</tr>
+<tr>
+<td class="num">
+375
+</td>
+<td class="line">
+	strcpy(NULL, NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+376
+</td>
+<td class="line">
+	int value_pred = 100;
+</td>
+</tr>
+<tr>
+<td class="num">
+377
+</td>
+<td class="line">
+	memset(&amp;doubleVar, 0, 4);
+</td>
+</tr>
+<tr>
+<td class="num">
+378
+</td>
+<td class="line">
+	if (value_pred &gt; 10) {
+</td>
+</tr>
+<tr>
+<td class="num">
+379
+</td>
+<td class="line">
+		int def_var1 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+380
+</td>
+<td class="line">
+		while (def_var1 &gt;= 1 &amp;&amp; (def_var1 &lt;= 1 || value_pred &gt; 10)) {
+</td>
+</tr>
+<tr>
+<td class="num">
+381
+</td>
+<td class="line">
+			strncpy(NULL, NULL, 100);
+</td>
+</tr>
+<tr>
+<td class="num">
+382
+</td>
+<td class="line">
+			for (int index = 0; index &lt; 10; ++index) {
+</td>
+</tr>
+<tr>
+<td class="num">
+383
+</td>
+<td class="line">
+			}
+</td>
+</tr>
+<tr>
+<td class="num">
+384
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+385
+</td>
+<td class="line">
+		int x = 32;
+</td>
+</tr>
+<tr>
+<td class="num">
+386
+</td>
+<td class="line">
+		int y = 100 / x;
+</td>
+</tr>
+<tr>
+<td class="num">
+387
+</td>
+<td class="line">
+		int n = 100 / x;
+</td>
+</tr>
+<tr>
+<td class="num">
+388
+</td>
+<td class="line">
+		int z = x / 64;
+</td>
+</tr>
+<tr>
+<td class="num">
+389
+</td>
+<td class="line">
+		x = y * 128;
+</td>
+</tr>
+<tr>
+<td class="num">
+390
+</td>
+<td class="line">
+		z = y * 133;
+</td>
+</tr>
+<tr>
+<td class="num">
+391
+</td>
+<td class="line">
+	} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+392
+</td>
+<td class="line">
+		strcpy(NULL, NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+393
+</td>
+<td class="line">
+		int def_var2 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+394
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+395
+</td>
+<td class="line">
+	memset(structPtr, 10, 5);
+</td>
+</tr>
+<tr>
+<td class="num">
+396
+</td>
+<td class="line">
+	while (true) {
+</td>
+</tr>
+<tr>
+<td class="num">
+397
+</td>
+<td class="line">
+		for (int index = 0; index &lt; 10; ++index) {
+</td>
+</tr>
+<tr>
+<td class="num">
+398
+</td>
+<td class="line">
+			//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+399
+</td>
+<td class="line">
+			for (int j = 0; j &lt; 100; ++j) {
+</td>
+</tr>
+<tr>
+<td class="num">
+400
+</td>
+<td class="line">
+				strncpy(NULL, NULL, j);
+</td>
+</tr>
+<tr>
+<td class="num">
+401
+</td>
+<td class="line">
+			}
+</td>
+</tr>
+<tr>
+<td class="num">
+402
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+403
+</td>
+<td class="line">
+		//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+404
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+405
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+406
+</td>
+<td class="line">
+	//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+407
+</td>
+<td class="line">
+	return 100;
+</td>
+</tr>
+<tr>
+<td class="num">
+408
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+409
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+410
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+411
+</td>
+<td class="line">
+int func2() {
+</td>
+</tr>
+<tr>
+<td class="num">
+412
+</td>
+<td class="line">
+	globalvar.intarray = NULL;
+</td>
+</tr>
+<tr>
+<td class="num">
+413
+</td>
+<td class="line">
+	int *ptr2 = new int[100];
+</td>
+</tr>
+<tr>
+<td class="num">
+414
+</td>
+<td class="line">
+	for (int i = 0; i &lt; 100; ++i) {
+</td>
+</tr>
+<tr>
+<td class="num">
+415
+</td>
+<td class="line">
+		ptr2[i] = 0x0;
+</td>
+</tr>
+<tr>
+<td class="num">
+416
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+417
+</td>
+<td class="line">
+	int p;
+</td>
+</tr>
+<tr>
+<td class="num">
+418
+</td>
+<td class="line">
+	p = 0x0;
+</td>
+</tr>
+<tr>
+<td class="num">
+419
+</td>
+<td class="line">
+	char n;
+</td>
+</tr>
+<tr>
+<td class="num">
+420
+</td>
+<td class="line">
+	//   strcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+421
+</td>
+<td class="line">
+	int value_pred = 100;
+</td>
+</tr>
+<tr>
+<td class="num">
+422
+</td>
+<td class="line">
+	if (value_pred &gt; 10) {
+</td>
+</tr>
+<tr>
+<td class="num">
+423
+</td>
+<td class="line">
+		int def_var1 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+424
+</td>
+<td class="line">
+		while (def_var1 &gt;= 1 &amp;&amp; (def_var1 &lt;= 1 || value_pred &gt; 10)) {
+</td>
+</tr>
+<tr>
+<td class="num">
+425
+</td>
+<td class="line">
+			//              strncpy(NULL,NULL,100);
+</td>
+</tr>
+<tr>
+<td class="num">
+426
+</td>
+<td class="line">
+			for (int index = 0; index &lt; 10; ++index) {
+</td>
+</tr>
+<tr>
+<td class="num">
+427
+</td>
+<td class="line">
+				//my_memcpy(&amp;globalvar.p,&apos;-&apos;,4);
+</td>
+</tr>
+<tr>
+<td class="num">
+428
+</td>
+<td class="line">
+			}
+</td>
+</tr>
+<tr>
+<td class="num">
+429
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+430
+</td>
+<td class="line">
+		int x = 32;
+</td>
+</tr>
+<tr>
+<td class="num">
+431
+</td>
+<td class="line">
+		int y = 100 / x;
+</td>
+</tr>
+<tr>
+<td class="num">
+432
+</td>
+<td class="line">
+		int n = 100 / x;
+</td>
+</tr>
+<tr>
+<td class="num">
+433
+</td>
+<td class="line">
+		int z = x / 64;
+</td>
+</tr>
+<tr>
+<td class="num">
+434
+</td>
+<td class="line">
+	} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+435
+</td>
+<td class="line">
+		//        strcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+436
+</td>
+<td class="line">
+		int def_var2 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+437
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+438
+</td>
+<td class="line">
+	while (true) {
+</td>
+</tr>
+<tr>
+<td class="num">
+439
+</td>
+<td class="line">
+		for (int index = 0; index &lt; 10; ++index) {
+</td>
+</tr>
+<tr>
+<td class="num">
+440
+</td>
+<td class="line">
+			//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+441
+</td>
+<td class="line">
+			for (int j = 0; j &lt; 100; ++j) {
+</td>
+</tr>
+<tr>
+<td class="num">
+442
+</td>
+<td class="line">
+				//                       strncpy(NULL,NULL,j);
+</td>
+</tr>
+<tr>
+<td class="num">
+443
+</td>
+<td class="line">
+			}
+</td>
+</tr>
+<tr>
+<td class="num">
+444
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+445
+</td>
+<td class="line">
+		//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+446
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+447
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+448
+</td>
+<td class="line">
+	//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+449
+</td>
+<td class="line">
+	return 100;
+</td>
+</tr>
+<tr>
+<td class="num">
+450
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+451
+</td>
+<td class="line">
+*/
+</td>
+</tr>
+<tr>
+<td class="num">
+452
+</td>
+<td class="line">
+int test_function(double a = 10) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: test_function has only 22 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function test_function is 384. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+453
+</td>
+<td class="line">
+	globalvar.intarray = NULL;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+454
+</td>
+<td class="line">
+	int value_pred = 100;
+</td>
+</tr>
+<tr>
+<td class="num">
+455
+</td>
+<td class="line">
+	if (value_pred &gt; 10) {
+</td>
+</tr>
+<tr>
+<td class="num">
+456
+</td>
+<td class="line">
+		int def_var1 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+457
+</td>
+<td class="line">
+		while (def_var1 &gt;= 1 &amp;&amp; (def_var1 &lt;= 1 || value_pred &gt; 10)) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+458
+</td>
+<td class="line">
+			for (int index = 0; index &lt; 10; ++index) {
+</td>
+</tr>
+<tr>
+<td class="num">
+459
+</td>
+<td class="line">
+				//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+460
+</td>
+<td class="line">
+			}
+</td>
+</tr>
+<tr>
+<td class="num">
+461
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+462
+</td>
+<td class="line">
+		int x = 32;
+</td>
+</tr>
+<tr>
+<td class="num">
+463
+</td>
+<td class="line">
+		int y = 100 / x;
+</td>
+</tr>
+<tr>
+<td class="num">
+464
+</td>
+<td class="line">
+		int z = x / 64;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+DivideByTwosExponentAnalyzer: divide by 2&apos;s exponent value=64
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+465
+</td>
+<td class="line">
+	} else {
+</td>
+</tr>
+<tr>
+<td class="num">
+466
+</td>
+<td class="line">
+		int def_var2 = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+467
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+468
+</td>
+<td class="line">
+	while (true) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+469
+</td>
+<td class="line">
+		for (int index = 0; index &lt; 10; ++index) {
+</td>
+</tr>
+<tr>
+<td class="num">
+470
+</td>
+<td class="line">
+			//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+471
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+472
+</td>
+<td class="line">
+		//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+473
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+474
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+475
+</td>
+<td class="line">
+	//my_memcpy(NULL,NULL);
+</td>
+</tr>
+<tr>
+<td class="num">
+476
+</td>
+<td class="line">
+	return 100;
+</td>
+</tr>
+<tr>
+<td class="num">
+477
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+478
+</td>
+<td class="line">
+void do_calc(int test_name = 10) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: do_calc has only 17 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function do_calc is 128. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+479
+</td>
+<td class="line">
+	int value = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+480
+</td>
+<td class="line">
+	for (int i = 0; i &lt; 100; ++i) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+481
+</td>
+<td class="line">
+		value = value + i;
+</td>
+</tr>
+<tr>
+<td class="num">
+482
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+483
+</td>
+<td class="line">
+	while (true) {
+</td>
+</tr>
+<tr>
+<td class="num">
+484
+</td>
+<td class="line">
+		value += 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+485
+</td>
+<td class="line">
+		if (value = 100) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=100)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+486
+</td>
+<td class="line">
+			return;
+</td>
+</tr>
+<tr>
+<td class="num">
+487
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+488
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+489
+</td>
+<td class="line">
+	int x = 1001;
+</td>
+</tr>
+<tr>
+<td class="num">
+490
+</td>
+<td class="line">
+	value = x / 32;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+DivideByTwosExponentAnalyzer: divide by 2&apos;s exponent value=32
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+491
+</td>
+<td class="line">
+	if (value == 0) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+IfToSwitchAnalyzer: if statement list can be changed to switch 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+492
+</td>
+<td class="line">
+		if (value == 1) {
+</td>
+</tr>
+<tr>
+<td class="num">
+493
+</td>
+<td class="line">
+			if (value == 2) {
+</td>
+</tr>
+<tr>
+<td class="num">
+494
+</td>
+<td class="line">
+				if (value == 3) {
+</td>
+</tr>
+<tr>
+<td class="num">
+495
+</td>
+<td class="line">
+				}
+</td>
+</tr>
+<tr>
+<td class="num">
+496
+</td>
+<td class="line">
+			}
+</td>
+</tr>
+<tr>
+<td class="num">
+497
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+498
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+499
+</td>
+<td class="line">
+	do_calc(100);
+</td>
+</tr>
+<tr>
+<td class="num">
+500
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+501
+</td>
+<td class="line">
+/*
+</td>
+</tr>
+<tr>
+<td class="num">
+502
+</td>
+<td class="line">
+int main(int argc, char** argvector) {
+</td>
+</tr>
+<tr>
+<td class="num">
+503
+</td>
+<td class="line">
+	int x, i;
+</td>
+</tr>
+<tr>
+<td class="num">
+504
+</td>
+<td class="line">
+	switch (x) {
+</td>
+</tr>
+<tr>
+<td class="num">
+505
+</td>
+<td class="line">
+	case 1:
+</td>
+</tr>
+<tr>
+<td class="num">
+506
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+507
+</td>
+<td class="line">
+	for (i = 0; i &lt; 100; i++) {
+</td>
+</tr>
+<tr>
+<td class="num">
+508
+</td>
+<td class="line">
+		VOS_MemAlloc(10);
+</td>
+</tr>
+<tr>
+<td class="num">
+509
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+510
+</td>
+<td class="line">
+		x++;
+</td>
+</tr>
+<tr>
+<td class="num">
+511
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+512
+</td>
+<td class="line">
+	default:
+</td>
+</tr>
+<tr>
+<td class="num">
+513
+</td>
+<td class="line">
+		;
+</td>
+</tr>
+<tr>
+<td class="num">
+514
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+515
+</td>
+<td class="line">
+	return 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+516
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+517
+</td>
+<td class="line">
+*/
+</td>
+</tr>
+<tr>
+<td class="num">
+518
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+519
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+520
+</td>
+<td class="line">
+int min(int i, int j)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: min has only 7 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function min is 0. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+521
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+522
+</td>
+<td class="line">
+	return i &lt; j ? i : j;
+</td>
+</tr>
+<tr>
+<td class="num">
+523
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+524
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+525
+</td>
+<td class="line">
+int main(int argc, char **argv)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: main has only 42 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function main is 608. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+526
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+527
+</td>
+<td class="line">
+	int x, i;
+</td>
+</tr>
+<tr>
+<td class="num">
+528
+</td>
+<td class="line">
+	switch (x) {
+</td>
+</tr>
+<tr>
+<td class="num">
+529
+</td>
+<td class="line">
+	case 1:
+</td>
+</tr>
+<tr>
+<td class="num">
+530
+</td>
+<td class="line">
+	{
+</td>
+</tr>
+<tr>
+<td class="num">
+531
+</td>
+<td class="line">
+		for (i = 0; i &lt; 100; i++) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+ForLoopToZeroAnalyzer: Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+532
+</td>
+<td class="line">
+			VOS_MemAlloc(10);
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MemApplyAnalyzer: MemApplyCall find in loop counter 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+533
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+534
+</td>
+<td class="line">
+		x++;
+</td>
+</tr>
+<tr>
+<td class="num">
+535
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+536
+</td>
+<td class="line">
+	break;
+</td>
+</tr>
+<tr>
+<td class="num">
+537
+</td>
+<td class="line">
+	default:
+</td>
+</tr>
+<tr>
+<td class="num">
+538
+</td>
+<td class="line">
+		break;
+</td>
+</tr>
+<tr>
+<td class="num">
+539
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+540
+</td>
+<td class="line">
+	int sum = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+541
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+542
+</td>
+<td class="line">
+	for (int i = 0; i &lt; argc; i++) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 3 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+543
+</td>
+<td class="line">
+		for (int j = 0; j &lt; 10; j++) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+544
+</td>
+<td class="line">
+			sum += sum + i + j;
+</td>
+</tr>
+<tr>
+<td class="num">
+545
+</td>
+<td class="line">
+		}
+</td>
+</tr>
+<tr>
+<td class="num">
+546
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+547
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+548
+</td>
+<td class="line">
+	int val = 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+549
+</td>
+<td class="line">
+	switch (val) {
+</td>
+</tr>
+<tr>
+<td class="num">
+550
+</td>
+<td class="line">
+	case 1:
+</td>
+</tr>
+<tr>
+<td class="num">
+551
+</td>
+<td class="line">
+		val += 1;
+</td>
+</tr>
+<tr>
+<td class="num">
+552
+</td>
+<td class="line">
+		break;
+</td>
+</tr>
+<tr>
+<td class="num">
+553
+</td>
+<td class="line">
+	default:
+</td>
+</tr>
+<tr>
+<td class="num">
+554
+</td>
+<td class="line">
+		break;
+</td>
+</tr>
+<tr>
+<td class="num">
+555
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+556
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+557
+</td>
+<td class="line">
+	int minval = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+558
+</td>
+<td class="line">
+	if (val &lt;= 10) {
+</td>
+</tr>
+<tr>
+<td class="num">
+559
+</td>
+<td class="line">
+		minval = min(val, sum);
+</td>
+</tr>
+<tr>
+<td class="num">
+560
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+561
+</td>
+<td class="line">
+
+</td>
+</tr>
+<tr>
+<td class="num">
+562
+</td>
+<td class="line">
+	int count = 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+563
+</td>
+<td class="line">
+	while (minval--) {
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+564
+</td>
+<td class="line">
+		count++;
+</td>
+</tr>
+<tr>
+<td class="num">
+565
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+566
+</td>
+<td class="line">
+	return 0;
+</td>
+</tr>
+<tr>
+<td class="num">
+567
+</td>
+<td class="line">
+}
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+</html>
+
