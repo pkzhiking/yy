@@ -100,6 +100,37 @@ void outputFilesName(int iSid)
     proj_name = row[1];
 
     cout << "porjname: " << proj_name << endl;
+
+    FILE *fp;
+    fp = fopen(FILES_DIR, "w");
+    if(NULL == fp)
+    {
+	cout << "cannot open file: " << FILES_DIR << endl;
+	return ;
+    }
+
+    string old_str, new_str;
+    string subs_group_name = gName;
+    string subs_proj_name = proj_name;
+    old_str = " ";
+    new_str = "\\ ";
+    for(string::size_type pos(subs_group_name.size() -1); string::npos != pos; pos--)
+    {
+	if( string::npos != (pos = subs_group_name.rfind(old_str, pos)))
+	    subs_group_name = subs_group_name.replace(pos, old_str.length(), new_str);
+	else
+	    break;
+    }
+    fprintf(fp, "%s\n", subs_group_name.c_str());
+    
+    for(string::size_type pos(subs_proj_name.size() -1); string::npos != pos; pos--)
+    {
+	if( string::npos != (pos = subs_proj_name.rfind(old_str, pos)))
+	    subs_proj_name = subs_proj_name.replace(pos, old_str.length(), new_str);
+	else
+	    break;
+    }
+    fprintf(fp, "%s\n", subs_proj_name.c_str());
     
 
     string strSelectSubmitFile = "select * from SubmitFile where sid=" + Util::intToString((int) iSid);
@@ -116,13 +147,6 @@ void outputFilesName(int iSid)
 
     res = mysql_store_result(&mysql);
 
-    FILE *fp;
-    fp = fopen(FILES_DIR, "w");
-    if(NULL == fp)
-    {
-	cout << "cannot open file: " << FILES_DIR << endl;
-	return ;
-    }
 
     while(row = mysql_fetch_row(res))
     {

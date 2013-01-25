@@ -13,7 +13,7 @@ using namespace std;
 
 void ProblemClass::Print()
 {
-    cout << name << ":" << count << endl;
+    //cout << name << ":" << count << endl;
     problem *p = head;
     for(; p; p = p->next)
     {
@@ -26,7 +26,7 @@ void ProblemList::Init()
     FILE *fp = freopen(PROBLEM_CONFIG, "r", stdin);
     if(NULL == fp)
     {
-	cout << "cannot open config file: " << PROBLEM_CONFIG << endl;
+	//cout << "cannot open config file: " << PROBLEM_CONFIG << endl;
 	return;
     }
     char tempStr[50];
@@ -76,24 +76,24 @@ void ProblemList::Print()
 void ProblemList::AmendRelativeName()
 {
     //string pwd(proj_name);
-    cout << "project name:" << proj_name << endl;
+    //cout << "project name:" << proj_name << endl;
     for(int i = 0; i < vec_pro.size(); i++)
     {
 	problem *p = vec_pro[i].GetHead();
 	for(; p; p = p->next)
 	{
-	    cout << "		p->fileName: " << p->fileName << endl;
+	    //cout << "		p->fileName: " << p->fileName << endl;
 	    string str_old, str_new;
 	    str_old = proj_name;
-	    cout << "	    str_old.length():	    " << str_old.length() << endl;
+	    //cout << "	    str_old.length():	    " << str_old.length() << endl;
 	    str_new = ".";
 	    int pos;
 	    if(string::npos != (pos = p->fileName.find(str_old)))
 	    {
-		cout << "pos: " << pos;
-		cout << " p->fileName: " << p->fileName;
-		cout << " str_old.length(): " << str_old.length();
-		cout << " str_new: " << str_new << endl;
+		//cout << "pos: " << pos;
+		//cout << " p->fileName: " << p->fileName;
+		//cout << " str_old.length(): " << str_old.length();
+		//cout << " str_new: " << str_new << endl;
 		p->fileName = p->fileName.replace(pos, str_old.length(), str_new);
 	    }
 #if 0
@@ -174,7 +174,7 @@ void ProblemList::PrintCommonDirForDirs()
 {
     for(int i = 0; i < vec_pro.size(); i++)
     {
-	cout << vec_pro[i].GetName() << endl;
+	//cout << vec_pro[i].GetName() << endl;
     }
 }
 
@@ -188,35 +188,35 @@ void ProblemList::DeduceProjName(int iSid)
 
     mysql_init(&mysql);
     if(!mysql_real_connect(&mysql, IP, USER, PASSWORD, DATABASE, 3306, NULL, 0)){
-	cout << "Error connecting database: " << mysql_error(&mysql) << endl;
+	//cout << "Error connecting database: " << mysql_error(&mysql) << endl;
 	return;
     }
-    cout << "Connected..." << endl;
+    //cout << "Connected..." << endl;
 
     //get pid of the project for searching project name
     string strGetPId = "select pid from Submit where sid=" + Util::intToString(iSid);
-    cout << strGetPId << endl;
+    //cout << strGetPId << endl;
     pQuery = (char*) strGetPId.c_str();
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet){
-        cout << "Error executing query: " << mysql_error(&mysql) << endl;
+        //cout << "Error executing query: " << mysql_error(&mysql) << endl;
         return;
     }
-    cout << pQuery << "executed..." << endl;
+    //cout << pQuery << "executed..." << endl;
     res = mysql_store_result(&mysql);
     row = mysql_fetch_row(res);
     int iPid = Util::stringToInt(row[0]);
     
     //get project name, gid according its pid
     string strGetProjName = "select name, gid from Project where pid=" + Util::intToString(iPid);
-    cout << strGetProjName << endl;
+    //cout << strGetProjName << endl;
     pQuery = (char*) strGetProjName.c_str();
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet){
-        cout << "Error executing query: " << mysql_error(&mysql) << endl;
+        //cout << "Error executing query: " << mysql_error(&mysql) << endl;
         return;
     }
-    cout << pQuery << "executed..." << endl;
+    //cout << pQuery << "executed..." << endl;
     res = mysql_store_result(&mysql);
     row = mysql_fetch_row(res);
     string strProjName = row[0];
@@ -224,20 +224,20 @@ void ProblemList::DeduceProjName(int iSid)
 
     //get Group Name according its gid
     string strGetGroupName = "select name from GroupInfo where gid=" + Util::intToString(iGid);
-    cout << strGetGroupName << endl;
+    //cout << strGetGroupName << endl;
     pQuery = (char*) strGetGroupName.c_str();
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet){
-        cout << "Error executing query: " << mysql_error(&mysql) << endl;
+        //cout << "Error executing query: " << mysql_error(&mysql) << endl;
         return;
     }
-    cout << pQuery << "executed..." << endl;
+    //cout << pQuery << "executed..." << endl;
     res = mysql_store_result(&mysql);
     row = mysql_fetch_row(res);
     string strGroupName = row[0];
 
     proj_name = DEFAULT_PROJS_DIR + strGroupName + "/" + strProjName;
-    cout << "proj_name: " << proj_name << endl;
+    //cout << "proj_name: " << proj_name << endl;
     mysql_close(&mysql);
 }
 
@@ -334,7 +334,7 @@ void ProblemList::PrintDirPro()
 {
     for(int i = 0; i < vec_dir_pro.size(); i++)
     {
-	cout << "dir " << vec_dir_pro[i].dirName << " exist " << vec_dir_pro[i].errCount << " problem" << endl;
+	//cout << "dir " << vec_dir_pro[i].dirName << " exist " << vec_dir_pro[i].errCount << " problem" << endl;
     }
 }
 
@@ -368,7 +368,7 @@ void ProblemList::PrintFilePro()
 {
     for(int i = 0; i < vec_file_pro.size(); i++)
     {
-	cout << "file: " << vec_file_pro[i].fileName << " analyzer: " << vec_file_pro[i].analyzer << " errors: " << vec_file_pro[i].err_num << endl;
+	//cout << "file: " << vec_file_pro[i].fileName << " analyzer: " << vec_file_pro[i].analyzer << " errors: " << vec_file_pro[i].err_num << endl;
     }
 }
 
@@ -393,10 +393,10 @@ void ProblemList::ReportFileProToDB(int iSid)
 
     mysql_init(&mysql);
     if(!mysql_real_connect(&mysql, IP, USER, PASSWORD, DATABASE, 3306, NULL, 0)){
-	cout << "Error connecting database: " << mysql_error(&mysql) << endl;
+	//cout << "Error connecting database: " << mysql_error(&mysql) << endl;
 	return;
     }
-    cout << "Connected..." << endl;
+    //cout << "Connected..." << endl;
 
     //insert into the table the errors for every directory
     //temp_time = Util::intToString(p->
@@ -404,26 +404,26 @@ void ProblemList::ReportFileProToDB(int iSid)
     {
 	string tempStr;
 	tempStr = "update SubmitFile set error_num=" + Util::intToString(vec_dir_pro[i].errCount) + " where sid=" + Util::intToString(iSid) + " and name='" + vec_dir_pro[i].dirName + "'";
-	cout << tempStr << endl;
+	//cout << tempStr << endl;
 	pQuery = (char*) tempStr.c_str();
 	iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
 	if(iQueryRet){
-	    cout << "Error executing query: " << mysql_error(&mysql) << endl;
+	    //cout << "Error executing query: " << mysql_error(&mysql) << endl;
 	    return;
 	}
-	cout << pQuery << "executed..." << endl;
+	//cout << pQuery << "executed..." << endl;
     }
 
     //update the status of Submit file
     string strUpdateSubmitStatus = "update Submit set status=1 where sid=" + Util::intToString(iSid);
-    cout << strUpdateSubmitStatus << endl;
+    //cout << strUpdateSubmitStatus << endl;
     pQuery = (char*) strUpdateSubmitStatus.c_str();
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet){
-        cout << "Error executing query: " << mysql_error(&mysql) << endl;
+        //cout << "Error executing query: " << mysql_error(&mysql) << endl;
         return;
     }
-    cout << pQuery << "executed..." << endl;
+    //cout << pQuery << "executed..." << endl;
 
     mysql_close(&mysql);
 }
@@ -438,10 +438,10 @@ void ProblemList::ReportAnalyzerProToDB(int iSid)
 
     mysql_init(&mysql);
     if(!mysql_real_connect(&mysql, IP, USER, PASSWORD, DATABASE, 3306, NULL, 0)){
-	cout << "Error connecting database: " << mysql_error(&mysql) << endl;
+	//cout << "Error connecting database: " << mysql_error(&mysql) << endl;
 	return;
     }
-    cout << "Connected..." << endl;
+    //cout << "Connected..." << endl;
 
     for(int i = 0; i < vec_file_pro.size(); i++)
     {
@@ -450,32 +450,32 @@ void ProblemList::ReportAnalyzerProToDB(int iSid)
 
 	string strGetAnalyzerId;
 	strGetAnalyzerId = "select * from Analyzer where name='" + vec_file_pro[i].analyzer + "'";
-	cout << strGetAnalyzerId << endl;
+	//cout << strGetAnalyzerId << endl;
 	pQuery = (char*) strGetAnalyzerId.c_str();
 	iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
 	if(iQueryRet){
-	    cout << "Error executing query: " << mysql_error(&mysql) << endl;
+	    //cout << "Error executing query: " << mysql_error(&mysql) << endl;
 	    return;
 	}
-	cout << pQuery << "executed..." << endl;
+	//cout << pQuery << "executed..." << endl;
 
 	res = mysql_store_result(&mysql);
 	row = mysql_fetch_row(res);
 	
 	aid = Util::stringToInt(row[0]);
-	cout << "aid: " << aid  << endl;
+	//cout << "aid: " << aid  << endl;
 
 	string tempStr;
 	tempStr = "insert into AnalyzeResult value(" + Util::intToString(iSid) + ", '" + vec_file_pro[i].fileName + "', " + Util::intToString(aid) + ", " + Util::intToString(vec_file_pro[i].err_num) + ")";
-	cout << tempStr << vec_file_pro[i].analyzer << endl;
+	//cout << tempStr << vec_file_pro[i].analyzer << endl;
 
 	pQuery = (char*) tempStr.c_str();
 	iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
 	if(iQueryRet){
-	    cout << "Error executing query: " << mysql_error(&mysql) << endl;
+	    //cout << "Error executing query: " << mysql_error(&mysql) << endl;
 	    return;
 	}
-	cout << pQuery << "executed..." << endl;
+	//cout << pQuery << "executed..." << endl;
     }
     mysql_close(&mysql);
 }
@@ -491,24 +491,24 @@ void ProblemList::ReCalFatherDirProToDB(int iSid)
 
     mysql_init(&mysql);
     if(!mysql_real_connect(&mysql, IP, USER, PASSWORD, DATABASE, 3306, NULL, 0)){
-	cout << "Error connecting database: " << mysql_error(&mysql) << endl;
+	//cout << "Error connecting database: " << mysql_error(&mysql) << endl;
 	return;
     }
-    cout << "Connected..." << endl;
+    //cout << "Connected..." << endl;
 
     char analyzer_name[255];
     vector<pair<string, int> > vec_file_err;
 
     string strGetFilesError;
     strGetFilesError = "select name, error_num from SubmitFile where sid=" + Util::intToString(iSid);
-    cout << strGetFilesError << endl;
+    //cout << strGetFilesError << endl;
     pQuery = (char*) strGetFilesError.c_str();
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet){
-        cout << "Error executing query: " << mysql_error(&mysql) << endl;
+        //cout << "Error executing query: " << mysql_error(&mysql) << endl;
         return;
     }
-    cout << pQuery << "executed..." << endl;
+    //cout << pQuery << "executed..." << endl;
 
     res = mysql_store_result(&mysql);
 
@@ -555,7 +555,7 @@ void ProblemList::ReCalFatherDirProToDB(int iSid)
 
     for(int i = 0; i < vec_file_err.size(); i++)
     {
-        cout << vec_file_err[i].first << ", " << vec_file_err[i].second << endl;
+        //cout << vec_file_err[i].first << ", " << vec_file_err[i].second << endl;
     }
 
 #if 0	
@@ -584,14 +584,15 @@ void ProblemList::ReCalFatherDirProToDB(int iSid)
 	if(0 == strcmp(".c", str_last_2_cha.c_str()) || 0 == strcmp(".cpp", str_last_4_cha.c_str()))
 	    continue;
 	string strTemp = "update SubmitFile set error_num=" + Util::intToString(vec_file_err[i].second) + " where sid = " + Util::intToString(iSid) + " and name =\'" + vec_file_err[i].first + "\'";
-	cout << strTemp << endl;
+	//cout << strTemp << endl;
 	pQuery = (char*) strTemp.c_str();
 	iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
 	if(iQueryRet){
-	    cout << "Error executing query: " << mysql_error(&mysql) << endl;
+	    //cout << "Error executing query: " << mysql_error(&mysql) << endl;
 	    return;
 	}
-	cout << pQuery << "executed..." << endl;
+	//cout << pQuery << "executed..." << endl;
     }
     mysql_close(&mysql);
 }
+

@@ -1,20 +1,25 @@
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/a
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/a/b
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/a/b/codesize.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/a/b/fun.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/a/b/gele.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/b
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/b/fun.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/b/gele.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/b/loop.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/b/main.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/codesize.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/fun.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/gele.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/hello.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/hello2.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/loop.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/main.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/mem_test.cpp
-/root/plugin/yy/plugin-dev/test/Compiler\ Group/aaaa/test/testcase-guo.cpp
+Compiler_Group
+g2
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/a
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/a.c
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/a/b
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/a/b/codesize.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/a/b/fun.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/a/b/gele.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/b
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/b/fun.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/b/gele.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/b/loop.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/b/main.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/codesize.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/fun.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/gele.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/hello.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/hello2.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/include
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/include/a.h
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/loop.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/main.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/mem_test.cpp
+/root/plugin/yy/plugin-dev/test/Compiler_Group/g2/test/testcase-guo.cpp
