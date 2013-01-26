@@ -1,1 +1,1 @@
-请不要把CPSA_web这个目录上传到github上
+请不要把CPSA_web这个目录、目标文件和可执行文件上传到github上~
