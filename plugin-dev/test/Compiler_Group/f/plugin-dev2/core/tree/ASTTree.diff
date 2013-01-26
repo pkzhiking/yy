@@ -1,0 +1,11 @@
+67a68,77
+> void
+> GTree::_setHashCode(unsigned int hashCode)
+> {
+>     this->mHashCode=hashCode;
+> }
+> unsigned int
+> GTree::_getHashCode() const
+> {
+> 	return this->mHashCode;
+> }

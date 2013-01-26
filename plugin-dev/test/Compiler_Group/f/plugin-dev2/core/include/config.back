@@ -1,0 +1,19 @@
+/*
+ * config.h
+ *
+ *  Created on: 2012-7-17
+ *      Author: dandelion
+ */
+
+#ifndef CONFIG_H_
+#define CONFIG_H_
+
+
+#define INPUT_FOLD "/root/plugin-dev2/test/"
+#define REPORT_FOLD "/root/plugin-dev2/run-result/"
+#define PROBLEM_CONFIG "/root/plugin-dev2/problem.config"
+#define OUTPUT_HTML "/root/plugin-dev2/run-result"
+#define DEFAULT_PROJS_DIR "/root/plugin-dev/test/"
+#define IP "192.168.0.100"
+
+#endif /* CONFIG_H_ */

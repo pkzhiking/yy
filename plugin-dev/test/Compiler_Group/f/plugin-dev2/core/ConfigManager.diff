@@ -1,0 +1,5 @@
+1a2
+> #include "include/config.h"
+12,13d12
+< #define PROBLEM_CONFIG "/root/plugin-dev2/problem.config"
+< 

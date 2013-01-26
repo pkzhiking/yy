@@ -1,0 +1,348 @@
+[analyze][01-20 22:12:54][1][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/webqq/gele.cpp:16		val =10;
+[analyze][01-20 22:12:54][2][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/webqq/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-20 22:12:54][3][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/webqq/gele.cpp:9 int main()
+[analyze][01-20 22:12:54][4][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/webqq/gele.cpp:9 int main()
+[analyze][01-20 22:12:54][5][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/webqq/loop.c:16		val =10;
+[analyze][01-20 22:12:54][6][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/webqq/loop.c:15	if(val <= max && val >= min) {
+[analyze][01-20 22:12:54][7][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/webqq/loop.c:9 int main()
+[analyze][01-20 22:12:54][8][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/webqq/loop.c:9 int main()
+[analyze][01-22 23:38:41][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-22 23:38:41][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/fun.cpp:0 
+[analyze][01-22 23:38:41][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:16		val =10;
+[analyze][01-22 23:38:41][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-22 23:38:41][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-22 23:38:41][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-22 23:40:03][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-22 23:40:03][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/fun.cpp:0 
+[analyze][01-22 23:40:03][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:16		val =10;
+[analyze][01-22 23:40:03][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-22 23:40:03][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-22 23:40:03][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-22 23:43:37][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-22 23:43:37][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/fun.cpp:0 
+[analyze][01-22 23:43:37][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:16		val =10;
+[analyze][01-22 23:43:37][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-22 23:43:37][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-22 23:43:37][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 00:37:53][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-23 00:37:53][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/fun.cpp:0 
+[analyze][01-23 00:37:53][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:16		val =10;
+[analyze][01-23 00:37:53][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-23 00:37:53][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 00:37:53][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 00:44:56][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-23 00:44:56][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/fun.cpp:0 
+[analyze][01-23 00:44:56][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:16		val =10;
+[analyze][01-23 00:44:56][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-23 00:44:56][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 00:44:56][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 00:48:43][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-23 00:48:43][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/fun.cpp:0 
+[analyze][01-23 00:48:43][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:16		val =10;
+[analyze][01-23 00:48:43][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-23 00:48:43][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 00:48:43][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 01:00:55][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-23 01:00:55][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/fun.cpp:0 
+[analyze][01-23 01:00:55][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:16		val =10;
+[analyze][01-23 01:00:55][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-23 01:00:55][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 01:00:55][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 01:03:03][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-23 01:03:03][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/fun.cpp:0 
+[analyze][01-23 01:03:03][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:16		val =10;
+[analyze][01-23 01:03:03][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-23 01:03:03][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 01:03:03][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/apt/a/b/gele.cpp:9 int main()
+[analyze][01-23 03:45:24][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-23 03:45:24][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/fun.cpp:0 
+[analyze][01-23 03:45:24][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/gele.cpp:16		val =10;
+[analyze][01-23 03:45:24][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-23 03:45:24][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/gele.cpp:9 int main()
+[analyze][01-23 03:45:24][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/gele.cpp:9 int main()
+[analyze][01-23 03:45:29][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-23 03:45:29][2][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/fun.cpp:0 
+[analyze][01-23 03:45:29][3][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/gele.cpp:16		val =10;
+[analyze][01-23 03:45:29][4][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-23 03:45:29][5][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/gele.cpp:9 int main()
+[analyze][01-23 03:45:29][6][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/project/a/b/gele.cpp:9 int main()
+<<<<<<< HEAD
+[analyze][01-25 05:58:11][1][FunctionCodeSizeAnalyzer]msg:Function: min has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:520 int min(int i, int j)
+[analyze][01-25 05:58:11][2][FunctionCodeSizeAnalyzer]msg:Function: min has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:0 
+[analyze][01-25 05:58:11][3][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:468 	while (true) {
+[analyze][01-25 05:58:11][4][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=64 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:464		int z = x / 64;
+[analyze][01-25 05:58:11][5][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:457 		while (def_var1 >= 1 && (def_var1 <= 1 || value_pred > 10)) {
+[analyze][01-25 05:58:11][6][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:453	globalvar.intarray = NULL;
+[analyze][01-25 05:58:11][7][FunctionCodeSizeAnalyzer]msg:Function: test_function has only 22 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:452 int test_function(double a = 10) {
+[analyze][01-25 05:58:11][8][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_function is 384. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:452 int test_function(double a = 10) {
+[analyze][01-25 05:58:11][9][FunctionCodeSizeAnalyzer]msg:Function: test_record has only 2 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:56 void test_record()
+[analyze][01-25 05:58:11][10][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_record is 736. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:56 void test_record()
+[analyze][01-25 05:58:11][11][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=32 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:271    value = x/32;
+[analyze][01-25 05:58:11][12][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=100)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:265      if(value=100)
+[analyze][01-25 05:58:11][13][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:259     for(int i=0;i<100;++i)
+[analyze][01-25 05:58:11][14][IfToSwitchAnalyzer]msg:if statement list can be changed to switch /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:272    if (value==0){
+[analyze][01-25 05:58:11][15][FunctionCodeSizeAnalyzer]msg:Function: do_calc has only 17 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:256 void do_calc(int test_name=10)
+[analyze][01-25 05:58:11][16][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function do_calc is 128. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:256 void do_calc(int test_name=10)
+[analyze][01-25 05:58:11][17][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:206     while(true)
+[analyze][01-25 05:58:11][18][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:208                 for(int index = 0;index<10;++index)
+[analyze][01-25 05:58:11][19][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=64 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:199    int z = x/64;
+[analyze][01-25 05:58:11][20][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:188         while(def_var1>=1 && (def_var1<=1 || value_pred>10))
+[analyze][01-25 05:58:11][21][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:181    p = 0x0;
+[analyze][01-25 05:58:11][22][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:176     for(int i=0;i<100;++i)
+[analyze][01-25 05:58:11][23][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:178        ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][24][InitializeArrayByForLoopAnalyzer]msg:init array in for loop /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:178        ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][25][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:174    globalvar.intarray = NULL;
+[analyze][01-25 05:58:11][26][FunctionCodeSizeAnalyzer]msg:Function: func2 has only 40 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:172 int func2()
+[analyze][01-25 05:58:11][27][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function func2 is 712. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:172 int func2()
+[analyze][01-25 05:58:11][28][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-25 05:58:11][29][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:270 	for (i = 1; i < 10; i++) {
+[analyze][01-25 05:58:11][30][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:274 			while (true)
+[analyze][01-25 05:58:11][31][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 2 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:275 				VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][32][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 1 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:272 			VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][33][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=1)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:270	for (i = 1; i < 10; i++) {
+[analyze][01-25 05:58:11][34][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:268 	while (true)
+[analyze][01-25 05:58:11][35][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 1 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:269 		VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][36][ForLoopToZeroAnalyzer]msg:Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:265 	for (i = 0; i < 100; i++) {
+[analyze][01-25 05:58:11][37][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:265 	for (i = 0; i < 100; i++) {
+[analyze][01-25 05:58:11][38][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 1 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:266 		VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][39][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:265	for (i = 0; i < 100; i++) {
+[analyze][01-25 05:58:11][40][FunctionCodeSizeAnalyzer]msg:Function: test1 has only 24 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:262 void test1() {
+[analyze][01-25 05:58:11][41][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test1 is 288. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:262 void test1() {
+[analyze][01-25 05:58:11][42][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 7 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:313     while(true)
+[analyze][01-25 05:58:11][43][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:315                 for(int index = 0;index<10;++index)
+[analyze][01-25 05:58:11][44][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:318                     for(int j=0;j<100;++j)
+[analyze][01-25 05:58:11][45][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:320                         strncpy(NULL,NULL,j);
+[analyze][01-25 05:58:11][46][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=64 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:306    int z = x/64;
+[analyze][01-25 05:58:11][47][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:295         while(def_var1>=1 && (def_var1<=1 || value_pred>10))
+[analyze][01-25 05:58:11][48][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:288    p = 0x0;
+[analyze][01-25 05:58:11][49][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:283     for(int i=0;i<100;++i)
+[analyze][01-25 05:58:11][50][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:285        ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][51][InitializeArrayByForLoopAnalyzer]msg:init array in for loop /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:285        ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][52][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:281    globalvar.intarray = NULL;
+[analyze][01-25 05:58:11][53][FunctionCodeSizeAnalyzer]msg:Function: func2 has only 40 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:279 int func2()
+[analyze][01-25 05:58:11][54][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function func2 is 712. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:279 int func2()
+[analyze][01-25 05:58:11][55][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 7 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:151     while(true)
+[analyze][01-25 05:58:11][56][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:153                 for(int index = 0;index<10;++index)
+[analyze][01-25 05:58:11][57][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:156                     for(int j=0;j<100;++j)
+[analyze][01-25 05:58:11][58][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:158                         strncpy(NULL,NULL,j);
+[analyze][01-25 05:58:11][59][MultiplyByTwosExponentAnalyzer]msg:multiply by 2's exponent value=128 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:142    x = y*128;
+[analyze][01-25 05:58:11][60][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=64 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:141    int z = x/64;
+[analyze][01-25 05:58:11][61][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 2 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:131         while(def_var1>=1 && (def_var1<=1 || value_pred>10))
+[analyze][01-25 05:58:11][62][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:133                 strncpy(NULL,NULL,100);
+[analyze][01-25 05:58:11][63][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:123    p = 0x0;
+[analyze][01-25 05:58:11][64][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=1001)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:118        intVar = 1001;
+[analyze][01-25 05:58:11][65][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:117        ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][66][InitializeArrayByForLoopAnalyzer]msg:init array in for loop /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:117        ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][67][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:113    globalvar.intarray = NULL;
+[analyze][01-25 05:58:11][68][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:108     for(int i=0;i<100;++i)
+[analyze][01-25 05:58:11][69][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:110        arr1[i] = 0;
+[analyze][01-25 05:58:11][70][InitializeArrayByForLoopAnalyzer]msg:init array in for loop /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:110        arr1[i] = 0;
+[analyze][01-25 05:58:11][71][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:102     strncpy(NULL,NULL,structPtr->x);
+[analyze][01-25 05:58:11][72][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:101     strncpy(NULL,NULL,ycst);
+[analyze][01-25 05:58:11][73][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:100     strncpy(NULL,NULL,10);
+[analyze][01-25 05:58:11][74][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:99     strncpy(NULL,NULL,structPtr->z);
+[analyze][01-25 05:58:11][75][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:97     strncpy(NULL,NULL,globalvar.x); //component_ref
+[analyze][01-25 05:58:11][76][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:96     strncpy(NULL,NULL,xxxx); //var_decl
+[info][01-25 05:58:11][1][StructProcessor]msg:struct cstruct not found.
+[info][01-25 05:58:11][2][StructProcessor]msg:mStructMap size=0
+[analyze][01-25 05:58:11][77][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:127    memset(&doubleVar,0,4);
+[analyze][01-25 05:58:11][78][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:121    memset(&globalvar.y,5,3);
+[analyze][01-25 05:58:11][79][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:120    memset(ptr2,0,100);
+[analyze][01-25 05:58:11][80][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:88    memset(&intVar1,100,10);
+[analyze][01-25 05:58:11][81][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function func1 is 6504. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:68 int func1()
+[analyze][01-25 05:58:11][82][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:244     while(true)
+[analyze][01-25 05:58:11][83][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=64 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:238    int z = x/64;
+[analyze][01-25 05:58:11][84][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:229         while(def_var1>=1 && (def_var1<=1 || value_pred>10))
+[analyze][01-25 05:58:11][85][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:224    globalvar.intarray = NULL;
+[analyze][01-25 05:58:11][86][FunctionCodeSizeAnalyzer]msg:Function: test_function has only 22 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:222 int test_function(double a = 10)
+[analyze][01-25 05:58:11][87][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_function is 384. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:222 int test_function(double a = 10)
+[analyze][01-25 05:58:11][88][MultiplyByTwosExponentAnalyzer]msg:multiply by 2's exponent value=128 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:103	x = y * 128;      //should find
+[analyze][01-25 05:58:11][89][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=64 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:102	int z2 = x / 64;  //should find
+[analyze][01-25 05:58:11][90][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=64 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:98    int z = x1/64;    //should find
+[analyze][01-25 05:58:11][91][FunctionCodeSizeAnalyzer]msg:Function: div_mul_2s_expo_test has only 30 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:92 void div_mul_2s_expo_test()
+[analyze][01-25 05:58:11][92][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function div_mul_2s_expo_test is 736. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:92 void div_mul_2s_expo_test()
+[analyze][01-25 05:58:11][93][FunctionCodeSizeAnalyzer]msg:Function: test_stack_simple has only 6 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:218 int test_stack_simple() {
+[analyze][01-25 05:58:11][94][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_stack_simple is 624. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:218 int test_stack_simple() {
+[info][01-25 05:58:11][3][StructProcessor]msg:struct simple_nonpod not found.
+[info][01-25 05:58:11][4][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][5][StructProcessor]msg:struct simplepod not found.
+[info][01-25 05:58:11][6][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][7][StructProcessor]msg:struct simplepod not found.
+[info][01-25 05:58:11][8][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][9][StructProcessor]msg:struct simple_nonpod not found.
+[info][01-25 05:58:11][10][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][11][StructProcessor]msg:struct simplepod not found.
+[info][01-25 05:58:11][12][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][13][StructProcessor]msg:struct simple_nonpod not found.
+[info][01-25 05:58:11][14][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][15][StructProcessor]msg:struct simplepod not found.
+[info][01-25 05:58:11][16][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][17][StructProcessor]msg:struct podStruct not found.
+[info][01-25 05:58:11][18][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][19][StructProcessor]msg:struct nonPOD_with_nonPOD_mem not found.
+[info][01-25 05:58:11][20][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][21][StructProcessor]msg:struct podStruct not found.
+[info][01-25 05:58:11][22][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][23][StructProcessor]msg:struct nonPOD_with_nonPOD_mem not found.
+[info][01-25 05:58:11][24][StructProcessor]msg:mStructMap size=0
+[analyze][01-25 05:58:11][95][FunctionCodeSizeAnalyzer]msg:Function: pod_test has only 31 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:67 void pod_test()
+[analyze][01-25 05:58:11][96][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function pod_test is 2016. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:67 void pod_test()
+[analyze][01-25 05:58:11][97][MemApplyAnalyzer]msg:Total MemApplyCall find in function 12 times! 249
+[analyze][01-25 05:58:11][98][FunctionCodeSizeAnalyzer]msg:Function: test_stack_full has only 35 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:225 int test_stack_full() {
+[analyze][01-25 05:58:11][99][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_stack_full is 3392. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:225 int test_stack_full() {
+[info][01-25 05:58:11][25][StructProcessor]msg:struct cstruct not found.
+[info][01-25 05:58:11][26][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][27][StructProcessor]msg:struct cstruct not found.
+[info][01-25 05:58:11][28][StructProcessor]msg:mStructMap size=0
+[analyze][01-25 05:58:11][100][FunctionCodeSizeAnalyzer]msg:Function: func5 has only 11 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:91 int func5() {
+[analyze][01-25 05:58:11][101][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function func5 is 1880. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:91 int func5() {
+[analyze][01-25 05:58:11][102][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/loop.cpp:1 int mymax(int a, int b)
+[info][01-25 05:58:11][29][StructProcessor]msg:struct simple_nonpod not found.
+[info][01-25 05:58:11][30][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][31][StructProcessor]msg:struct simplepod not found.
+[info][01-25 05:58:11][32][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][33][StructProcessor]msg:struct simple_nonpod not found.
+[info][01-25 05:58:11][34][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][35][StructProcessor]msg:struct simplepod not found.
+[info][01-25 05:58:11][36][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][37][StructProcessor]msg:struct podStruct not found.
+[info][01-25 05:58:11][38][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][39][StructProcessor]msg:struct nonPOD_with_nonPOD_mem not found.
+[info][01-25 05:58:11][40][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][41][StructProcessor]msg:struct podStruct not found.
+[info][01-25 05:58:11][42][StructProcessor]msg:mStructMap size=0
+[info][01-25 05:58:11][43][StructProcessor]msg:struct nonPOD_with_nonPOD_mem not found.
+[info][01-25 05:58:11][44][StructProcessor]msg:mStructMap size=0
+[analyze][01-25 05:58:11][103][FunctionCodeSizeAnalyzer]msg:Function: pod_test has only 23 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:70 void pod_test()
+[analyze][01-25 05:58:11][104][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function pod_test is 1280. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:70 void pod_test()
+[analyze][01-25 05:58:11][105][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 7 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:204     while(true)
+[analyze][01-25 05:58:11][106][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:206                 for(int index = 0;index<10;++index)
+[analyze][01-25 05:58:11][107][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:209                     for(int j=0;j<100;++j)
+[analyze][01-25 05:58:11][108][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:211                         strncpy(NULL,NULL,j);
+[analyze][01-25 05:58:11][109][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=64 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:197    int z = x/64;
+[analyze][01-25 05:58:11][110][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 4 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:186         while(def_var1>=1 && (def_var1<=1 || value_pred>10))
+[analyze][01-25 05:58:11][111][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:189                 for(int index = 0;index<10;++index)
+[analyze][01-25 05:58:11][112][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:188                 strncpy(NULL,NULL,100);
+[analyze][01-25 05:58:11][113][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:179    p = 0x0;
+[analyze][01-25 05:58:11][114][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:174     for(int i=0;i<100;++i)
+[analyze][01-25 05:58:11][115][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:176        ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][116][InitializeArrayByForLoopAnalyzer]msg:init array in for loop /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:176        ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][117][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:172    globalvar.intarray = NULL;
+[analyze][01-25 05:58:11][118][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:167     for(int i=0;i<100;++i)
+[analyze][01-25 05:58:11][119][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:169        arr1[i] = 0;
+[analyze][01-25 05:58:11][120][InitializeArrayByForLoopAnalyzer]msg:init array in for loop /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:169        arr1[i] = 0;
+[analyze][01-25 05:58:11][121][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:160     strncpy(NULL,NULL,structPtr->x);
+[analyze][01-25 05:58:11][122][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:159     strncpy(NULL,NULL,ycst);
+[analyze][01-25 05:58:11][123][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:158     strncpy(NULL,NULL,10);
+[analyze][01-25 05:58:11][124][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:157     strncpy(NULL,NULL,structPtr->z);
+[analyze][01-25 05:58:11][125][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:155     strncpy(NULL,NULL,globalvar.x); //component_ref
+[analyze][01-25 05:58:11][126][StringCopyAnalyzer]msg:string copy function strcpy || strncpy found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:154     strncpy(NULL,NULL,xxxx); //var_decl
+[analyze][01-25 05:58:11][127][RealDivisionAnalyzer]msg:Real divided by const found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:144 fa = fa / 2.2;
+[analyze][01-25 05:58:11][128][RealDivisionAnalyzer]msg:Real divided by const found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:143 fa = fa / 2;
+[analyze][01-25 05:58:11][129][RealDivisionAnalyzer]msg:Real divided by const found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:140 c = a / 2.3;
+[analyze][01-25 05:58:11][130][RealDivisionAnalyzer]msg:Real divided by const found /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:139 double c = a / 2;
+[analyze][01-25 05:58:11][131][ForLoopToZeroAnalyzer]msg:Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:135 for ( intVar1 = 0; intVar1 == 0 && intVar1 != 111 || intVar1 ==3213; intVar1++ )
+[analyze][01-25 05:58:11][132][ForLoopCombineAnalyzer]msg:This for loop may be combine with previous for loop /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:135 for ( intVar1 = 0; intVar1 == 0 && intVar1 != 111 || intVar1 ==3213; intVar1++ )
+[analyze][01-25 05:58:11][133][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:135 for ( intVar1 = 0; intVar1 == 0 && intVar1 != 111 || intVar1 ==3213; intVar1++ )
+[analyze][01-25 05:58:11][134][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:135for ( intVar1 = 0; intVar1 == 0 && intVar1 != 111 || intVar1 ==3213; intVar1++ )
+[analyze][01-25 05:58:11][135][ForLoopToZeroAnalyzer]msg:Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:133 for ( intVar1 = 0; intVar1 == 0 && intVar1 != 111 || intVar1 ==3213; intVar1++ )
+[analyze][01-25 05:58:11][136][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:133 for ( intVar1 = 0; intVar1 == 0 && intVar1 != 111 || intVar1 ==3213; intVar1++ )
+[analyze][01-25 05:58:11][137][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:133for ( intVar1 = 0; intVar1 == 0 && intVar1 != 111 || intVar1 ==3213; intVar1++ )
+[analyze][01-25 05:58:11][138][BitNotExprAnalyzer]msg:Bit not expression found (may result in unwanted result) /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:132 int testBitNot = ~intVar1;
+[analyze][01-25 05:58:11][139][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:117 	for (i = 1; i < 10; i++) {
+[analyze][01-25 05:58:11][140][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:121 			while (true)
+[analyze][01-25 05:58:11][141][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 2 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:122 				VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][142][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 1 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:119 			VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][143][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=1)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:117	for (i = 1; i < 10; i++) {
+[analyze][01-25 05:58:11][144][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:115 	while (true)
+[analyze][01-25 05:58:11][145][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 1 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:116 		VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][146][ForLoopToZeroAnalyzer]msg:Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:112 	for (i = 0; i < 10; i++) {
+[analyze][01-25 05:58:11][147][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:112 	for (i = 0; i < 10; i++) {
+[analyze][01-25 05:58:11][148][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 1 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:113 		VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][149][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:112	for (i = 0; i < 10; i++) {
+[analyze][01-25 05:58:11][150][MemApplyAnalyzer]msg:Total MemApplyCall find in function 6 times! 131
+[info][01-25 05:58:11][45][StructProcessor]msg:struct cstruct not found.
+[info][01-25 05:58:11][46][StructProcessor]msg:mStructMap size=0
+[analyze][01-25 05:58:11][151][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test is 6360. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:105 void test() {
+[analyze][01-25 05:58:11][152][FunctionCodeSizeAnalyzer]msg:Function: test has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/fun.cpp:0 
+[analyze][01-25 05:58:11][153][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/gele.cpp:16		val =10;
+[analyze][01-25 05:58:11][154][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-25 05:58:11][155][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/gele.cpp:9 int main()
+[analyze][01-25 05:58:11][156][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/gele.cpp:9 int main()
+[info][01-25 05:58:11][47][StructProcessor]msg:struct non_pod_struct not found.
+[info][01-25 05:58:11][48][StructProcessor]msg:mStructMap size=0
+[analyze][01-25 05:58:11][157][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:66	memset(&globalvar.y,0,100);
+[analyze][01-25 05:58:11][158][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:65	memset(ptr_doubleVar2,0,100);
+[analyze][01-25 05:58:11][159][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:64	memset(ptr_intVar1,0,100);
+[analyze][01-25 05:58:11][160][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:63	memset(&doubleVar2,0,100);
+[analyze][01-25 05:58:11][161][BadMemOperationCallAnalyzer]msg:using memset to set value of primitive type /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:62	memset(&intVar1,0,100);
+[analyze][01-25 05:58:11][162][FunctionCodeSizeAnalyzer]msg:Function: mem_test has only 24 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:55 void mem_test()
+[analyze][01-25 05:58:11][163][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function mem_test is 480. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/mem_test.cpp:55 void mem_test()
+[analyze][01-25 05:58:11][164][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:110 	for(int i=0;i<100;++i)
+[analyze][01-25 05:58:11][165][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:112		ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][166][InitializeArrayByForLoopAnalyzer]msg:init array in for loop /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:112		ptr2[i] = 0x0;
+[analyze][01-25 05:58:11][167][FunctionCodeSizeAnalyzer]msg:Function: using_for_loop_to_init_array_to_const has only 6 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:107 void using_for_loop_to_init_array_to_const()
+[analyze][01-25 05:58:11][168][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function using_for_loop_to_init_array_to_const is 64. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/testcase-guo.cpp:107 void using_for_loop_to_init_array_to_const()
+[analyze][01-25 05:58:11][169][FunctionCodeSizeAnalyzer]msg:Function: test_stack has only 6 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:252 int test_stack() {
+[analyze][01-25 05:58:11][170][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_stack is 992. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:252 int test_stack() {
+[analyze][01-25 05:58:11][171][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/loop.cpp:1 int mymax(int a, int b)
+[analyze][01-25 05:58:11][172][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/fun.cpp:0 
+[analyze][01-25 05:58:11][173][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/gele.cpp:16		val =10;
+[analyze][01-25 05:58:11][174][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-25 05:58:11][175][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/gele.cpp:9 int main()
+[analyze][01-25 05:58:11][176][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/gele.cpp:9 int main()
+[analyze][01-25 05:58:11][177][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/loop.cpp:27 	do {
+[analyze][01-25 05:58:11][178][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/loop.cpp:22 	while (sum < 3000) {
+[analyze][01-25 05:58:11][179][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/loop.cpp:23 		for (int i = 0; i < 5; i++) {
+[analyze][01-25 05:58:11][180][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 5 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/loop.cpp:10 	for (int i = 0; i < 10; i++) {
+[analyze][01-25 05:58:11][181][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/loop.cpp:14 		for (int j = 0; j < 5; j++) {
+[analyze][01-25 05:58:11][182][FunctionCodeSizeAnalyzer]msg:Function: main has only 21 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/loop.cpp:6 int main()
+[analyze][01-25 05:58:11][183][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 128. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/loop.cpp:6 int main()
+[analyze][01-25 05:58:11][184][FunctionCodeSizeAnalyzer]msg:Function: main has only 4 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/b/main.cpp:1 int main()
+[analyze][01-25 05:58:11][185][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/loop.cpp:27 	do {
+[analyze][01-25 05:58:11][186][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/loop.cpp:22 	while (sum < 3000) {
+[analyze][01-25 05:58:11][187][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/loop.cpp:23 		for (int i = 0; i < 5; i++) {
+[analyze][01-25 05:58:11][188][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 5 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/loop.cpp:10 	for (int i = 0; i < 10; i++) {
+[analyze][01-25 05:58:11][189][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/loop.cpp:14 		for (int j = 0; j < 5; j++) {
+[analyze][01-25 05:58:11][190][FunctionCodeSizeAnalyzer]msg:Function: main has only 21 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/loop.cpp:6 int main()
+[analyze][01-25 05:58:11][191][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 128. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/loop.cpp:6 int main()
+[analyze][01-25 05:58:11][192][FunctionCodeSizeAnalyzer]msg:Function: main has only 4 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/main.cpp:1 int main()
+[analyze][01-25 05:58:11][193][FunctionCodeSizeAnalyzer]msg:Function: test_stack_simple has only 2 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:30 int test_stack_simple()
+[analyze][01-25 05:58:11][194][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_stack_simple is 64. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:30 int test_stack_simple()
+[analyze][01-25 05:58:11][195][FunctionCodeSizeAnalyzer]msg:Function: main has only 8 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:283 int main(int argc,char** argvector)
+[analyze][01-25 05:58:11][196][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 32. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:283 int main(int argc,char** argvector)
+[analyze][01-25 05:58:11][197][DivideByTwosExponentAnalyzer]msg:divide by 2's exponent value=32 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:490	value = x / 32;
+[analyze][01-25 05:58:11][198][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=100)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:485		if (value = 100) {
+[analyze][01-25 05:58:11][199][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:480 	for (int i = 0; i < 100; ++i) {
+[analyze][01-25 05:58:11][200][IfToSwitchAnalyzer]msg:if statement list can be changed to switch /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:491	if (value == 0) {
+[analyze][01-25 05:58:11][201][FunctionCodeSizeAnalyzer]msg:Function: do_calc has only 17 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:478 void do_calc(int test_name = 10) {
+[analyze][01-25 05:58:11][202][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function do_calc is 128. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:478 void do_calc(int test_name = 10) {
+[analyze][01-25 05:58:11][203][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:563 	while (minval--) {
+[analyze][01-25 05:58:11][204][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:542 	for (int i = 0; i < argc; i++) {
+[analyze][01-25 05:58:11][205][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:543 		for (int j = 0; j < 10; j++) {
+[analyze][01-25 05:58:11][206][ForLoopToZeroAnalyzer]msg:Loop iterator is initiated to 0 (may be rewrite with a reverse loop to 0) /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:531 		for (i = 0; i < 100; i++) {
+[analyze][01-25 05:58:11][207][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:531 		for (i = 0; i < 100; i++) {
+[analyze][01-25 05:58:11][208][MemApplyAnalyzer]msg:MemApplyCall find in loop counter 1 /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:532 			VOS_MemAlloc(10);
+[analyze][01-25 05:58:11][209][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=0)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:531		for (i = 0; i < 100; i++) {
+[analyze][01-25 05:58:11][210][FunctionCodeSizeAnalyzer]msg:Function: main has only 42 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:525 int main(int argc, char **argv)
+[analyze][01-25 05:58:11][211][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 608. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello.cpp:525 int main(int argc, char **argv)
+[analyze][01-25 05:58:11][212][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/a/b/codesize.cpp:1 int mymax(int pa, int pb, int pc)
+[analyze][01-25 05:58:11][213][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 0 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/a/b/fun.cpp:0 
+[analyze][01-25 05:58:11][214][AssignToConstantAnalyzer]msg:Here:Assign to integer constant (value=10)/root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/a/b/gele.cpp:16		val =10;
+[analyze][01-25 05:58:11][215][GeAndLeCondAnalyzer]msg:>=min && <= max  /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/a/b/gele.cpp:15	if(val <= max && val >= min) {
+[analyze][01-25 05:58:11][216][FunctionCodeSizeAnalyzer]msg:Function: main has only 13 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/a/b/gele.cpp:9 int main()
+[analyze][01-25 05:58:11][217][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 224. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/a/b/gele.cpp:9 int main()
+[analyze][01-25 05:58:11][218][FunctionCodeSizeAnalyzer]msg:Function: test_stack has only 6 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:55 int test_stack()
+[analyze][01-25 05:58:11][219][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_stack is 992. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:55 int test_stack()
+[analyze][01-25 05:58:11][220][FunctionCodeSizeAnalyzer]msg:Function: test_stack_full has only 9 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:35 int test_stack_full()
+[analyze][01-25 05:58:11][221][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function test_stack_full is 3392. /root/plugin/yy/plugin-dev/test/Compiler Group/fadfadaf/test/hello2.cpp:35 int test_stack_full()
+=======
+>>>>>>> 74f22e8d60a04a9e0846ca34fb50145445472c3a
+[analyze][01-25 11:59:45][1][FunctionCodeSizeAnalyzer]msg:Function: mymax has only 7 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:1 int mymax(int a, int b)
+[analyze][01-25 11:59:45][2][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:27 	do {
+[analyze][01-25 11:59:45][3][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 3 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:22 	while (sum < 3000) {
+[analyze][01-25 11:59:45][4][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:23 		for (int i = 0; i < 5; i++) {
+[analyze][01-25 11:59:45][5][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 5 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:10 	for (int i = 0; i < 10; i++) {
+[analyze][01-25 11:59:45][6][LoopDivideAnalyzer]msg:This loop can be divided into two loops for it has 1 code lines/root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:14 		for (int j = 0; j < 5; j++) {
+[analyze][01-25 11:59:45][7][FunctionCodeSizeAnalyzer]msg:Function: main has only 21 code lines, it's better to replace it with a macro. /root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:6 int main()
+[analyze][01-25 11:59:45][8][LocalVarSizeAnalyzer]msg:The total size of local stack variables of function main is 128. /root/plugin/yy/plugin-dev/test/Compiler_Group/f2/test/loop.cpp:6 int main()
