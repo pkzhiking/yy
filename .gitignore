@@ -1,4 +1,6 @@
 CPSA_web
+./plugin-dev/test/*
+./plugin-dev2/test/*
 *.[oa]
 *.so
 *~
