@@ -1,0 +1,1074 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>检测报告</title
+<meta name="viewport" content="user-scalable=no, width=device-width height=device-height" />
+<link rel="stylesheet" type="text/css" href="report_style.css"/>
+</head>
+
+<body>
+<table class="code">
+<tbody>
+<tr>
+<td class="num">
+1
+</td>
+<td class="line">
+/*
+</td>
+</tr>
+<tr>
+<td class="num">
+2
+</td>
+<td class="line">
+ * testcase-guo.cpp
+</td>
+</tr>
+<tr>
+<td class="num">
+3
+</td>
+<td class="line">
+ *
+</td>
+</tr>
+<tr>
+<td class="num">
+4
+</td>
+<td class="line">
+ *  Created on : May 6, 2012
+</td>
+</tr>
+<tr>
+<td class="num">
+5
+</td>
+<td class="line">
+ *      Author : Guo Jiuliang
+</td>
+</tr>
+<tr>
+<td class="num">
+6
+</td>
+<td class="line">
+ *  Description: This file mainly contains test cases for my own use
+</td>
+</tr>
+<tr>
+<td class="num">
+7
+</td>
+<td class="line">
+ *
+</td>
+</tr>
+<tr>
+<td class="num">
+8
+</td>
+<td class="line">
+ */
+</td>
+</tr>
+<tr>
+<td class="num">
+9
+</td>
+<td class="line">
+#include &lt;stdio.h&gt;
+</td>
+</tr>
+<tr>
+<td class="num">
+10
+</td>
+<td class="line">
+#include &lt;stdlib.h&gt;
+</td>
+</tr>
+<tr>
+<td class="num">
+11
+</td>
+<td class="line">
+#include &lt;string.h&gt;
+</td>
+</tr>
+<tr>
+<td class="num">
+12
+</td>
+<td class="line">
+#include &lt;memory.h&gt;
+</td>
+</tr>
+<tr>
+<td class="num">
+13
+</td>
+<td class="line">
+//very simple POD type to put into another struct to test nested struct
+</td>
+</tr>
+<tr>
+<td class="num">
+14
+</td>
+<td class="line">
+struct simplepod
+</td>
+</tr>
+<tr>
+<td class="num">
+15
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+16
+</td>
+<td class="line">
+    int x;
+</td>
+</tr>
+<tr>
+<td class="num">
+17
+</td>
+<td class="line">
+    int y;
+</td>
+</tr>
+<tr>
+<td class="num">
+18
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+19
+</td>
+<td class="line">
+//very simple non POD type to put into another struct to test nested struct
+</td>
+</tr>
+<tr>
+<td class="num">
+20
+</td>
+<td class="line">
+struct simple_nonpod
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+21
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+22
+</td>
+<td class="line">
+	int* p;
+</td>
+</tr>
+<tr>
+<td class="num">
+23
+</td>
+<td class="line">
+	double x;
+</td>
+</tr>
+<tr>
+<td class="num">
+24
+</td>
+<td class="line">
+	float y;
+</td>
+</tr>
+<tr>
+<td class="num">
+25
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+26
+</td>
+<td class="line">
+//non POD type with nested POD type
+</td>
+</tr>
+<tr>
+<td class="num">
+27
+</td>
+<td class="line">
+struct non_pod_struct
+</td>
+</tr>
+<tr>
+<td class="num">
+28
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+29
+</td>
+<td class="line">
+    char p;
+</td>
+</tr>
+<tr>
+<td class="num">
+30
+</td>
+<td class="line">
+    static const int x = 10;
+</td>
+</tr>
+<tr>
+<td class="num">
+31
+</td>
+<td class="line">
+    double y;
+</td>
+</tr>
+<tr>
+<td class="num">
+32
+</td>
+<td class="line">
+    int *intarray;
+</td>
+</tr>
+<tr>
+<td class="num">
+33
+</td>
+<td class="line">
+    double *doublearray;
+</td>
+</tr>
+<tr>
+<td class="num">
+34
+</td>
+<td class="line">
+    int z;
+</td>
+</tr>
+<tr>
+<td class="num">
+35
+</td>
+<td class="line">
+    simplepod pod_mem;
+</td>
+</tr>
+<tr>
+<td class="num">
+36
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+37
+</td>
+<td class="line">
+//nested POD type struct
+</td>
+</tr>
+<tr>
+<td class="num">
+38
+</td>
+<td class="line">
+struct podStruct
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+39
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+40
+</td>
+<td class="line">
+    char x;
+</td>
+</tr>
+<tr>
+<td class="num">
+41
+</td>
+<td class="line">
+    int v;
+</td>
+</tr>
+<tr>
+<td class="num">
+42
+</td>
+<td class="line">
+    static const int var = 1024;
+</td>
+</tr>
+<tr>
+<td class="num">
+43
+</td>
+<td class="line">
+    double item;
+</td>
+</tr>
+<tr>
+<td class="num">
+44
+</td>
+<td class="line">
+    double radius;
+</td>
+</tr>
+<tr>
+<td class="num">
+45
+</td>
+<td class="line">
+    double length;
+</td>
+</tr>
+<tr>
+<td class="num">
+46
+</td>
+<td class="line">
+    float v1;
+</td>
+</tr>
+<tr>
+<td class="num">
+47
+</td>
+<td class="line">
+    simplepod x2;
+</td>
+</tr>
+<tr>
+<td class="num">
+48
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+49
+</td>
+<td class="line">
+//non POD type with not pod nested member
+</td>
+</tr>
+<tr>
+<td class="num">
+50
+</td>
+<td class="line">
+struct nonPOD_with_nonPOD_mem
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+51
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+52
+</td>
+<td class="line">
+	int p;
+</td>
+</tr>
+<tr>
+<td class="num">
+53
+</td>
+<td class="line">
+	double v;
+</td>
+</tr>
+<tr>
+<td class="num">
+54
+</td>
+<td class="line">
+	simplepod POD_mem;
+</td>
+</tr>
+<tr>
+<td class="num">
+55
+</td>
+<td class="line">
+	simple_nonpod nonPOD_mem;
+</td>
+</tr>
+<tr>
+<td class="num">
+56
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+57
+</td>
+<td class="line">
+struct complexPOD{
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+58
+</td>
+<td class="line">
+	int x;
+</td>
+</tr>
+<tr>
+<td class="num">
+59
+</td>
+<td class="line">
+	podStruct y;
+</td>
+</tr>
+<tr>
+<td class="num">
+60
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+61
+</td>
+<td class="line">
+struct complexNonPOD{
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+StructSizeAnalyzer: struct size is not 32-bit aligned! 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+62
+</td>
+<td class="line">
+	int x;
+</td>
+</tr>
+<tr>
+<td class="num">
+63
+</td>
+<td class="line">
+	nonPOD_with_nonPOD_mem y;
+</td>
+</tr>
+<tr>
+<td class="num">
+64
+</td>
+<td class="line">
+};
+</td>
+</tr>
+<tr>
+<td class="num">
+65
+</td>
+<td class="line">
+non_pod_struct globalvar;
+</td>
+</tr>
+<tr>
+<td class="num">
+66
+</td>
+<td class="line">
+//BadMemOperationCallAnalyzer
+</td>
+</tr>
+<tr>
+<td class="num">
+67
+</td>
+<td class="line">
+void pod_test()
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: pod_test has only 31 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function pod_test is 2016. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+68
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+69
+</td>
+<td class="line">
+	struct nonPOD_with_nonPOD_mem nonPOD_var;
+</td>
+</tr>
+<tr>
+<td class="num">
+70
+</td>
+<td class="line">
+	struct podStruct pod_var;
+</td>
+</tr>
+<tr>
+<td class="num">
+71
+</td>
+<td class="line">
+	struct nonPOD_with_nonPOD_mem *nonPOD_ptr;
+</td>
+</tr>
+<tr>
+<td class="num">
+72
+</td>
+<td class="line">
+	struct podStruct *pod_ptr;
+</td>
+</tr>
+<tr>
+<td class="num">
+73
+</td>
+<td class="line">
+	struct complexPOD compPODVar1;
+</td>
+</tr>
+<tr>
+<td class="num">
+74
+</td>
+<td class="line">
+	struct complexNonPOD compNonPODVar2;
+</td>
+</tr>
+<tr>
+<td class="num">
+75
+</td>
+<td class="line">
+	//-----------------------------
+</td>
+</tr>
+<tr>
+<td class="num">
+76
+</td>
+<td class="line">
+	memset(&amp;nonPOD_var,0,100); 					//should&apos;t find
+</td>
+</tr>
+<tr>
+<td class="num">
+77
+</td>
+<td class="line">
+	memset(&amp;pod_var,0,100); 					//should find
+</td>
+</tr>
+<tr>
+<td class="num">
+78
+</td>
+<td class="line">
+	memset(nonPOD_ptr,0,100); 					//should&apos;t find
+</td>
+</tr>
+<tr>
+<td class="num">
+79
+</td>
+<td class="line">
+	memset(pod_ptr,0,100);   					//should find
+</td>
+</tr>
+<tr>
+<td class="num">
+80
+</td>
+<td class="line">
+	memset(&amp;nonPOD_var.POD_mem,0,100); 			//should find
+</td>
+</tr>
+<tr>
+<td class="num">
+81
+</td>
+<td class="line">
+	memset(&amp;nonPOD_var.nonPOD_mem,0,100); 		//should&apos;t find
+</td>
+</tr>
+<tr>
+<td class="num">
+82
+</td>
+<td class="line">
+	memset(&amp;(nonPOD_ptr-&gt;POD_mem),0,100);		//should find
+</td>
+</tr>
+<tr>
+<td class="num">
+83
+</td>
+<td class="line">
+	memset(&amp;(nonPOD_ptr-&gt;nonPOD_mem),0,100); 	//should&apos;t find
+</td>
+</tr>
+<tr>
+<td class="num">
+84
+</td>
+<td class="line">
+    //-------------------------------
+</td>
+</tr>
+<tr>
+<td class="num">
+85
+</td>
+<td class="line">
+	//test complex struct with multi-level nested members
+</td>
+</tr>
+<tr>
+<td class="num">
+86
+</td>
+<td class="line">
+	memset(&amp;compPODVar1.y.x2,0,100);            //should find
+</td>
+</tr>
+<tr>
+<td class="num">
+87
+</td>
+<td class="line">
+	memset(&amp;compNonPODVar2.y.POD_mem,0,100);    //should find
+</td>
+</tr>
+<tr>
+<td class="num">
+88
+</td>
+<td class="line">
+	memset(&amp;compNonPODVar2.y.nonPOD_mem,0,100); //should&apos;t find
+</td>
+</tr>
+<tr>
+<td class="num">
+89
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+90
+</td>
+<td class="line">
+//MultiplyByTwosExponentAnalyzer
+</td>
+</tr>
+<tr>
+<td class="num">
+91
+</td>
+<td class="line">
+//DivideByTwosExponentAnalyzer
+</td>
+</tr>
+<tr>
+<td class="num">
+92
+</td>
+<td class="line">
+void div_mul_2s_expo_test()
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: div_mul_2s_expo_test has only 30 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function div_mul_2s_expo_test is 736. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+93
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+94
+</td>
+<td class="line">
+	const int c1 = 128;
+</td>
+</tr>
+<tr>
+<td class="num">
+95
+</td>
+<td class="line">
+    int x1 = 32;
+</td>
+</tr>
+<tr>
+<td class="num">
+96
+</td>
+<td class="line">
+    int y = 100/x1;
+</td>
+</tr>
+<tr>
+<td class="num">
+97
+</td>
+<td class="line">
+    int n = 100/c1;	   //should find
+</td>
+</tr>
+<tr>
+<td class="num">
+98
+</td>
+<td class="line">
+    int z = x1/64;    //should find
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+DivideByTwosExponentAnalyzer: divide by 2&apos;s exponent value=64
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+99
+</td>
+<td class="line">
+	int x = 32;
+</td>
+</tr>
+<tr>
+<td class="num">
+100
+</td>
+<td class="line">
+	int y2 = 100 / x;
+</td>
+</tr>
+<tr>
+<td class="num">
+101
+</td>
+<td class="line">
+	int n2 = 100 * x;
+</td>
+</tr>
+<tr>
+<td class="num">
+102
+</td>
+<td class="line">
+	int z2 = x / 64;  //should find
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+DivideByTwosExponentAnalyzer: divide by 2&apos;s exponent value=64
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+103
+</td>
+<td class="line">
+	x = y * 128;      //should find
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+MultiplyByTwosExponentAnalyzer: multiply by 2&apos;s exponent value=128
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+104
+</td>
+<td class="line">
+	z = y * 133;
+</td>
+</tr>
+<tr>
+<td class="num">
+105
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+106
+</td>
+<td class="line">
+//InitializeArrayByForLoopAnalyzer
+</td>
+</tr>
+<tr>
+<td class="num">
+107
+</td>
+<td class="line">
+void using_for_loop_to_init_array_to_const()
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+FunctionCodeSizeAnalyzer:Function: using_for_loop_to_init_array_to_const has only 6 code lines, it&apos;s better to replace it with a macro. 
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LocalVarSizeAnalyzer:The total size of local stack variables of function using_for_loop_to_init_array_to_const is 64. 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+108
+</td>
+<td class="line">
+{
+</td>
+</tr>
+<tr>
+<td class="num">
+109
+</td>
+<td class="line">
+	int *ptr2 = new int [100];
+</td>
+</tr>
+<tr>
+<td class="num">
+110
+</td>
+<td class="line">
+	for(int i=0;i&lt;100;++i)
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+LoopDivideAnalyzer: This loop can be divided into two loops for it has 1 code lines
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+111
+</td>
+<td class="line">
+	{
+</td>
+</tr>
+<tr>
+<td class="num">
+112
+</td>
+<td class="line">
+		ptr2[i] = 0x0;
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+AssignToConstantAnalyzer: Here:Assign to integer constant (value=0)
+
+</div>
+</td>
+</tr>
+<tr>
+<td class="num"></td><td class="line">
+<div class="msg msgEvent" style="margin-left:5ex">
+InitializeArrayByForLoopAnalyzer: init array in for loop 
+
+</div>
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td class="num">
+113
+</td>
+<td class="line">
+	}
+</td>
+</tr>
+<tr>
+<td class="num">
+114
+</td>
+<td class="line">
+}
+</td>
+</tr>
+<tr>
+<td class="num">
+115
+</td>
+<td class="line">
+
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+</html>
+

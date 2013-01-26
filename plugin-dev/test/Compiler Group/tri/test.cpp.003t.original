@@ -1,0 +1,224 @@
+
+;; Function int myadd(int, int, int, int) (null)
+;; enabled by -tree-original
+
+@1      return_expr      type: @2       expr: @3      
+@2      void_type        name: @4       algn: 8       
+@3      init_expr        type: @5       op 0: @6       op 1: @7      
+@4      type_decl        name: @8       type: @2       srcp: <built-in>:0      
+                         note: artificial 
+@5      integer_type     name: @9       size: @10      algn: 32      
+                         prec: 32       sign: signed   min : @11     
+                         max : @12     
+@6      result_decl      type: @5       scpe: @13      srcp: test.cpp:7      
+                         note: artificial              size: @10     
+                         algn: 32      
+@7      plus_expr        type: @5       op 0: @14      op 1: @15     
+@8      identifier_node  strg: void     lngt: 4       
+@9      type_decl        name: @16      type: @5       srcp: <built-in>:0      
+                         note: artificial 
+@10     integer_cst      type: @17      low : 32      
+@11     integer_cst      type: @5       high: -1       low : -2147483648 
+@12     integer_cst      type: @5       low : 2147483647 
+@13     function_decl    name: @18      type: @19      scpe: @20     
+                         srcp: test.cpp:7              args: @21     
+                         link: extern  
+@14     plus_expr        type: @5       op 0: @22      op 1: @23     
+@15     parm_decl        name: @24      type: @5       scpe: @13     
+                         srcp: test.cpp:7              argt: @5      
+                         size: @10      algn: 32       used: 1       
+@16     identifier_node  strg: int      lngt: 3       
+@17     integer_type     name: @25      size: @26      algn: 64      
+                         prec: 64       sign: unsigned min : @27     
+                         max : @28     
+@18     identifier_node  strg: myadd    lngt: 5       
+@19     function_type    size: @29      algn: 8        retn: @5      
+                         prms: @30     
+@20     translation_unit_decl 
+@21     parm_decl        name: @31      type: @5       scpe: @13     
+                         srcp: test.cpp:7              argt: @5      
+                         size: @10      algn: 32       used: 1       
+@22     plus_expr        type: @5       op 0: @21      op 1: @32     
+@23     parm_decl        name: @33      type: @5       scpe: @13     
+                         srcp: test.cpp:7              argt: @5      
+                         size: @10      algn: 32       used: 1       
+@24     identifier_node  strg: num4     lngt: 4       
+@25     identifier_node  strg: bit_size_type           lngt: 13      
+@26     integer_cst      type: @17      low : 64      
+@27     integer_cst      type: @17      low : 0       
+@28     integer_cst      type: @17      low : -1      
+@29     integer_cst      type: @17      low : 8       
+@30     tree_list        valu: @5       chan: @34     
+@31     identifier_node  strg: num1     lngt: 4       
+@32     parm_decl        name: @35      type: @5       scpe: @13     
+                         srcp: test.cpp:7              argt: @5      
+                         size: @10      algn: 32       used: 1       
+@33     identifier_node  strg: num3     lngt: 4       
+@34     tree_list        valu: @5       chan: @36     
+@35     identifier_node  strg: num2     lngt: 4       
+@36     tree_list        valu: @5       chan: @37     
+@37     tree_list        valu: @5       chan: @38     
+@38     tree_list        valu: @2      
+
+
+;; Function int main() (null)
+;; enabled by -tree-original
+
+@1      statement_list   0   : @2       1   : @3      
+@2      bind_expr        type: @4       vars: @5       body: @6      
+@3      return_expr      type: @4       expr: @7      
+@4      void_type        name: @8       algn: 8       
+@5      var_decl         name: @9       type: @10      scpe: @11     
+                         srcp: test.cpp:14             size: @12     
+                         algn: 64       used: 1       
+@6      statement_list   0   : @13      1   : @14      2   : @15     
+                         3   : @16      4   : @17      5   : @18     
+                         6   : @19      7   : @20     
+@7      init_expr        type: @21      op 0: @22      op 1: @23     
+@8      type_decl        name: @24      type: @4       srcp: <built-in>:0      
+                         note: artificial 
+@9      identifier_node  strg: param    lngt: 5       
+@10     real_type        name: @25      size: @12      algn: 64      
+                         prec: 64      
+@11     function_decl    name: @26      type: @27      scpe: @28     
+                         srcp: test.cpp:12             lang: C       
+                         link: extern  
+@12     integer_cst      type: @29      low : 64      
+@13     decl_expr        type: @4      
+@14     decl_expr        type: @4      
+@15     cleanup_point_expr type: @4       op 0: @30     
+@16     cleanup_point_expr type: @4       op 0: @31     
+@17     decl_expr        type: @4      
+@18     cleanup_point_expr type: @4       op 0: @32     
+@19     cond_expr        type: @4       op 0: @33      op 1: @34     
+                         op 2: @35     
+@20     return_expr      type: @4       expr: @36     
+@21     integer_type     name: @37      size: @38      algn: 32      
+                         prec: 32       sign: signed   min : @39     
+                         max : @40     
+@22     result_decl      type: @21      scpe: @11      srcp: test.cpp:12     
+                         note: artificial              size: @38     
+                         algn: 32      
+@23     integer_cst      type: @21      low : 0       
+@24     identifier_node  strg: void     lngt: 4       
+@25     type_decl        name: @41      type: @10      srcp: <built-in>:0      
+                         note: artificial 
+@26     identifier_node  strg: main     lngt: 4       
+@27     function_type    size: @42      algn: 8        retn: @21     
+                         prms: @43     
+@28     translation_unit_decl 
+@29     integer_type     name: @44      size: @12      algn: 64      
+                         prec: 64       sign: unsigned min : @45     
+                         max : @46     
+@30     expr_stmt        type: @4       line: 15       expr: @47     
+@31     expr_stmt        type: @4       line: 16       expr: @48     
+@32     expr_stmt        type: @4       line: 18       expr: @49     
+@33     truth_andif_expr type: @50      op 0: @51      op 1: @52     
+@34     cleanup_point_expr type: @4       op 0: @53     
+@35     nop_expr         type: @4       op 0: @54     
+@36     init_expr        type: @21      op 0: @22      op 1: @23     
+@37     type_decl        name: @55      type: @21      srcp: <built-in>:0      
+                         note: artificial 
+@38     integer_cst      type: @29      low : 32      
+@39     integer_cst      type: @21      high: -1       low : -2147483648 
+@40     integer_cst      type: @21      low : 2147483647 
+@41     identifier_node  strg: double   lngt: 6       
+@42     integer_cst      type: @29      low : 8       
+@43     tree_list        valu: @4      
+@44     identifier_node  strg: bit_size_type           lngt: 13      
+@45     integer_cst      type: @29      low : 0       
+@46     integer_cst      type: @29      low : -1      
+@47     convert_expr     type: @4       op 0: @56     
+@48     convert_expr     type: @4       op 0: @57     
+@49     convert_expr     type: @4       op 0: @58     
+@50     boolean_type     name: @59      size: @42      algn: 8       
+@51     ge_expr          type: @50      op 0: @60      op 1: @5      
+@52     gt_expr          type: @50      op 0: @61      op 1: @62     
+@53     expr_stmt        type: @4       line: 21       expr: @63     
+@54     integer_cst      type: @64      low : 0       
+@55     identifier_node  strg: int      lngt: 3       
+@56     modify_expr      type: @10      op 0: @5       op 1: @65     
+@57     modify_expr      type: @10      op 0: @62      op 1: @66     
+@58     init_expr        type: @21      op 0: @67      op 1: @68     
+@59     type_decl        name: @69      type: @50      srcp: <built-in>:0      
+                         note: artificial 
+@60     float_expr       type: @10      op 0: @67     
+@61     float_expr       type: @10      op 0: @67     
+@62     var_decl         name: @70      type: @10      scpe: @11     
+                         srcp: test.cpp:14             size: @12     
+                         algn: 64       used: 1       
+@63     convert_expr     type: @4       op 0: @71     
+@64     integer_type     name: @72      size: @12      algn: 64      
+                         prec: 64       sign: unsigned min : @73     
+                         max : @74     
+@65     real_cst         type: @10      valu: 3.0e+1 
+@66     call_expr        type: @10      fn  : @75      0   : @76     
+@67     var_decl         name: @77      type: @21      scpe: @11     
+                         srcp: test.cpp:18             size: @38     
+                         algn: 32       used: 1       
+@68     call_expr        type: @21      fn  : @78      0   : @79     
+                         1   : @80      2   : @81      3   : @82     
+@69     identifier_node  strg: bool     lngt: 4       
+@70     identifier_node  strg: result   lngt: 6       
+@71     modify_expr      type: @21      op 0: @67      op 1: @83     
+@72     type_decl        name: @84      type: @85      srcp: <built-in>:0      
+                         note: artificial 
+@73     integer_cst      type: @85      low : 0       
+@74     integer_cst      type: @64      high: -1       low : -1      
+@75     addr_expr        type: @86      op 0: @87     
+@76     nop_expr         type: @10      op 0: @88     
+@77     identifier_node  strg: res      lngt: 3       
+@78     addr_expr        type: @89      op 0: @90     
+@79     integer_cst      type: @21      low : 1       
+@80     integer_cst      type: @21      low : 2       
+@81     integer_cst      type: @21      low : 3       
+@82     integer_cst      type: @21      low : 4       
+@83     plus_expr        type: @21      op 0: @67      op 1: @79     
+@84     identifier_node  strg: long unsigned int       lngt: 17      
+@85     integer_type     name: @72      size: @12      algn: 64      
+                         prec: 64       sign: unsigned min : @73     
+                         max : @91     
+@86     pointer_type     size: @12      algn: 64       ptd : @92     
+@87     function_decl    name: @93      type: @92      scpe: @28     
+                         srcp: mathcalls.h:66          lang: C       
+                         args: @94      body: undefined 
+                         link: extern  
+@88     nop_expr         type: @95      op 0: @96     
+@89     pointer_type     size: @12      algn: 64       ptd : @97     
+@90     function_decl    name: @98      mngl: @99      type: @97     
+                         scpe: @28      srcp: test.cpp:7      
+                         args: @100     link: extern  
+@91     integer_cst      type: @85      low : -1      
+@92     function_type    unql: @101     size: @42      algn: 8       
+                         retn: @10      prms: @102    
+@93     identifier_node  strg: sin      lngt: 3       
+@94     parm_decl        name: @103     type: @10      scpe: @87     
+                         srcp: mathcalls.h:66          lang: C       
+                         argt: @10      size: @12      algn: 64      
+                         used: 0       
+@95     real_type        name: @104     size: @38      algn: 32      
+                         prec: 32      
+@96     rdiv_expr        type: @10      op 0: @105     op 1: @106    
+@97     function_type    size: @42      algn: 8        retn: @21     
+                         prms: @107    
+@98     identifier_node  strg: myadd    lngt: 5       
+@99     identifier_node  strg: _Z5myaddiiii            lngt: 12      
+@100    parm_decl        name: @108     type: @21      scpe: @90     
+                         srcp: test.cpp:7              argt: @21     
+                         size: @38      algn: 32       used: 1       
+@101    function_type    size: @42      algn: 8        retn: @10     
+                         prms: @102    
+@102    tree_list        valu: @10      chan: @43     
+@103    identifier_node  strg: __x      lngt: 3       
+@104    type_decl        name: @109     type: @95      srcp: <built-in>:0      
+                         note: artificial 
+@105    mult_expr        type: @10      op 0: @5       op 1: @110    
+@106    real_cst         type: @10      valu: 1.8e+2 
+@107    tree_list        valu: @21      chan: @111    
+@108    identifier_node  strg: num1     lngt: 4       
+@109    identifier_node  strg: float    lngt: 5       
+@110    real_cst         type: @10      valu: 3.1415926500000002086210316e+0 
+@111    tree_list        valu: @21      chan: @112    
+@112    tree_list        valu: @21      chan: @113    
+@113    tree_list        valu: @21      chan: @43     
+
