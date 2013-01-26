@@ -15,7 +15,7 @@ print pre_dir
 proj1_dir = project_dir + "plugin-dev/"
 proj2_dir = project_dir + "plugin-dev2/"
 html_source_dir = proj1_dir + "test"
-html_target_dir ="/home/damon/Software/tomcat6/webapps"
+html_target_dir ="/root/tomcat/webapps"
 print html_target_dir
 rm_intemediate_files_stmt = "rm -rf " + proj2_dir + "test/*"
 print rm_intemediate_files_stmt
@@ -60,7 +60,7 @@ log.write("\n")
 log.flush()
 os.system(exec_proj2_stmt)
 log.write("after exec dev2\n")
-html_target_dir ="/home/damon/Software/tomcat6/webapps"+ "/huawei/result"
+html_target_dir ="/root/tomcat/webapps"+ "/huawei/result"
 move_html_stmt = "python movehtml.py " + html_source_dir + ' ' + html_target_dir + " " + sys.argv[1]
 print move_html_stmt
 log.write(move_html_stmt)
