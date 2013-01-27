@@ -1,0 +1,29 @@
+log begin
+rm -rf /root/plugin/yy/plugin-dev2/test/*
+/root/plugin/yy/plugin-dev-pre/main 78
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/a" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/a.c" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/a/b" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/a/b/codesize.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/a/b/fun.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/a/b/gele.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/b" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/b/fun.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/b/gele.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/b/loop.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/b/main.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/codesize.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/fun.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/gele.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/hello.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/hello2.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/include" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/include/a.h" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/loop.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/main.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/mem_test.cpp" GROUP="Compiler_Group" PROJ="li"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/li/test/testcase-guo.cpp" GROUP="Compiler_Group" PROJ="li"
+/root/plugin/yy/plugin-dev2/binary/main 78
+after exec dev2
+python movehtml.py /root/plugin/yy/plugin-dev/test /root/tomcat/webapps/huawei/result 78

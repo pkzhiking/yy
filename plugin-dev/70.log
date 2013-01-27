@@ -1,0 +1,29 @@
+log begin
+rm -rf /root/plugin/yy/plugin-dev2/test/*
+/root/plugin/yy/plugin-dev-pre/main 70
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/a" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/a.c" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/a/b" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/a/b/codesize.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/a/b/fun.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/a/b/gele.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/b" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/b/fun.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/b/gele.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/b/loop.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/b/main.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/codesize.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/fun.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/gele.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/hello.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/hello2.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/include" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/include/a.h" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/loop.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/main.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/mem_test.cpp" GROUP="Compiler_Group" PROJ="zq"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/zq/test/testcase-guo.cpp" GROUP="Compiler_Group" PROJ="zq"
+/root/plugin/yy/plugin-dev2/binary/main 70
+after exec dev2
+python movehtml.py /root/plugin/yy/plugin-dev/test /root/tomcat/webapps/huawei/result 70

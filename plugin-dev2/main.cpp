@@ -306,7 +306,7 @@ int main(int argc, char **argv)
 			status = iter->second;
 			if(Config::GetInstance().IsOn("ConditionInLoopAnalyzer") && status)
 			    manager.addAnalyzer(new ConditionInLoopAnalyzer());
-#if 0
+#if 1
 			iter = map_WebAnalyzerOn.find("FloatTriCallAnalyzer");
 			status = iter->second;
 			if(Config::GetInstance().IsOn("FloatTriCallAnalyzer") && status)
@@ -358,6 +358,7 @@ int main(int argc, char **argv)
 	 ProblemList::GetInstance().ReportFileProToDB(Util::stringToInt(argv[1]));
 	 ProblemList::GetInstance().ReportAnalyzerProToDB(Util::stringToInt(argv[1]));
 	 ProblemList::GetInstance().ReCalFatherDirProToDB(Util::stringToInt(argv[1]));
+	 ProblemList::GetInstance().UpdateSubmitToDB(Util::stringToInt(argv[1]));
 	 return 1;
 #endif
 }

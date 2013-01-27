@@ -15,9 +15,9 @@ BIT64:=x86_64
 EXE: PLUGIN_OBJECT_FILES plugin.so
 	
 	ls --color
-GCCINSTALL_DIR =/home/damon/Software/gcc/gcc-install
-GCCDOWNLOAD_DIR =/home/damon/Software/gcc/gcc-4.6.0
-GMPINSTALL_DIR =/usr/local/include
+GCCINSTALL_DIR =/usr/gcc-build
+GCCDOWNLOAD_DIR =/root/Downloads/gcc-4.6.0
+GMPINSTALL_DIR =/usr/local/gmp
 TESTDIR = $(PWD)/test
 GCC = $(GCCINSTALL_DIR)/bin/gcc
 STDLIBPATH= $(GCCINSTALL_DIR)/lib

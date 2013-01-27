@@ -122,6 +122,7 @@ public:
     void PrintCommonDir(){cout << proj_name << endl;}
     void PrintCommonDirForDirs();
     void ReCalFatherDirProToDB(int);
+    void UpdateSubmitToDB(int);
 };
 
 #endif
