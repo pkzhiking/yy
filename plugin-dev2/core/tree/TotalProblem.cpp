@@ -414,7 +414,22 @@ void ProblemList::ReportFileProToDB(int iSid)
 	//cout << pQuery << "executed..." << endl;
     }
 
-    //update the status of Submit file
+    mysql_close(&mysql);
+}
+
+void ProblemList::UpdateSubmitToDB(int iSid)
+{
+    MYSQL mysql;
+    MYSQL_RES *res;
+    MYSQL_ROW row;
+    char *pQuery;
+    int iQueryRet;
+
+    mysql_init(&mysql);
+    if(!mysql_real_connect(&mysql, IP, USER, PASSWORD, DATABASE, 3306, NULL, 0)){
+	//cout << "Error connecting database: " << mysql_error(&mysql) << endl;
+	return;
+    }
     string strUpdateSubmitStatus = "update Submit set status=1 where sid=" + Util::intToString(iSid);
     //cout << strUpdateSubmitStatus << endl;
     pQuery = (char*) strUpdateSubmitStatus.c_str();
@@ -520,6 +535,40 @@ void ProblemList::ReCalFatherDirProToDB(int iSid)
 	vec_file_err.push_back(p);
 	
     }
+#if 1
+    string str_adjust_negative_err_num;
+    for(int i = 0; i < vec_file_err.size(); i++)
+    {
+	string str_last_2_cha = vec_file_err[i].first.substr(vec_file_err[i].first.size() - 2, 2);
+
+	string str_last_3_cha;
+	
+	if(vec_file_err[i].first.size() >= 3)
+	    str_last_3_cha = vec_file_err[i].first.substr(vec_file_err[i].first.size() - 3, 3);
+	else
+	    str_last_3_cha = "dir";
+
+
+	string str_last_4_cha;
+	
+	if(vec_file_err[i].first.size() >= 4)
+	    str_last_4_cha = vec_file_err[i].first.substr(vec_file_err[i].first.size() - 4, 4);
+	else
+	    str_last_4_cha = "dir";
+	if((0 == strcmp(".c", str_last_2_cha.c_str()) || 0 == strcmp(".cpp", str_last_4_cha.c_str()) || 0 == strcmp(".cc", str_last_3_cha.c_str())) && -1 == vec_file_err[i].second)
+	{
+	    str_adjust_negative_err_num = "update SubmitFile set error_num=0 where name=\'" + vec_file_err[i].first + "\'";
+	    vec_file_err[i].second = 0;
+	    cout << str_adjust_negative_err_num;
+	    pQuery = (char*) str_adjust_negative_err_num.c_str();
+	    iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
+	    if(iQueryRet){
+		//cout << "Error executing query: " << mysql_error(&mysql) << endl;
+		return;
+		}
+	}
+    }
+#endif 
 
     for(int i = 0; i < vec_file_err.size(); i++)
     {
@@ -543,10 +592,11 @@ void ProblemList::ReCalFatherDirProToDB(int iSid)
 		str_last_4_cha = "dir";
 	    if(0 != strcmp(".c", str_last_2_cha.c_str()) && strcmp(".cpp", str_last_4_cha.c_str()))
 		continue;
+	    string str_i_add_slash = vec_file_err[i].first + "/";
 	    if(vec_file_err[j].first.size() > vec_file_err[i].first.size())
 	    {
-		string str_first_n = vec_file_err[j].first.substr(0, vec_file_err[i].first.size());
-		if(0 == strcmp(str_first_n.c_str(), vec_file_err[i].first.c_str()))
+		string str_first_n = vec_file_err[j].first.substr(0, str_i_add_slash.size());
+		if(0 == strcmp(str_first_n.c_str(), str_i_add_slash.c_str()))
 		    vec_file_err[i].second += vec_file_err[j].second;
 	    }
 

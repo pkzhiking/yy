@@ -1,0 +1,29 @@
+log begin
+rm -rf /root/plugin/yy/plugin-dev2/test/*
+/root/plugin/yy/plugin-dev-pre/main 80
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/a" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/a.c" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/a/b" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/a/b/codesize.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/a/b/fun.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/a/b/gele.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/b" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/b/fun.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/b/gele.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/b/loop.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/b/main.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/codesize.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/fun.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/gele.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/hello.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/hello2.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/include" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/include/a.h" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/loop.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/main.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/mem_test.cpp" GROUP="Compiler_Group" PROJ="xc"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/xc/test/testcase-guo.cpp" GROUP="Compiler_Group" PROJ="xc"
+/root/plugin/yy/plugin-dev2/binary/main 80
+after exec dev2
+python movehtml.py /root/plugin/yy/plugin-dev/test /root/tomcat/webapps/huawei/result 80

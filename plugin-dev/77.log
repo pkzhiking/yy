@@ -1,0 +1,29 @@
+log begin
+rm -rf /root/plugin/yy/plugin-dev2/test/*
+/root/plugin/yy/plugin-dev-pre/main 77
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/a" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/a.c" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/a/b" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/a/b/codesize.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/a/b/fun.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/a/b/gele.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/b" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/b/fun.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/b/gele.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/b/loop.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/b/main.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/codesize.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/fun.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/gele.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/hello.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/hello2.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/include" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/include/a.h" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/loop.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/main.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/mem_test.cpp" GROUP="Compiler_Group" PROJ="aqw"
+make run -k "INPUT_FILE=/root/plugin/yy/plugin-dev/test/Compiler_Group/aqw/test/testcase-guo.cpp" GROUP="Compiler_Group" PROJ="aqw"
+/root/plugin/yy/plugin-dev2/binary/main 77
+after exec dev2
+python movehtml.py /root/plugin/yy/plugin-dev/test /root/tomcat/webapps/huawei/result 77
