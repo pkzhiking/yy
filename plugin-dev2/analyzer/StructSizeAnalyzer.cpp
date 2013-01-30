@@ -176,8 +176,17 @@ bool StructSizeAnalyzer::calStructSize(GNode* node) {
 		return structMap[nodeStr];
 	}
 
+    const GProperty * fldsNode = node->getProperty("flds");
+    GNode* fieldNode = NULL;
+    if(fldsNode!=0){
+        fieldNode = globalASTTreePointer->findNodeByIndex(fldsNode->mNodeProperty);
+    }else{
+        return false;
+    }
+    /*
 	GNode* fieldNode = globalASTTreePointer->findNodeByIndex(node->getProperty(
 			"flds")->mNodeProperty);
+    */
 
 	int size = 0;
 	while (true) {

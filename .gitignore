@@ -5,3 +5,4 @@ CPSA_web
 *.so
 *~
 *.out
+*.log

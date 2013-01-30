@@ -326,6 +326,9 @@ NodeProcessor::getFunctionCallName(GNode* node) throw (Error)
 		if(fnAddrNode->getTreeCode()=="addr_expr")
 		{
 			GNode *fnDeclNode = NodeProcessor::getOperand(fnAddrNode,0);
+            if(fnDeclNode==NULL){
+                throw Error();
+            }
 			if(fnDeclNode->getTreeCode()=="function_decl")
 			{
 				return FunctionCallNodeProcessor::getFunctionName(fnDeclNode);
