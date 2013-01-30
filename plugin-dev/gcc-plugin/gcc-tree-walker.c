@@ -1083,7 +1083,8 @@ dequeue_and_dump (dump_info_p di)
 	    //dump_child ("bpos", bit_position (t));
       //dump_child ("chan",TREE_CHAIN(t));
 	  //temporary solution: if scope is of struct_decl I chain it up
-      if (TREE_CODE(DECL_CONTEXT(t))==RECORD_TYPE)
+      tree decl_context = DECL_CONTEXT(t);
+      if (decl_context && TREE_CODE(DECL_CONTEXT(t))==RECORD_TYPE)
       {
         dump_child ("chan",TREE_CHAIN(t));
       }
