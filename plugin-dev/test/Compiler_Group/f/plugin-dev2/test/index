@@ -1,8 +1,0 @@
-/home/damon/Workspace/yy/plugin-dev2/test/Compiler_Group/e/mpc-0.8.1/tests/memory$&$tests_memory_find.printer memory$&$tests_memory_find
-/home/damon/Workspace/yy/plugin-dev2/test/Compiler_Group/e/mpc-0.8.1/tests/memory$&$tests_allocate.printer memory$&$tests_allocate
-/home/damon/Workspace/yy/plugin-dev2/test/Compiler_Group/e/mpc-0.8.1/tests/memory$&$tests_reallocate.printer memory$&$tests_reallocate
-/home/damon/Workspace/yy/plugin-dev2/test/Compiler_Group/e/mpc-0.8.1/tests/memory$&$tests_free_find.printer memory$&$tests_free_find
-/home/damon/Workspace/yy/plugin-dev2/test/Compiler_Group/e/mpc-0.8.1/tests/memory$&$tests_free_nosize.printer memory$&$tests_free_nosize
-/home/damon/Workspace/yy/plugin-dev2/test/Compiler_Group/e/mpc-0.8.1/tests/memory$&$tests_free.printer memory$&$tests_free
-/home/damon/Workspace/yy/plugin-dev2/test/Compiler_Group/e/mpc-0.8.1/tests/memory$&$tests_memory_start.printer memory$&$tests_memory_start
-/home/damon/Workspace/yy/plugin-dev2/test/Compiler_Group/e/mpc-0.8.1/tests/memory$&$tests_memory_end.printer memory$&$tests_memory_end
