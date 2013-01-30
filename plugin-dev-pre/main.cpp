@@ -25,8 +25,8 @@ void outputFilesName(int iSid)
 
     mysql_init(&mysql);
     if(!mysql_real_connect(&mysql, IP, "huawei", "huawei", "huawei", 3306, NULL, 0)){
-	cout << "Error connecting to database: %s\n", mysql_error(&mysql);
-	return;
+        cout << "Error connecting to database: %s\n", mysql_error(&mysql);
+        return;
     }
     cout << "successful connected." << endl;
     string strSelectSubmitUserInfo = "select * from GroupInfo, UserInfo, Submit where UserInfo.uid=Submit.uid and UserInfo.gid=GroupInfo.gid and Submit.sid=" + Util::intToString(iSid);
@@ -35,8 +35,8 @@ void outputFilesName(int iSid)
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet)
     {
-	cout << "Error executing query: %s\n", mysql_error(&mysql);
-	return;
+        cout << "Error executing query: %s\n", mysql_error(&mysql);
+        return;
     }
     cout << pQuery << " executed ..." << endl;
 
@@ -45,8 +45,8 @@ void outputFilesName(int iSid)
     row = mysql_fetch_row(res);
     if(!row)
     {
-	cout << "fail to fetch data." << endl;
-	return;
+        cout << "fail to fetch data." << endl;
+        return;
     }
     string gName;
     gName = row[1];
@@ -58,8 +58,8 @@ void outputFilesName(int iSid)
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet)
     {
-	cout << "Error executing query: %s\n", mysql_error(&mysql);
-	return;
+        cout << "Error executing query: %s\n", mysql_error(&mysql);
+        return;
     }
     cout << pQuery << " executed ..." << endl;
 
@@ -68,8 +68,8 @@ void outputFilesName(int iSid)
     row = mysql_fetch_row(res);
     if(!row)
     {
-	cout << "fail to fetch data." << endl;
-	return;
+        cout << "fail to fetch data." << endl;
+        return;
     }
 
     int pid = Util::stringToInt(row[2]);
@@ -77,23 +77,23 @@ void outputFilesName(int iSid)
 
     string strSelectProj = "select * from Project where pid=" + Util::intToString(pid);
     cout << strSelectProj << endl;
-    
+
     pQuery = (char*) strSelectProj.c_str();
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet)
     {
-	cout << "Error executing query: %s\n", mysql_error(&mysql);
-	return;
+        cout << "Error executing query: %s\n", mysql_error(&mysql);
+        return;
     }
     cout << pQuery << " executed ..." << endl;
 
-    
+
     res = mysql_store_result(&mysql);
     row = mysql_fetch_row(res);
     if(!row)
     {
-	cout << "fail to fetch data." << endl;
-	return;
+        cout << "fail to fetch data." << endl;
+        return;
     }
 
     string proj_name;
@@ -105,8 +105,8 @@ void outputFilesName(int iSid)
     fp = fopen(FILES_DIR, "w");
     if(NULL == fp)
     {
-	cout << "cannot open file: " << FILES_DIR << endl;
-	return ;
+        cout << "cannot open file: " << FILES_DIR << endl;
+        return ;
     }
 
     string old_str, new_str;
@@ -116,32 +116,32 @@ void outputFilesName(int iSid)
     new_str = "\\ ";
     for(string::size_type pos(subs_group_name.size() -1); string::npos != pos; pos--)
     {
-	if( string::npos != (pos = subs_group_name.rfind(old_str, pos)))
-	    subs_group_name = subs_group_name.replace(pos, old_str.length(), new_str);
-	else
-	    break;
+        if( string::npos != (pos = subs_group_name.rfind(old_str, pos)))
+            subs_group_name = subs_group_name.replace(pos, old_str.length(), new_str);
+        else
+            break;
     }
     fprintf(fp, "%s\n", subs_group_name.c_str());
-    
+
     for(string::size_type pos(subs_proj_name.size() -1); string::npos != pos; pos--)
     {
-	if( string::npos != (pos = subs_proj_name.rfind(old_str, pos)))
-	    subs_proj_name = subs_proj_name.replace(pos, old_str.length(), new_str);
-	else
-	    break;
+        if( string::npos != (pos = subs_proj_name.rfind(old_str, pos)))
+            subs_proj_name = subs_proj_name.replace(pos, old_str.length(), new_str);
+        else
+            break;
     }
     fprintf(fp, "%s\n", subs_proj_name.c_str());
-    
+
 
     string strSelectSubmitFile = "select * from SubmitFile where sid=" + Util::intToString((int) iSid);
     cout << strSelectSubmitFile << endl;
     pQuery = (char*) strSelectSubmitFile.c_str();
-     
+
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet)
     {
-	cout << "Error executing query: %s\n", mysql_error(&mysql);
-	return;
+        cout << "Error executing query: %s\n", mysql_error(&mysql);
+        return;
     }
     cout << pQuery << " executed ..." << endl;
 
@@ -150,27 +150,27 @@ void outputFilesName(int iSid)
 
     while(row = mysql_fetch_row(res))
     {
-	string fullFileName;
-	fullFileName = DEFAULT_PROJS_DIR;
-	fullFileName += gName + "/" + proj_name;
-	string sf_name = row[1];
-	if('.' == sf_name[0])
-	    sf_name = sf_name.substr(1, sf_name.size() - 1);
-	fullFileName += sf_name;
-	
-	string old_str, new_str;
-	old_str = " ";
-	new_str = "\\ ";
-	for(string::size_type pos(fullFileName.size() -1); string::npos != pos; pos--)
-	{
-	    if( string::npos != (pos = fullFileName.rfind(old_str, pos)))
-		fullFileName = fullFileName.replace(pos, old_str.length(), new_str);
-	    else
-		break;
-	}
+        string fullFileName;
+        fullFileName = DEFAULT_PROJS_DIR;
+        fullFileName += gName + "/" + proj_name;
+        string sf_name = row[1];
+        if('.' == sf_name[0])
+            sf_name = sf_name.substr(1, sf_name.size() - 1);
+        fullFileName += sf_name;
 
-	cout << "fullFileName: " << fullFileName << endl;
-	fprintf(fp, "%s\n", fullFileName.c_str());
+        string old_str, new_str;
+        old_str = " ";
+        new_str = "\\ ";
+        for(string::size_type pos(fullFileName.size() -1); string::npos != pos; pos--)
+        {
+            if( string::npos != (pos = fullFileName.rfind(old_str, pos)))
+                fullFileName = fullFileName.replace(pos, old_str.length(), new_str);
+            else
+                break;
+        }
+
+        cout << "fullFileName: " << fullFileName << endl;
+        fprintf(fp, "%s\n", fullFileName.c_str());
     }
 #if 0
     string strDeleteSubmitFile = "delete from SubmitFile where sid=" + Util::intToString((int) iSid);
@@ -178,12 +178,12 @@ void outputFilesName(int iSid)
     cout << strDeleteSubmitFile << endl;
 
     pQuery = (char*) strDeleteSubmitFile.c_str();
-     
+
     iQueryRet = mysql_real_query(&mysql, pQuery, (unsigned int) strlen(pQuery));
     if(iQueryRet)
     {
-	cout << "Error executing query: %s\n", mysql_error(&mysql);
-	return;
+        cout << "Error executing query: %s\n", mysql_error(&mysql);
+        return;
     }
     cout << pQuery << " executed ..." << endl;
 #endif
@@ -195,24 +195,24 @@ int main(int argc, char **argv)
 {
     if(argc < 2)
     {
-	cout << "please cin sid" << endl;
-	return -1;
+        cout << "please cin sid" << endl;
+        return -1;
     }
 
     int iSid = Util::stringToInt(argv[1]);
 
     if(iSid < 1)
     {
-	cout << "sid is not right" << endl;
-	return -1;
+        cout << "sid is not right" << endl;
+        return -1;
     }
-    
+
     FILE *fp;
     fp = fopen(FILES_DIR, "w");
     if(NULL == fp)
     {
-	cout << "cannot open file: " << FILES_DIR << endl;
-	return -1;
+        cout << "cannot open file: " << FILES_DIR << endl;
+        return -1;
     }
 
     outputFilesName(iSid);
