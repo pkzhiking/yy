@@ -83,14 +83,16 @@ PROJ =
 PROJECT_DIR = $(PROJ_DIR)/test/$(GROUP)/$(PROJ)
 HEADER_FILES = $(shell find $(PROJECT_DIR) -regex ".*\.h")
 HEADER_DIR = $(dir $(HEADER_FILES))
+FATHER_HEAD_DIR =$(dir $(HEADER_DIR))
 PROJ_HEADER_DIR = $(addprefix -I, $(HEADER_DIR))
+PROJ_FATHER_HEADER_DIR = $(addprefix -I, $(FATHER_HEAD_DIR))
 
 run:
 	export LD_LIBRARY_PATH=$(LD_LIBRARY_PATH)
 	echo $(GCCPLUGINS_INCLUDE_FLAGS)
 
 #	$(foreach file, $(INPUT_FILES), $(shell $(G++) -fsyntax-only  -iplugindir=/root/plugin-dev/ -D_GNU_SOURCE $(file) -c -dumpbase -mtune=generic -march=pentiumpro -fplugin=$(PWD)/plugin.so))
-	$(shell $(G++) $(PROJ_HEADER_DIR) -fsyntax-only  -iplugindir=$(PWD) -D_GNU_SOURCE $(INPUT_FILE) -c -dumpbase -mtune=generic -fplugin=$(PWD)/plugin.so)
+	$(shell $(G++) $(PROJ_HEADER_DIR) $(PROJ_FATHER_DIR) -fsyntax-only  -iplugindir=$(PWD) -D_GNU_SOURCE $(INPUT_FILE) -c -dumpbase -mtune=generic -fplugin=$(PWD)/plugin.so)
 
 	echo $(HTML_TARGET_DIR)
 
