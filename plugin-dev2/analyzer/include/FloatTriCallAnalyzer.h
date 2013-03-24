@@ -11,18 +11,21 @@
 #include "../../core/include/SrcManager.h"
 #include "../../core/include/ContextProcessor.h"
 #include "../../util/include/Logger.h"
+#include <string>
+
+using std::string;
 
 class FloatTriCallAnalyzer : public BaseAnalyzer
 {
 public:
-	FloatTriCallAnalyzer();
-	virtual ~FloatTriCallAnalyzer();
-	virtual void analyzeNode(GNode*,const vector<int>&);
-	virtual void startAnalyze();
-	virtual void finishAnalyze();
-	virtual void clearAnalyzerState();
+    FloatTriCallAnalyzer();
+    virtual ~FloatTriCallAnalyzer();
+    virtual void analyzeNode(GNode*,const vector<int>&);
+    virtual void startAnalyze();
+    virtual void finishAnalyze();
+    virtual void clearAnalyzerState();
 private:
-	bool isConditionFunction(GTree* tree);
+    string calledFunction;
 };
 
 
