@@ -27,6 +27,7 @@ FunctionAsLoopVarAnalyzer::analyzeNode(GNode* node,const vector<int>& context)
 {
 		int varID;
 		if ((varID = NodeProcessor::subtreeContainFunction(node, "call_expr", "strlen")) != -1){
+
 				if (!NodeProcessor::isVarChanged(node, varID)){
 
 					int lineNumber = Util::stringToInt(node->getProperty("line")->mStringProperty);

@@ -81,6 +81,8 @@ bool FunctionCallAnalyzer::isConditionFunction(GTree* tree)
 
 		  	vector < int > childs = tNode->getChilds();
 		  	int id;
+if (childs.size() == 0)
+	return false;
 		  	for(id = 0; id < childs.size() - 1; id++){
 
 		  		tNode = tree->findNodeByIndex(childs[id]);

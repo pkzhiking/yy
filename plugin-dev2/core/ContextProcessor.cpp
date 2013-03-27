@@ -111,6 +111,12 @@ ContextProcessor::getNestedLoopCount(const vector<int>& context)
 }
 GNode *
 ContextProcessor::getPreStmt( const vector<int> &context, int currentIndex ){
+    /**
+     * if context if empty, no precious statement found. 
+     */
+    if(context.size()==0){
+        return NULL;
+    }
 	GNode *stmtList = globalASTTreePointer->findNodeByIndex( *( context.rbegin() ) );
 	if ( "statement_list" != stmtList->getTreeCode() )
 		return NULL;

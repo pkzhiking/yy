@@ -24,7 +24,7 @@ FunctionCodeSizeAnalyzer::FunctionCodeSizeAnalyzer() {
 	setAnalyzerNodeType("do_stmt");
 	setAnalyzerNodeType("while_stmt");
 	codeSize = 0;
-	threshold = 100;
+	threshold = 4;
 	printed = false;
 	fun_decl_line_num = 0;
 }
@@ -71,7 +71,7 @@ void FunctionCodeSizeAnalyzer::finishAnalyze() {
 }
 void FunctionCodeSizeAnalyzer::clearAnalyzerState(){
 	codeSize = 0;
-	threshold = 100;
+	threshold = 4;
 	printed = false;
 	fun_decl_line_num = 0;
 }

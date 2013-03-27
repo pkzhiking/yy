@@ -574,6 +574,7 @@ int NodeProcessor::subtreeContainFunction(GNode* node, string nodeCode, string f
     vector < int > childs = node->getChilds();
     map < int, bool> hashMap;
     GNode* tNode;
+	
     for(int i = 0; i < childs.size(); i++){
         hashMap[childs[i]] = true;
         subTreeQ.push(childs[i]);
@@ -584,7 +585,17 @@ int NodeProcessor::subtreeContainFunction(GNode* node, string nodeCode, string f
         tNode = globalASTTreePointer->findNodeByIndex(id);
         if (tNode->getTreeCode() == nodeCode){
             if (NodeProcessor::isNamedFunction(tNode, functionName)){
-                return globalASTTreePointer->findNodeByIndex(\
+
+if (tNode->getProperty("0") == NULL)
+return -1;
+GNode* tmpNode = globalASTTreePointer->findNodeByIndex(tNode->getProperty("0")->mNodeProperty);
+if (tmpNode->getProperty("op 0") == NULL)
+return -1;
+tmpNode = globalASTTreePointer->findNodeByIndex(tmpNode->getProperty("op 0")->mNodeProperty);
+if (tmpNode->getProperty("op 0") == NULL)
+return -1;
+                return tmpNode->getProperty("op 0")->mNodeProperty;
+               // return globalASTTreePointer->findNodeByIndex(\
                                                              globalASTTreePointer->findNodeByIndex(tNode->getProperty("0")->mNodeProperty)->getProperty("op 0")->mNodeProperty)\
                     ->getProperty("op 0")->mNodeProperty;
                 //return true;
