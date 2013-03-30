@@ -56,7 +56,7 @@ else:
     password = f.readline()
     password = password.rstrip('\n')
     database = f.readline()
-    database = password.rstrip('\n')
+    database = database.rstrip('\n')
     f.close()
     pass
 
