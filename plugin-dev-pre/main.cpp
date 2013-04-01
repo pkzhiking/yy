@@ -24,7 +24,7 @@ void outputFilesName(int iSid)
     int iQueryRet; //return value of mysql_real_query
 
     mysql_init(&mysql);
-    if(!mysql_real_connect(&mysql, IP, "huawei", "huawei", "huawei", 3306, NULL, 0)){
+    if(!mysql_real_connect(&mysql, IP, USER, PASSWORD, DATABASE, 3306, NULL, 0)){
         cout << "Error connecting to database: %s\n", mysql_error(&mysql);
         return;
     }

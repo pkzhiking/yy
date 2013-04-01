@@ -21,7 +21,7 @@ LoopDivideAnalyzer::LoopDivideAnalyzer() {
 	setAnalyzerNodeType("for_stmt");
 	setAnalyzerNodeType("while_stmt");
 	setAnalyzerNodeType("do_stmt");
-	threshold = 0;
+	threshold = 100;
 	loopFactor = 2;
 }
 void
