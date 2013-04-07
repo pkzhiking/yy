@@ -25,7 +25,7 @@ void IfToIfelseAnalyzer::startAnalyze()
 void IfToIfelseAnalyzer::finishAnalyze()
 {
     if(mConditionNodeVector.size() < 2)
-	return ;
+        return ;
     vector<int> conSet;
     conSet.clear();
     conSet.push_back(0);
@@ -33,16 +33,16 @@ void IfToIfelseAnalyzer::finishAnalyze()
 
     for(int id = 1; iter != mConditionNodeVector.end(); iter++, id++)
     {
-	if(iter->varId == (iter -1)->varId)
-	{
-	    conSet.push_back(id);
-	}
-	else
-	{
-	    isIfToIfelse(conSet);
-	    conSet.clear();
-	    conSet.push_back(id);
-	}
+        if(iter->varId == (iter -1)->varId)
+        {
+            conSet.push_back(id);
+        }
+        else
+        {
+            isIfToIfelse(conSet);
+            conSet.clear();
+            conSet.push_back(id);
+        }
     }
     isIfToIfelse(conSet);
 }
@@ -54,12 +54,18 @@ void IfToIfelseAnalyzer::analyzeNode(GNode *node,const vector<int> &context)
 
     if(-1 == conNode.varId)
     {
-	return ;
+        return ;
     }
 
     conNode.node = node;
-    if(NULL != node)
-	conNode.iContextLine = Util::stringToInt(node->getProperty("line")->mStringProperty);
+    if(NULL != node){
+        if(node->getProperty("line") != NULL){
+        std::string str = node->getProperty("line")->mStringProperty;
+        conNode.iContextLine = Util::stringToInt(str);
+        }
+        else 
+            return ;
+    }
     conNode.testing = NodeProcessor::getCondTesting(node);
 
     conNode.father = (context.size() >= 1)? context[context.size() -1] : -1;
@@ -76,25 +82,25 @@ void IfToIfelseAnalyzer::clearAnalyzerState()
 void IfToIfelseAnalyzer::isIfToIfelse(const vector<int> &conSet)
 {
     if(conSet.size() < 2)
-	return ;
+        return ;
 
     for(int id = 1; id < conSet.size(); id++)
     {
-	if(mConditionNodeVector[conSet[id]].father == mConditionNodeVector[conSet[id - 1]].father)
-	{
-	    if(mConditionNodeVector[conSet[id]].testing.find(mConditionNodeVector[conSet[id -1]].testing) != string::npos)
-	    {
-		log(mConditionNodeVector[conSet[id -1]].iContextLine);
-	    }
-	}
+        if(mConditionNodeVector[conSet[id]].father == mConditionNodeVector[conSet[id - 1]].father)
+        {
+            if(mConditionNodeVector[conSet[id]].testing.find(mConditionNodeVector[conSet[id -1]].testing) != string::npos)
+            {
+                log(mConditionNodeVector[conSet[id -1]].iContextLine);
+            }
+        }
     }
 }
 
 void IfToIfelseAnalyzer::log(int lineNum)
 {
     Logger::a("IfToIfelseAnalyzer") << "if statement list can be changed to ifelse" \
-	<< SrcManager::getInstance().getFullFileName() << ":" << lineNum \
-	<< SrcManager::getInstance().getLine(lineNum) << endl;
+        << SrcManager::getInstance().getFullFileName() << ":" << lineNum \
+        << SrcManager::getInstance().getLine(lineNum) << endl;
     stringstream reportMsgStream;
     reportMsgStream << "IfToIfelseAnalyzer: if statement list can be changed to ifelse" << endl;
     string reportMsg = reportMsgStream.str();
