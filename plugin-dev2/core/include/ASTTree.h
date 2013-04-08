@@ -34,7 +34,9 @@ class GTree
         string _getFunctionName() const;
         void _setHashCode(unsigned int);
         unsigned int _getHashCode() const;
+	map<int, GNode*> _getNodeMap() {return mNodeMap;}
         ~GTree();
+	void Print();
     private:
         //member functions to delete
         GTree(const GTree&){}
@@ -64,6 +66,7 @@ class GNode
         GTree* _getTree(){return this->mTree;}
         const vector<int>& getChilds(){return mChilds;}
         string toString() const;
+	void Print();
     private:
     int mIndex;
     string mTreeCode;
@@ -82,5 +85,6 @@ class GProperty
         int mNodeProperty;
     public:
         string toString() const;
+	void Print();
 };
 #endif /* ASTTREE_H */

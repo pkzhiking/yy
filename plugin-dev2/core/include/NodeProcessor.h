@@ -4,14 +4,18 @@
  *  Created on: Apr 7, 2012
  *      Author: Guo Jiuliang
  */
-#ifndef NODE_PROCESSOR_H
-#define NDOE_PROCESSOR_H
+#ifndef NODE_PROCESSOR_H_H
+#define NDOE_PROCESSOR_H_H
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include "Error.h"
+#include "Expr.h"
+
 using std::string;
 using std::vector;
+
 class GNode;
 class NodeProcessor
 {
@@ -73,5 +77,22 @@ public:
         static GNode *getFuncTypeNode(GNode *node) throw (Error);
         static bool isFunctionReturnRecordType(GNode *node) throw(Error);
         static bool isFunctionPrmsRecordType(GNode *node) throw(Error);
+	static string GetName(GNode*) throw(Error);
+	static CVar* ConstructVar(GNode*) throw(Error);
+	static int GetSize(GNode*) throw(Error);
+	static int GetAlgn(GNode*) throw(Error);
+	static UValue GetValue(GNode*) throw(Error);
+	static CConstant* ConstructConst(GNode*) throw(Error);
+	static void PrintTreeCode() throw(Error);
+	static int GetNArgs(GNode*) throw(Error);
+	static CExpr* GetExpr(GNode*) throw(Error);
+	static bool IsSimpleExpr(GNode*) throw(Error);
+	static void* GetSimpleExpr(GNode*) throw(Error);
+	static bool IsConst(GNode*) throw(Error);
+	static CUnit* ConstructExpr(GNode*) throw(Error);
+	static bool IsExpr(GNode*) throw(Error);
+	static int GetNextBindIndex(GNode*) throw(Error);
+	static int GetNextBindFirstVarIndex(GNode*) throw(Error);
+	static bool IsTruthExpr(GNode*) throw(Error);
 };
 #endif /* NODE_PROCESSOR_H */

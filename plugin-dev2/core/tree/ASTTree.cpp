@@ -8,11 +8,14 @@
 #include <sstream>
 #include <map>
 #include "../include/ASTTree.h"
+#include <iostream>
 using std::ostringstream;
 using std::string;
 using std::map;
 using std::pair;
 using std::make_pair;
+using std::cout;
+using std::endl;
 GTree::GTree()
 {
 	this->mSize = 0;
@@ -45,6 +48,15 @@ GTree::~GTree()
 	}
 	this->mNodeMap.clear();
 }
+
+void GTree::Print()
+{
+    for(map<int, GNode*>::iterator itor = mNodeMap.begin(); itor != mNodeMap.end(); itor++)
+    {
+	itor->second->Print();
+    }
+}
+
 string
 GTree::toString()
 {
@@ -151,6 +163,8 @@ GNode::_addTreeNode(int index,const string& treeCode)
 string
 GNode::toString() const
 {
+    if(NULL == this)
+	return "";
 	ostringstream sstr;
 	sstr<<"@"<<this->mIndex<<"\t"<<this->mTreeCode<<"\t";
 //	for(map<string,GProperty>::iterator itor=this->mPropertyMap.begin();itor!=this->mPropertyMap.end();++itor)
@@ -169,9 +183,24 @@ GNode::_addChild(int childID)
 	this->mChilds.push_back(childID);
 }
 
+void
+GNode::Print()
+{
+    cout << "@" << mIndex << ":" << endl;
+    cout << "	" << mTreeCode << endl;
+    for(int i = 0; i < mPropertyMap.size(); i++)
+    {
+	cout << "   " << mPropertyMap[i].first << ":";
+	mPropertyMap[i].second.Print();
+    }
+    cout << endl;
+}
+
 string
 GProperty::toString() const
 {
+    if(NULL == this)
+	return "";
 	ostringstream sstr;
 	if (ePropertyType == GProperty::PROP_STRING_TYPE)
 	{
@@ -182,4 +211,13 @@ GProperty::toString() const
 		sstr<<"@"<<mNodeProperty;
 	}
 	return sstr.str();
+}
+
+void
+GProperty::Print()
+{
+    if(PROP_STRING_TYPE == ePropertyType)
+	cout << mStringProperty;
+    else
+	cout << mNodeProperty;
 }

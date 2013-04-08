@@ -22,5 +22,12 @@ Util::intToString(int value)
 	return sstr.str();
 }
 
-
-
+double
+Util::stringToDouble(const string& strValue)
+{
+    stringstream sstr;
+    sstr << strValue;
+    double dResult;
+    sstr >> dResult;
+    return dResult;
+}

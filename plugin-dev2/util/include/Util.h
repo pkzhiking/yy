@@ -15,6 +15,7 @@ class Util
 {
 public:
 	static int stringToInt(const string&);
+	static double stringToDouble(const string&);
 	static string intToString(int);
 };
 #endif /* UTIL_H_ */
